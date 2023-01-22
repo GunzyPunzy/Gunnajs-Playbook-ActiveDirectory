@@ -23,7 +23,7 @@ responder -I eth0 -v
 ```
 
 ## Mimikatz
-###Dump tickets
+### Dump tickets
 ```bash
 mimikatz.exe
 privilege::debug
