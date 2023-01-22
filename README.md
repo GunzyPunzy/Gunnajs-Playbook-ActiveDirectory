@@ -15,6 +15,10 @@ https://github.com/lgandx/Responder
 ```bash
 sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```
+## SMB VEV
+* in the making 
+## Nmap
+* in the making 
 
 ## Zero Logon
 * in the making 
@@ -41,7 +45,3 @@ mimikatz.exe
 kerberos::ptt <ticket>
 klist
 ```
-## SMB VEV
-* in the making 
-## Nmap
-* in the making 
