@@ -1,5 +1,5 @@
 # Gunnajs-Playbook
-Typical pentesting way
+En svensk penetrationsvägvisare
 
 ## Tools bby
 
