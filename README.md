@@ -17,7 +17,7 @@ sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```
 
 ## Zero Logon
-
+* in the making *
 ## Responder
 ### Veva igång responder
 ```bash
@@ -42,4 +42,6 @@ kerberos::ptt <ticket>
 klist
 ```
 ## SMB VEV
+* in the making *
 ## Nmap
+* in the making *
