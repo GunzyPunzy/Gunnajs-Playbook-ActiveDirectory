@@ -18,8 +18,13 @@ sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ## Zero Logon
 
 ## Responder
+### Veva igång responder
 ```bash
 responder -I eth0 -v
+```
+### Cracka NTLMv2 hashar
+```bash
+hashcat64.exe -m 5600 hashes\hash.txt password_list.txt -o cracked\cracked.txt
 ```
 
 ## Mimikatz
