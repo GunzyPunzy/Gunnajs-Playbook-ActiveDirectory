@@ -16,7 +16,18 @@ https://github.com/lgandx/Responder
 sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```
 ## SMB VEV
-* in the making 
+### Montera mapp
+```bash
+sudo mount.cifs <//ip/mapp> <./mapp> -o user=<användare>,password=<lösen>,dom=<domän.com>
+```
+### Avmontera mapp
+```bash
+sudo umount.cifs <./mapp>
+```
+### Söka efter nyckelord
+```bash
+grep -i <nyckelord> *
+```
 ## Nmap
 * in the making 
 
