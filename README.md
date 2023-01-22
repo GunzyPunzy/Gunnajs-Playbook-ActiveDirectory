@@ -15,6 +15,8 @@ https://github.com/ParrotSec/mimikatz
 sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```
 
+## Zero Logon
+
 ## Responder
 ```bash
 responder -I eth0 -v
