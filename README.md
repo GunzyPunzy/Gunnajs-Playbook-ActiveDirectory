@@ -24,7 +24,7 @@ responder -I eth0 -v
 ```
 ### Cracka NTLMv2 hashar
 ```bash
-hashcat64.exe -m 5600 ntlm-hashes.txt <lösenlista.txt> -o cracked\cracked.txt
+hashcat64.exe -m 5600 ntlm-hashes.txt <lösenlista.txt> -o cracked.txt
 ```
 
 ## Mimikatz
