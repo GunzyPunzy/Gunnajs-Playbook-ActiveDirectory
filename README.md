@@ -35,3 +35,4 @@ mimikatz.exe
 kerberos::ptt <ticket>
 klist
 ```
+## SMB VEV
