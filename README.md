@@ -36,3 +36,4 @@ kerberos::ptt <ticket>
 klist
 ```
 ## SMB VEV
+## Nmap
