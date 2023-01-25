@@ -13,7 +13,7 @@ https://github.com/lgandx/Responder
 
 ## linWinPwn 
 ```bash
-sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
 ```
 ## SMB VEV
 ### Mount share
