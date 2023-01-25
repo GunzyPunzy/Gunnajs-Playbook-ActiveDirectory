@@ -1,5 +1,5 @@
 # Gunnajs-Playbook
-How pentest like a Gunnaj
+How to pentest like a Gunnaj
 
 ## Tools bby
 
