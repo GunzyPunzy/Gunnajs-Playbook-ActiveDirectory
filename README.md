@@ -1,5 +1,5 @@
 # Gunnajs-Playbook
-En svensk penetrationsvägvisare
+How pentest like a Gunnaj
 
 ## Tools bby
 
@@ -16,17 +16,17 @@ https://github.com/lgandx/Responder
 sudo ./linWinPwn.sh -t <Domän_Kontrollant_IP> -u <AD_konto> -p <AD_lösen>
 ```
 ## SMB VEV
-### Montera mapp
+### Mount share
 ```bash
-sudo mount.cifs <//ip/mapp> <./mapp> -o user=<användare>,password=<lösen>,dom=<domän.com>
+sudo mount.cifs <//ip/folder> <./mapp> -o user=<username>,password=<password>,dom=<domain.com>
 ```
-### Avmontera mapp
+### Unmount share
 ```bash
 sudo umount.cifs <./mapp>
 ```
-### Söka efter nyckelord
+### Search for keywords in files
 ```bash
-grep -i <nyckelord> *
+grep -i <keyword> *
 ```
 ## Nmap
 * in the making 
@@ -34,13 +34,13 @@ grep -i <nyckelord> *
 ## Zero Logon
 * in the making 
 ## Responder
-### Veva igång responder
+### Kickstart responder
 ```bash
 responder -I eth0 -v
 ```
-### Cracka NTLMv2 hashar
+### Crack NTLMv2 hashes
 ```bash
-hashcat64.exe -m 5600 ntlm-hashes.txt <lösenlista.txt> -o cracked.txt
+hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
 ```
 
 ## Mimikatz
