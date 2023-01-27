@@ -9,6 +9,11 @@ https://github.com/lefayjey/linWinPwn
 https://github.com/ParrotSec/mimikatz
 ### Responder
 https://github.com/lgandx/Responder
+
+## Wordlists bby
+https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
+http://download1568.mediafire.com/yuh4jmehecwg/8oazhwqzexid771/WordlistBySheez_v8.7z (166.17 GB)
+
 # VEV
 
 ## linWinPwn 
