@@ -41,11 +41,11 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
 ## SMB VEV
 ### Mount share
 ```bash
-sudo mount.cifs <//ip/folder> <./mapp> -o user=<username>,password=<password>,dom=<domain.com>
+sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<domain.com>
 ```
 ### Unmount share
 ```bash
-sudo umount.cifs <./mapp>
+sudo umount.cifs <./folder>
 ```
 ### Search for keywords in files
 ```bash
