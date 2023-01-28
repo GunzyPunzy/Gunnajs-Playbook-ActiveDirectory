@@ -20,12 +20,13 @@ https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credenti
 ### Crackstation
 https://crackstation.net/files/crackstation.txt.gz (4.2 GB)
 
-### Rockyou2021
-
-https://github.com/ohmybahgosh/RockYou2021.txt
 
 ### Large p-list
 https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
+
+### Rockyou2021
+
+https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 ### Big ass p-list
 
