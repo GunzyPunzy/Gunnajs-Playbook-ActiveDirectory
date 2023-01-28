@@ -19,7 +19,7 @@ https://crackstation.net/files/crackstation.txt.gz (4.2 GB)
 
 ### Rockyou2021
 
-magnet:?xt=urn:btih:JEQMEEFTBXT35RJ3GUTGXU7HP3HBU5P6&dn=rockyou2021.txt%20dictionary%20from%20kys234%20on%20RaidForums&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce
+https://github.com/ohmybahgosh/RockYou2021.txt
 
 ### Large p-list
 https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
