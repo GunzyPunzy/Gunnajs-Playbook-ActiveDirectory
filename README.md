@@ -18,7 +18,7 @@ https://github.com/hmaverickadams/breach-parse
 https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
 
 ### Crackstation
-https://crackstation.net/files/crackstation.txt.gz (4.2 GB)
+https://crackstation.net/files/crackstation.txt.gz (14.6 GB)
 
 
 ### Large p-list
