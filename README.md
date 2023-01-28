@@ -10,6 +10,9 @@ https://github.com/ParrotSec/mimikatz
 ### Responder
 https://github.com/lgandx/Responder
 
+### breach-parse
+https://github.com/hmaverickadams/breach-parse
+
 ## Wordlists bby
 ### Top 10 million
 https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
