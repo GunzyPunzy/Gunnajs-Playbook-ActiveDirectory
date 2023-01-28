@@ -12,6 +12,7 @@ https://github.com/lgandx/Responder
 
 ## Wordlists bby
 https://crackstation.net/files/crackstation.txt.gz (4.2 GB)
+
 https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 https://download.g0tmi1k.com/wordlists/large/b0n3z-wordlist-sorted-something.tar.gz (165 GB)
 
