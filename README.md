@@ -52,7 +52,10 @@ sudo umount.cifs <./folder>
 grep -i <keyword> *
 ```
 ## Nmap
-* in the making 
+#### Scan for Version, OS-type and all open ports
+```bash
+sudo nmap -sV -O -p- IP/mask > file.txt
+```
 
 ## Zero Logon
 * in the making 
