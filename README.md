@@ -52,7 +52,7 @@ sudo umount.cifs <./folder>
 grep -i <keyword> *
 ```
 ## Nmap
-#### Scan for Version, OS-type and all open ports
+#### Scan for Version, OS-type and all open ports to a file
 ```bash
 sudo nmap -sV -O -p- IP/mask > file.txt
 ```
