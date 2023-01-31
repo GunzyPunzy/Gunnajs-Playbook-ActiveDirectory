@@ -34,6 +34,11 @@ https://download.g0tmi1k.com/wordlists/large/b0n3z-wordlist-sorted-something.tar
 
 # VEV
 
+## Nmap
+#### Scan for Version, OS-type and all open ports to a file
+```bash
+sudo nmap -sV -O -p- IP/mask > file.txt
+```
 ## linWinPwn 
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
@@ -50,11 +55,6 @@ sudo umount.cifs <./folder>
 ### Search for keywords in files
 ```bash
 grep -i <keyword> *
-```
-## Nmap
-#### Scan for Version, OS-type and all open ports to a file
-```bash
-sudo nmap -sV -O -p- IP/mask > file.txt
 ```
 
 ## Zero Logon
