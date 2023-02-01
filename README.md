@@ -58,7 +58,7 @@ sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,
 ```
 ### Unmount share
 ```bash
-sudo umount.cifs <./folder>
+sudo umount <./folder>
 ```
 ### Search for keywords in files
 ```bash
