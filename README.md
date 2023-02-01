@@ -48,7 +48,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
 ```
 ## BloodHound Dump
 ```bash
-./bloodhound.py -c All -u [username] -p [password] -dc [domain controller domain name] -d [domain name]
+./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc <domain controller domain name> -d <domain name>
 
 ```
 ## SMB VEV
