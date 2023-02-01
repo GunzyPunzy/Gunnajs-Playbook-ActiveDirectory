@@ -5,6 +5,8 @@ How to pentest like a Gunnaj
 
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
+### BloodHound
+https://github.com/fox-it/BloodHound.py
 ### mimikatz
 https://github.com/ParrotSec/mimikatz
 ### Responder
@@ -42,6 +44,11 @@ sudo nmap -sV -O -p- IP/mask > file.txt
 ## linWinPwn 
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
+```
+## BloodHound Dump
+```bash
+./bloodhound.py -c All -u [username] -p [password] -dc [domain controller domain name] -d [domain name]
+
 ```
 ## SMB VEV
 ### Mount share
