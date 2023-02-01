@@ -11,9 +11,10 @@ https://github.com/fox-it/BloodHound.py
 https://github.com/ParrotSec/mimikatz
 ### Responder
 https://github.com/lgandx/Responder
-
 ### breach-parse
 https://github.com/hmaverickadams/breach-parse
+### PRET
+https://github.com/RUB-NDS/PRET
 
 ## Wordlists bby
 ### Top 10 million
@@ -63,7 +64,14 @@ sudo umount.cifs <./folder>
 ```bash
 grep -i <keyword> *
 ```
-
+## PRET
+### Nmap printers
+```bash
+nmap -p 9100 IP/mask
+```
+```bash
+pret.py target {ps,pjl,pcl}
+```
 ## Zero Logon
 * in the making 
 ## Responder
