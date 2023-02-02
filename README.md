@@ -43,8 +43,17 @@ https://download.g0tmi1k.com/wordlists/large/b0n3z-wordlist-sorted-something.tar
 sudo nmap -sV -O -p- IP/mask > file.txt
 ```
 ## linWinPwn 
+### With AD-user
 ```bash
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password>
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
+```
+### With Hash
+```bash 
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <./krb5cc_ticket> -o <output_dir>
+```
+### With kerbticket
+```bash 
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <LMHASH:NTHASH> -o <output_dir>
 ```
 ## BloodHound Dump
 ```bash
