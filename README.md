@@ -51,14 +51,14 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <./krb5cc_ticket> 
 ```bash 
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <LMHASH:NTHASH> -o <output_dir>
 ```
-## BloodHound Dump
-```bash
-./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc <domain controller domain name> -d <domain name>
-
-```
 ## ldapdomaindump
 ```bash
 ldapdomaindump -u <domain name\\AD_user> -p <AD_password> -d <domain IP>
+```
+## BloodHound Dump on Linux (can be wonky)
+```bash
+./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc <domain controller domain name> -d <domain name>
+
 ```
 ## SMB VEV
 ### Mount share
