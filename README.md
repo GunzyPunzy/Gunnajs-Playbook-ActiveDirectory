@@ -40,7 +40,7 @@ responder -I eth0 -v
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
-sudo nmap -sV -O -p- IP/mask > file.txt
+sudo nmap -sV -O -p- <IP/mask> > file.txt
 ```
 ## linWinPwn 
 ### With AD-user
