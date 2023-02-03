@@ -31,10 +31,6 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
-### Big ass p-list
-
-https://download.g0tmi1k.com/wordlists/large/b0n3z-wordlist-sorted-something.tar.gz (165 GB)
-
 # VEV
 
 ## Nmap
