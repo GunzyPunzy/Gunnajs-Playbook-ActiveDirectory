@@ -60,6 +60,10 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <LMHASH:NTHASH> -o
 ./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc <domain controller domain name> -d <domain name>
 
 ```
+## ldapdomaindump
+```bash
+ldapdomaindump -u <domain name\\AD_user> -p <AD_password> -d <domain IP>
+```
 ## SMB VEV
 ### Mount share
 ```bash
