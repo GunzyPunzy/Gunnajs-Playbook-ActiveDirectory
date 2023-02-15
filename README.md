@@ -37,6 +37,11 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 ```bash
 responder -I eth0 -v
 ```
+
+### Responder linkifle
+```bash
+https://infinitelogins.com/2020/12/17/capturing-password-hashes-via-malicious-lnk-files/
+```
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
