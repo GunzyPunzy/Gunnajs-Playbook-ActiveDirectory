@@ -17,6 +17,8 @@ https://github.com/hmaverickadams/breach-parse
 https://github.com/RUB-NDS/PRET
 
 ## Wordlists bby
+### Create your own wordlist
+https://zzzteph.github.io/weakpass/
 ### Top 10 million
 https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
 
