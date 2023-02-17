@@ -63,6 +63,28 @@ crackmapexec smb <IPs> --gen-relay-list <output.txt>
 ```bash
 sudo python3 ntlmrelayx.py -smb2support -tf
 ```
+#### Disbale SMB and HTTP in Responder.conf
+```bash
+[Responder Core]
+
+; Servers to start
+SQL = On
+SMB = Off
+RDP = On
+Kerberos = On
+FTP = On
+POP = On
+SMTP = On
+IMAP = On
+HTTP = On
+HTTPS = Off
+DNS = On
+LDAP = On
+DCERPC = On
+WINRM = On
+SNMP = Off
+```
+
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
