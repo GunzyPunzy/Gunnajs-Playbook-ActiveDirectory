@@ -53,6 +53,13 @@ $lnk.Description = "Browsing to the dir this file lives in will perform an authe
 $lnk.HotKey = "Ctrl+Alt+O"
 $lnk.Save()
 ```
+
+### Crackmapexec NTLM-relay
+### Evaluate no smb-signing
+```bash
+crackmapexec smb <IPs> --gen-relay-list <output.txt>
+```
+
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
