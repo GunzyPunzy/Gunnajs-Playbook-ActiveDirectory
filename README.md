@@ -55,11 +55,14 @@ $lnk.Save()
 ```
 
 ### Crackmapexec NTLM-relay
-### Evaluate no smb-signing
+#### Evaluate no smb-signing
 ```bash
 crackmapexec smb <IPs> --gen-relay-list <output.txt>
 ```
-
+#### NTLMRelayx
+```bash
+sudo python3 ntlmrelayx.py -smb2support -tf
+```
 ## Nmap
 #### Scan for Version, OS-type and all open ports to a file
 ```bash
