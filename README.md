@@ -125,7 +125,7 @@ grep -i <keyword> *
 ## PRET
 ### Nmap printers
 ```bash
-nmap -p 9100 IP/mask
+nmap -p 9100 <IP/mask>
 ```
 ```bash
 pret.py target {ps,pjl,pcl}
