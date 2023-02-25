@@ -56,6 +56,20 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 
 ## linWinPwn 
 ### Unauthenticated
+- Module ad_enum
+    - RID bruteforce using crackmapexec
+    - Anonymous enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, ldeep
+    - Pre2k authentication check on collected list of computers
+- Module kerberos
+    - kerbrute user spray
+    - ASREPRoast using collected list of users (and cracking hashes using john-the-ripper and the rockyou wordlist)
+    - Blind Kerberoast
+    - CVE-2022-33679 exploit
+- Module scan_shares
+    - SMB shares anonymous enumeration on identified servers
+- Module vuln_checks
+    - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on identified servers
+    - Check for ms17-010, zerologon, petitpotam, nopac, smb-sigining, ntlmv1, runasppl weaknesses
 ```bash
  sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
 ```
