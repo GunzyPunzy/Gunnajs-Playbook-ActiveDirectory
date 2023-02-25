@@ -112,6 +112,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <
 ```bash
 crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
 ```
+
 ## Responder
 ### Kickstart responder
 ```bash
@@ -138,7 +139,7 @@ $lnk.Save()
 ```
 
 ### Crackmapexec NTLM-relay
-#### Evaluate no smb-signing
+#### Evaluate no smb-signing and create an IP txt file for TLMRelayx
 ```bash
 crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
 ```
