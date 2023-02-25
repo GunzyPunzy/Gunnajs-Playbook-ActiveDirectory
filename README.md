@@ -34,6 +34,30 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 # VEV
+
+## Nmap
+#### Ping scan
+```bash
+sudo nmap -sP -p <output.txt> <IP/mask>
+```
+#### Full scan
+```bash
+sudo nmap -PN -sC -sV -p- -oA <output.txt> <IP/mask>
+```
+#### smb vuln scan
+```bash
+sudo nmap -PN --script smb-vuln* -p139,445 -oA <output.txt> <IP/mask>
+```
+## Find DC IP
+#### Show domain name and DNS
+```bash
+sudo mncli dev show eth0
+```
+#### Show DC IP
+```bash
+nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
+```
+
 ## Responder
 ### Kickstart responder
 ```bash
@@ -85,28 +109,15 @@ WINRM = On
 SNMP = Off
 ```
 
-## Nmap
-#### Scan for Version, OS-type and all open ports to a file
-```bash
-sudo nmap -sV -O -p- <IP/mask> > file.txt
-```
 ## linWinPwn 
+### Unauthenticated
+```bash
+ sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
+```
 ### With AD-user
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
-### With Hash
-```bash 
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <./krb5cc_ticket> -o <output_dir>
-```
-### With kerbticket
-```bash 
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <LMHASH:NTHASH> -o <output_dir>
-```
-
-## BloodHound Dump on Linux (can be wonky)
-```bash
-./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc <domain controller domain name> -d <domain name>
 
 ```
 ## SMB VEV
