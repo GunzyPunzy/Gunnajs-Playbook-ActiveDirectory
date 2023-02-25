@@ -59,7 +59,7 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```bash
  sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
 ```
-### With AD-user
+### With AD-user credentials 
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
