@@ -146,14 +146,50 @@ pret.py target {ps,pjl,pcl}
 ## Zero Logon
 * in the making 
 
-### Crack NTLMv2 hashes
+## Hash cracking
+### LM
 ```bash
-hashcat64.exe -m 5600 ntlm-hashes.txt <passlist.txt> -o cracked.txt
+hashcat64.exe -m 3000 -a 3 LM-hashes.txt -o cracked.txt
 ```
 
-### Crack kerberos hashes
+### NTLM
 ```bash
-hashcat64.exe -m 13100 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
+hashcat64.exe -m 1000 -a 3 NTLM-hashes.txt -o cracked.txt
+```
+
+### NTLMv1
+```bash
+hashcat64.exe -m 5500 -a 3 NTLMv1-hashes.txt -o cracked.txt
+```
+
+### NTLMv2
+```bash
+hashcat64.exe -m 5600 -a 0 NTLMv2-hashes.txt <passlist.txt> -o cracked.txt
+```
+
+### Kerberos 5 TGS
+```bash
+hashcat64.exe -m 13100 -a 0 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
+```
+
+### Kerberos 5 TGS AES128
+```bash
+hashcat64.exe -m 19600 -a 0 krb5tgsaes128-hashes.txt <passlist.txt> -o cracked.txt
+```
+
+### Kerberos 5 TGS AES256
+```bash
+hashcat64.exe -m 19600  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
+```
+
+### Kerberos ASREP
+```bash
+hashcat64.exe -m 18200 -a 0 asrep-hashes.txt <passlist.txt> -o cracked.txt
+```
+
+### MsCache 2 (slow af)
+```bash
+hashcat64.exe -m 2100 -a 0 mscache2-hashes.txt <passlist.txt> -o cracked.txt
 ```
 
 ## Mimikatz
