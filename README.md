@@ -124,7 +124,6 @@ WINRM = On
 SNMP = Off
 ```
 
-```
 ## SMB VEV
 ### Mount share
 ```bash
@@ -140,6 +139,7 @@ sudo umount <./folder>
 ```bash
 grep -i <keyword> *
 ```
+
 ## PRET
 ### Nmap printers
 ```bash
