@@ -190,6 +190,8 @@ grep -i <keyword> *
 ```bash
 nmap -p 9100 <IP/mask>
 ```
+
+### Kickstart PRET 
 ```bash
 pret.py target {ps,pjl,pcl}
 ```
