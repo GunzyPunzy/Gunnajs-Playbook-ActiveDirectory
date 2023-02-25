@@ -124,7 +124,7 @@ responder -I eth0
 responder -I eth0 --lm
 ```
 
-### Responder linkifle
+### Responder LNK ifle
 
 #### In Powershell, use each command to create a linkfile for Responder
 ```powershell
