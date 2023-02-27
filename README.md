@@ -119,6 +119,18 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
 
+### With administrator Account (using password, NTLM hash or Kerberos ticket)**
+- All of the "Standard User" checks
+- Module pwd_dump
+    - LAPS and gMSA dump
+    - secretsdump on all domain servers
+    - NTDS dump using impacket, crackmapexec and certsync
+    - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
+    - Extract backup keys using DonPAPI, HEKATOMB
+```bash
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -M all -o <output_dir>
+```
+
 ## Password spray
 ### Spray a password on a user list
 ```bash
