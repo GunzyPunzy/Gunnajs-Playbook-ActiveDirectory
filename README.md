@@ -119,7 +119,7 @@ nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
 ```
 
-### With administrator Account (using password, NTLM hash or Kerberos ticket)**
+### With administrator Account (using password, NTLM hash or Kerberos ticket)
 - All of the "Standard User" checks
 - Module pwd_dump
     - LAPS and gMSA dump
