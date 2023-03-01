@@ -20,7 +20,11 @@ https://github.com/lgandx/Responder
 https://github.com/hmaverickadams/breach-parse
 
 ### PRET
+```bash
 https://github.com/RUB-NDS/PRET
+git clone https://github.com/RUB-NDS/PRET && cd PRET
+python2 -m pip install colorama pysnmP
+```bash
 
 ## Wordlists bby
 ### Generate wordlist
