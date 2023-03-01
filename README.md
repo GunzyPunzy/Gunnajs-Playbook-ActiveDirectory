@@ -27,8 +27,8 @@ https://github.com/lgandx/Responder
 https://github.com/hmaverickadams/breach-parse
 
 ### PRET
-```bash
 https://github.com/RUB-NDS/PRET
+```bash
 git clone https://github.com/RUB-NDS/PRET && cd PRET
 ```
 ```bash
