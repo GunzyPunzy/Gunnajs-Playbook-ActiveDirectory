@@ -15,7 +15,7 @@ chmod +x install.sh
 ./install.sh
 ```
 ### BloodHound
-https://github.com/fox-it/BloodHound.py
+https://github.com/BloodHoundAD/Bloodhound
 ```bash
 wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
 echo 'deb https://debian.neo4j.com stable latest' > /etc/apt/sources.list.d/neo4j.list
