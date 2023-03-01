@@ -14,6 +14,7 @@ cd linWinPwn; chmod +x linWinPwn.sh
 chmod +x install.sh
 ./install.sh
 ```
+
 ### BloodHound
 https://github.com/BloodHoundAD/Bloodhound
 ```bash
@@ -54,6 +55,7 @@ npm install
 ```bash
 npm run build:linux
 ```
+
 ### mimikatz
 https://github.com/ParrotSec/mimikatz
 
