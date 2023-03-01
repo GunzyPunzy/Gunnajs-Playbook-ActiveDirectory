@@ -5,8 +5,15 @@ How to pentest like a Gunnaj
 
 ## Tools bby
 ### linWinPwn - Active Directory Vulnerability Scanner
+```bash
 https://github.com/lefayjey/linWinPwn
-
+git clone https://github.com/lefayjey/linWinPwn
+cd linWinPwn; chmod +x linWinPwn.sh
+```
+```bash
+chmod +x install.sh
+./install.sh
+```
 ### BloodHound
 https://github.com/fox-it/BloodHound.py
 
@@ -24,7 +31,7 @@ https://github.com/hmaverickadams/breach-parse
 https://github.com/RUB-NDS/PRET
 git clone https://github.com/RUB-NDS/PRET && cd PRET
 python2 -m pip install colorama pysnmP
-```bash
+```
 
 ## Wordlists bby
 ### Generate wordlist
