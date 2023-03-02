@@ -270,7 +270,10 @@ grep -i <keyword> *
 ```bash
 nmap -p 9100 <IP/mask>
 ```
-
+### cheat sheet
+```bash
+http://hacking-printers.net/wiki/index.php/Printer_Security_Testing_Cheat_Sheet
+```
 ### Kickstart PRET 
 ```bash
 pret.py target {ps,pjl,pcl}
