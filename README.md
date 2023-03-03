@@ -14,6 +14,11 @@ cd linWinPwn; chmod +x linWinPwn.sh
 chmod +x install.sh
 ./install.sh
 ```
+### tmux
+https://github.com/tmux/tmux/wiki
+```bash
+apt install tmux
+```
 
 ### BloodHound
 https://github.com/BloodHoundAD/Bloodhound
