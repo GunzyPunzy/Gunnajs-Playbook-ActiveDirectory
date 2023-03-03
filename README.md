@@ -15,10 +15,10 @@ chmod +x install.sh
 ./install.sh
 ```
 ### tmux
-https://github.com/tmux/tmux/wiki
 ```bash
 apt install tmux
 ```
+https://github.com/tmux/tmux/wiki
 
 ### BloodHound
 https://github.com/BloodHoundAD/Bloodhound
