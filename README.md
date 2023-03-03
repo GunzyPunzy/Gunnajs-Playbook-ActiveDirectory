@@ -19,6 +19,8 @@ https://github.com/tmux/tmux/wiki
 ```bash
 apt install tmux
 ```
+#### If you get lost
+https://tmuxcheatsheet.com/
 
 ### BloodHound
 https://github.com/BloodHoundAD/Bloodhound
