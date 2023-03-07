@@ -317,7 +317,7 @@ hashcat64.exe -m 19600 -a 0 krb5tgsaes128-hashes.txt <passlist.txt> -o cracked.t
 
 ### Kerberos 5 TGS AES256
 ```bash
-hashcat64.exe -m 19600  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
+hashcat64.exe -m 19700  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
 ```
 
 ### Kerberos ASREP
