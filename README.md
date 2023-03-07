@@ -66,6 +66,20 @@ npm run build:linux
 ### pypykatz
 https://github.com/skelsec/pypykatz
 
+#### Install prerequirements
+```bash
+pip3 install minidump minikerberos aiowinreg msldap winacl
+```
+#### Clone this repo
+```bash
+git clone https://github.com/skelsec/pypykatz.git
+cd pypykatz
+```
+#### Install it
+```bash
+python3 setup.py install
+```
+
 ### Responder
 https://github.com/lgandx/Responder
 
