@@ -305,6 +305,11 @@ hashcat64.exe -m 5500 -a 3 NTLMv1-hashes.txt -o cracked.txt
 hashcat64.exe -m 5600 -a 0 NTLMv2-hashes.txt <passlist.txt> -o cracked.txt
 ```
 
+### Kerberos ASREP
+```bash
+hashcat64.exe -m 18200 -a 0 asrep-hashes.txt <passlist.txt> -o cracked.txt
+```
+
 ### Kerberos 5 TGS
 ```bash
 hashcat64.exe -m 13100 -a 0 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
@@ -320,9 +325,14 @@ hashcat64.exe -m 19600 -a 0 krb5tgsaes128-hashes.txt <passlist.txt> -o cracked.t
 hashcat64.exe -m 19700  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
 ```
 
-### Kerberos ASREP
+### Kerberos 5 etype 17, Pre-Auth
 ```bash
-hashcat64.exe -m 18200 -a 0 asrep-hashes.txt <passlist.txt> -o cracked.txt
+hashcat64.exe -m 19800  -a 0 krb5tetype17.txt <passlist.txt> -o cracked.txt
+```
+
+### Kerberos 5 etype 18, Pre-Auth
+```bash
+hashcat64.exe -m 19900  -a 0 krb5tetype18.txt <passlist.txt> -o cracked.txt
 ```
 
 ### MsCache 2 (slow af)
