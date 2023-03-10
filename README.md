@@ -270,9 +270,6 @@ WINRM = On
 SNMP = Off
 ```
 
-## Disable lsass protection
-#### go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa in registry and change RunAsPPL DWORD value to 0
-
 ## pypykatz
 ### Examine lsass dump
 ```bash
