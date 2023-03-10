@@ -203,7 +203,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <
     - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
     - Extract backup keys using DonPAPI, HEKATOMB
 ```bash
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -o <output_dir>
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
 
 ## Password spray
