@@ -277,7 +277,7 @@ pypykatz lsa minidump lsass.DMP
 ```
 
 ## golden and silver tickets
-### Get user SID value by using the Windows Terminal
+#### Get user SID value by using the Windows Terminal
 ```cmd
 wmic useraccount where name="USER" get sid
 ```
