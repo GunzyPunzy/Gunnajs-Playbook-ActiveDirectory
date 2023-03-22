@@ -139,6 +139,11 @@ sudo mncli dev show eth0
 nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
 ```
 
+#### Show DC controllers in cmd
+```bash
+nltest /dclist:<domainname>
+```
+
 ## linWinPwn 
 ### Unauthenticated
 - Module ad_enum
