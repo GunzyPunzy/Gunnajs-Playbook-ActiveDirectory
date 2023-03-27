@@ -115,17 +115,17 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 ## Nmap
 #### Ping scan
 ```bash
-sudo nmap -sP -p <output.txt> <IP/mask>
+sudo nmap -sP -p -oN <output.txt> <IP/mask>
 ```
 
 #### Full scan
 ```bash
-sudo nmap -PN -sC -sV -p- -oA <output.txt> <IP/mask>
+sudo nmap -PN -sC -sV -p- -oN <output.txt> <IP/mask>
 ```
 
 #### smb vuln scan
 ```bash
-sudo nmap -PN --script smb-vuln* -p139,445 -oA <output.txt> <IP/mask>
+sudo nmap -PN --script smb-vuln* -p139,445 -oN <output.txt> <IP/mask>
 ```
 
 ## Find DC IP
