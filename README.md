@@ -10,13 +10,13 @@ https://github.com/lefayjey/linWinPwn
   <summary> Install </summary> 
 
   ```bash
-git clone https://github.com/lefayjey/linWinPwn
-cd linWinPwn; chmod +x linWinPwn.sh
-```
-```bash
-chmod +x install.sh
-./install.sh
-```  
+  git clone https://github.com/lefayjey/linWinPwn
+  cd linWinPwn; chmod +x linWinPwn.sh
+  ```
+  ```bash
+  chmod +x install.sh
+  ./install.sh
+  ```  
 </details>
 
 
