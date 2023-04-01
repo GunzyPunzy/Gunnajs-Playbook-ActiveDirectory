@@ -7,7 +7,7 @@ How to pentest like a Gunnaj
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
 <details>
-  <summary> Install </summary> 
+  <summary> Installation </summary> 
 
   ```bash
   git clone https://github.com/lefayjey/linWinPwn
@@ -22,7 +22,7 @@ https://github.com/lefayjey/linWinPwn
 ### BloodHound
 https://github.com/fox-it/BloodHound.py
 <details>
-  <summary> Install </summary> 
+  <summary> Installation </summary> 
   
   ```bash
   git clone https://github.com/fox-it/BloodHound.py
@@ -37,20 +37,23 @@ https://github.com/fox-it/BloodHound.py
 
 ### pypykatz
 https://github.com/skelsec/pypykatz
+<details>
+  <summary> Installation </summary> 
 
-#### Install prerequirements
-```bash
-pip3 install minidump minikerberos aiowinreg msldap winacl
-```
-#### Clone this repo
-```bash
-git clone https://github.com/skelsec/pypykatz.git
-cd pypykatz
-```
-#### Install it
-```bash
-python3 setup.py install
-```
+  #### Install prerequirements
+  ```bash
+  pip3 install minidump minikerberos aiowinreg msldap winacl
+  ```
+  #### Clone this repo
+  ```bash
+  git clone https://github.com/skelsec/pypykatz.git
+  cd pypykatz
+  ```
+  #### Install it
+  ```bash
+  python3 setup.py install
+  ```
+<details>
 
 ### Responder
 https://github.com/lgandx/Responder
