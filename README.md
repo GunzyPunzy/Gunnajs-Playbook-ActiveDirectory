@@ -4,11 +4,10 @@ How to pentest like a Gunnaj
 ![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader.jpg)
 
 ## Tools bby
-<details>
-  <summary> Tools bby</summary>
-
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
+<details>
+  <summary> Install </summary>
 ```bash
 git clone https://github.com/lefayjey/linWinPwn
 cd linWinPwn; chmod +x linWinPwn.sh
