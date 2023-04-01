@@ -25,8 +25,16 @@ https://github.com/fox-it/BloodHound.py
   <summary> Installation </summary> 
   
   ```bash
-  git clone https://github.com/fox-it/BloodHound.py
+  apt-get install bloodhound
   ```
+  ```bash
+  neo4j console
+  ```
+  #### Navigate to http://localhost:7474/
+  ```bash
+  bloodhound
+  ```
+  
 </details>
 
 ### pypykatz
