@@ -7,19 +7,18 @@ How to pentest like a Gunnaj
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
 <details>
-  <summary> Install </summary>
-  
+  <summary> Install </summary> 
 ```bash
 git clone https://github.com/lefayjey/linWinPwn
 cd linWinPwn; chmod +x linWinPwn.sh
 ```
-  
-</details>
-
 ```bash
 chmod +x install.sh
 ./install.sh
-```
+```  
+</details>
+
+
 ### tmux
 https://github.com/tmux/tmux/wiki
 ```bash
