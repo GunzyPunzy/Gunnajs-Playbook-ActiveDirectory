@@ -5,7 +5,7 @@ How to pentest like a Gunnaj
 
 ## Tools bby
 <details>
-  <summary> Installation </summary> 
+  <summary>  </summary> 
   
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
