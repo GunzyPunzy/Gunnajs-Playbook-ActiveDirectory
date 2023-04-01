@@ -20,7 +20,7 @@ https://github.com/lefayjey/linWinPwn
 </details>
 
 ### BloodHound
-https://github.com/fox-it/BloodHound.py
+https://github.com/BloodHoundAD/BloodHound
 <details>
   <summary> Installation </summary> 
   
@@ -30,11 +30,7 @@ https://github.com/fox-it/BloodHound.py
   ```bash
   neo4j console
   ```
-  #### Navigate to http://localhost:7474/
-  ```bash
-  bloodhound
-  ```
-  
+  #### Navigate to http://localhost:7474/ 
 </details>
 
 ### pypykatz
