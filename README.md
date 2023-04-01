@@ -8,7 +8,8 @@ How to pentest like a Gunnaj
 https://github.com/lefayjey/linWinPwn
 <details>
   <summary> Install </summary> 
-```bash
+
+  ```bash
 git clone https://github.com/lefayjey/linWinPwn
 cd linWinPwn; chmod +x linWinPwn.sh
 ```
