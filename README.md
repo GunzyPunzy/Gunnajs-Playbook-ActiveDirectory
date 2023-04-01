@@ -19,55 +19,20 @@ https://github.com/lefayjey/linWinPwn
   ```  
 </details>
 
-
-### tmux
-https://github.com/tmux/tmux/wiki
-```bash
-apt install tmux
-```
-#### If you get lost
-https://tmuxcheatsheet.com/
-
 ### BloodHound
-https://github.com/BloodHoundAD/Bloodhound
-```bash
-wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
-echo 'deb https://debian.neo4j.com stable latest' > /etc/apt/sources.list.d/neo4j.list
-sudo apt-get update
-```
-```bash
-sudo apt-get install apt-transport-https
-```
-```bash
-sudo apt-get install neo4j
-```
-```bash
-sudo systemctl stop neo4j
-```
-```bash
-cd /usr/bin
-```
-```bash
-./neo4j console
-```
-```bash
-sudo systemctl start neo4j
-```
-```bash
-https://localhost:7474/
-```
-```bash
-sudo npm install -g electron-packager
-```
-```bash
-git clone https://github.com/BloodHoundAD/Bloodhound
-```
-```bash
-npm install
-```
-```bash
-npm run build:linux
-```
+https://github.com/fox-it/BloodHound.py
+<details>
+  <summary> Install </summary> 
+  ```bash
+  git clone https://github.com/fox-it/BloodHound.py
+  ```
+  ```bash
+  sudo apt-get install neo4j
+  ```
+  ```bash
+  sudo systemctl stop neo4j
+  ```
+</details>
 
 ### pypykatz
 https://github.com/skelsec/pypykatz
