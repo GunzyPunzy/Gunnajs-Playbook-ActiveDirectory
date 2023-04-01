@@ -64,12 +64,16 @@ https://github.com/hmaverickadams/breach-parse
 
 ### PRET
 https://github.com/RUB-NDS/PRET
-```bash
-git clone https://github.com/RUB-NDS/PRET && cd PRET
+<details>
+  <summary> Installation </summary> 
+  
+  ```bash
+  git clone https://github.com/RUB-NDS/PRET && cd PRET
+  ```
+  ```bash
+  python -m pip install colorama pysnmP
 ```
-```bash
-python -m pip install colorama pysnmP
-```
+</details>
 
 ## Wordlists bby
 ### Generate wordlist
