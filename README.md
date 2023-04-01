@@ -53,7 +53,7 @@ https://github.com/skelsec/pypykatz
   ```bash
   python3 setup.py install
   ```
-<details>
+</details>
 
 ### Responder
 https://github.com/lgandx/Responder
