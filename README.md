@@ -27,12 +27,6 @@ https://github.com/fox-it/BloodHound.py
   ```bash
   git clone https://github.com/fox-it/BloodHound.py
   ```
-  ```bash
-  sudo apt-get install neo4j
-  ```
-  ```bash
-  sudo systemctl stop neo4j
-  ```
 </details>
 
 ### pypykatz
