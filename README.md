@@ -296,7 +296,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD
 pypykatz lsa minidump lsass.DMP
 ```
 
-## golden and silver tickets
+# golden and silver tickets
 #### Get user SID value by using the Windows Terminal
 ```cmd
 wmic useraccount where name="USER" get sid
