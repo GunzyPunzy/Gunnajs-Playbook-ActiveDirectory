@@ -55,6 +55,9 @@ https://github.com/dievus/lnkbomb
   ```
 </details>
 
+### CrackMapExec
+https://github.com/Porchetta-Industries/CrackMapExec
+
 ### Impacket
 https://github.com/fortra/impacket
 
