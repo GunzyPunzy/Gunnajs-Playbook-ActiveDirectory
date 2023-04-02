@@ -93,7 +93,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
  
 # Netowrk enumeration
 <details>
-  <summary> Installation </summary> 
+  <summary> NMAP </summary> 
   
   ### Nmap
   #### Ping scan
