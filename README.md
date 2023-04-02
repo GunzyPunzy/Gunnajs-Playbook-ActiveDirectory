@@ -91,38 +91,42 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 ### Rockyou2021
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
  
-# VEV
-## Nmap
-#### Ping scan
-```bash
-sudo nmap -sP -p -oN <output.txt> <IP/mask>
-```
+# Netowrk enumeration
+<details>
+  <summary> Installation </summary> 
+  
+  ### Nmap
+  #### Ping scan
+  ```bash
+  sudo nmap -sP -p -oN <output.txt> <IP/mask>
+  ```
 
-#### Full scan
-```bash
-sudo nmap -PN -sC -sV -p- -oN <output.txt> <IP/mask>
-```
+  #### Full scan
+  ```bash
+  sudo nmap -PN -sC -sV -p- -oN <output.txt> <IP/mask>
+  ```
 
-#### smb vuln scan
-```bash
-sudo nmap -PN --script smb-vuln* -p139,445 -oN <output.txt> <IP/mask>
-```
+  #### smb vuln scan
+  ```bash
+  sudo nmap -PN --script smb-vuln* -p139,445 -oN <output.txt> <IP/mask>
+  ```
 
-## Find DC IP
-#### Show domain name and DNS
-```bash
-sudo mncli dev show eth0
-```
+  ### Find DC IP
+  #### Show domain name and DNS
+  ```bash
+  sudo mncli dev show eth0
+  ```
 
-#### Show DC IP
-```bash
-nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
-```
+  #### Show DC IP
+  ```bash
+  nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
+  ```
 
-#### Show DC controllers in cmd
-```bash
-nltest /dclist:<domainname>
-```
+  #### Show DC controllers in cmd
+  ```bash
+  nltest /dclist:<domainname>
+  ```
+</details>
 
 ## linWinPwn 
 ### Unauthenticated
