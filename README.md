@@ -358,6 +358,7 @@ pret.py target {ps,pjl,pcl}
 ## Hash cracking
 <details>
   <summary> Hashcat </summary> 
+  
   ### LM
   ```bash
   hashcat64.exe -m 3000 -a 3 LM-hashes.txt -o cracked.txt
