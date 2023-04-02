@@ -72,13 +72,10 @@ https://github.com/RUB-NDS/PRET
   ```
   ```bash
   python -m pip install colorama pysnmP
-```
+  ```
 </details>
 
 ## Wordlists
-<details>
-  <summary>  </summary> 
-  
 ### Generate wordlist
 https://zzzteph.github.io/weakpass/
 
@@ -93,7 +90,6 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 
 ### Rockyou2021
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
-</details>
  
 # VEV
 ## Nmap
