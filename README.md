@@ -341,19 +341,23 @@ sudo umount <./folder>
 grep -i <keyword> *
 ```
 
-## PRET
-### Nmap printers
-```bash
-nmap -p 9100 <IP/mask>
-```
-### cheat sheet
-```bash
-http://hacking-printers.net/wiki/index.php/Printer_Security_Testing_Cheat_Sheet
-```
-### Kickstart PRET 
-```bash
-pret.py target {ps,pjl,pcl}
-```
+# Printers
+<details>
+  <summary> PRET </summary> 
+
+  ### Nmap printers
+  ```bash
+  nmap -p 9100 <IP/mask>
+  ```
+  ### cheat sheet
+  ```bash
+  http://hacking-printers.net/wiki/index.php/Printer_Security_Testing_Cheat_Sheet
+  ```
+  ### Kickstart PRET 
+  ```bash
+  pret.py target {ps,pjl,pcl}
+  ```
+</details>
 
 ## Hash cracking
 <details>
