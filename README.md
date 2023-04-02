@@ -4,6 +4,9 @@ How to pentest like a Gunnaj
 ![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader.jpg)
 
 # Toolbox
+### NMAP
+https://nmap.org/
+
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
 <details>
@@ -33,6 +36,25 @@ https://github.com/BloodHoundAD/BloodHound
   #### Navigate to http://localhost:7474/ 
 </details>
 
+### Responder
+https://github.com/lgandx/Responder
+
+### lnkbomb
+https://github.com/dievus/lnkbomb
+<details>
+  <summary> Installation </summary> 
+
+  #### Install prerequirements
+  ```bash
+  pip install pysmb==1.2.2
+  ```
+  #### Clone this repo
+  ```bash
+  git clone https://github.com/dievus/lnkbomb
+  cd pypykatz
+  ```
+</details>
+
 ### Impacket
 https://github.com/fortra/impacket
 
@@ -55,9 +77,6 @@ https://github.com/skelsec/pypykatz
   python3 setup.py install
   ```
 </details>
-
-### Responder
-https://github.com/lgandx/Responder
 
 ### breach-parse
 https://github.com/hmaverickadams/breach-parse
