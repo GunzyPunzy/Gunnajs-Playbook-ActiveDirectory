@@ -218,6 +218,7 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```bash
   responder -I eth0 --lm
   ```
+ </details>
  <details>
   <summary> lnkbomb </summary> 
   
