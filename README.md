@@ -209,18 +209,6 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   ```
 </details>
   
-### With administrator Account (using password, NTLM hash or Kerberos ticket)
-- All of the "Standard User" checks
-- Module pwd_dump
-    - LAPS and gMSA dump
-    - secretsdump on all domain servers
-    - NTDS dump using impacket, crackmapexec and certsync
-    - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
-    - Extract backup keys using DonPAPI, HEKATOMB
-```bash
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
-```
-
 ## Password spray
 ### Spray a password on a user list
 ```bash
@@ -289,7 +277,19 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   SNMP = Off
   ```
 </details>
-  
+
+# Credential dumping
+### With administrator Account (using password, NTLM hash or Kerberos ticket)
+- All of the "Standard User" checks
+- Module pwd_dump
+    - LAPS and gMSA dump
+    - secretsdump on all domain servers
+    - NTDS dump using impacket, crackmapexec and certsync
+    - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
+    - Extract backup keys using DonPAPI, HEKATOMB
+```bash
+sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
+```
 ## pypykatz
 ### Examine lsass dump
 ```bash
