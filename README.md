@@ -91,7 +91,7 @@ https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
 ### Rockyou2021
 https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
  
-# Netowrk enumeration
+# Netowork enumeration
 <details>
   <summary> NMAP </summary> 
   
@@ -128,61 +128,65 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   ```
 </details>
 
-## linWinPwn 
-### Unauthenticated
-- Module ad_enum
-    - RID bruteforce using crackmapexec
-    - Anonymous enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, ldeep
-    - Pre2k authentication check on collected list of computers
-- Module kerberos
-    - kerbrute user spray
-    - ASREPRoast using collected list of users (and cracking hashes using john-the-ripper and the rockyou wordlist)
-    - Blind Kerberoast
-    - CVE-2022-33679 exploit
-- Module scan_shares
-    - SMB shares anonymous enumeration on identified servers
-- Module vuln_checks
-    - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on identified servers
-    - Check for ms17-010, zerologon, petitpotam, nopac, smb-sigining, ntlmv1, runasppl weaknesses
-```bash
- sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
-```
+# Acitve directory enumeration
+<details>
+  <summary> NMAP </summary> 
+  ## linWinPwn 
+  ### Unauthenticated
+  - Module ad_enum
+      - RID bruteforce using crackmapexec
+      - Anonymous enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, ldeep
+      - Pre2k authentication check on collected list of computers
+  - Module kerberos
+      - kerbrute user spray
+      - ASREPRoast using collected list of users (and cracking hashes using john-the-ripper and the rockyou wordlist)
+      - Blind Kerberoast
+      - CVE-2022-33679 exploit
+  - Module scan_shares
+      - SMB shares anonymous enumeration on identified servers
+  - Module vuln_checks
+      - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on identified servers
+      - Check for ms17-010, zerologon, petitpotam, nopac, smb-sigining, ntlmv1, runasppl weaknesses
+  ```bash
+   sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
+  ```
 
-### With AD-user credentials 
-- DNS extraction using adidnsdump
-- Module ad_enum
-    - BloodHound data collection
-    - Enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, windapsearch, SilentHound, ldeep
-        - Users
-        - MachineAccountQuota
-        - Password Policy
-        - Users' descriptions containing "pass"
-        - ADCS
-        - Subnets
-        - GPP Passwords
-        - Check if ldap-signing is enforced, check for LDAP Relay
-        - Delegation information
-    - crackmapexec find accounts with user=pass 
-    - Pre2k authentication check on domain computers
-    - Extract ADCS information using certipy and certi.py
- 
-- Module kerberos
-    - kerbrute find accounts with user=pas
-    - ASREPRoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
-    - Kerberoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
-    - Targeted Kerberoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
-- Module scan_shares
-    - SMB shares enumeration on all domain servers using smbmap and cme's spider_plus
-    - KeePass files and processes discovery on all domain servers
-- Module vuln_checks
-    - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on all domain servers
-    - Check for ms17-010, ms14-068, zerologon, petitpotam, nopac, smb-signing, ntlmv1, runasppl weaknesses
-- Module mssql_enum
-    - Check mssql privilege escalation paths
-```bash
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
-```
+  ### With AD-user credentials 
+  - DNS extraction using adidnsdump
+  - Module ad_enum
+      - BloodHound data collection
+      - Enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, windapsearch, SilentHound, ldeep
+          - Users
+          - MachineAccountQuota
+          - Password Policy
+          - Users' descriptions containing "pass"
+          - ADCS
+          - Subnets
+          - GPP Passwords
+          - Check if ldap-signing is enforced, check for LDAP Relay
+          - Delegation information
+      - crackmapexec find accounts with user=pass 
+      - Pre2k authentication check on domain computers
+      - Extract ADCS information using certipy and certi.py
 
+  - Module kerberos
+      - kerbrute find accounts with user=pas
+      - ASREPRoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
+      - Kerberoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
+      - Targeted Kerberoasting (and cracking hashes using john-the-ripper and the rockyou wordlist)
+  - Module scan_shares
+      - SMB shares enumeration on all domain servers using smbmap and cme's spider_plus
+      - KeePass files and processes discovery on all domain servers
+  - Module vuln_checks
+      - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on all domain servers
+      - Check for ms17-010, ms14-068, zerologon, petitpotam, nopac, smb-signing, ntlmv1, runasppl weaknesses
+  - Module mssql_enum
+      - Check mssql privilege escalation paths
+  ```bash
+  sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
+  ```
+</details>
+  
 ### With administrator Account (using password, NTLM hash or Kerberos ticket)
 - All of the "Standard User" checks
 - Module pwd_dump
