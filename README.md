@@ -131,6 +131,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 # Acitve directory enumeration
 <details>
   <summary> linWinPwn </summary> 
+  
   ### Unauthenticated
   - Module ad_enum
       - RID bruteforce using crackmapexec
@@ -207,6 +208,7 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
 # Poisining 
 <details>
   <summary> Responder </summary> 
+  
   ### Kickstart responder
   ```bash
   responder -I eth0
