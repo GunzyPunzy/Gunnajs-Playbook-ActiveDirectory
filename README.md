@@ -3,10 +3,7 @@ How to pentest like a Gunnaj
 
 ![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader.jpg)
 
-## Tools bby
-<details>
-  <summary>  </summary> 
-  
+# Tools bby
 ### linWinPwn - Active Directory Vulnerability Scanner
 https://github.com/lefayjey/linWinPwn
 <details>
@@ -76,7 +73,6 @@ https://github.com/RUB-NDS/PRET
   ```bash
   python -m pip install colorama pysnmP
 ```
-</details>
 </details>
 
 ## Wordlists bby
