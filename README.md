@@ -51,7 +51,6 @@ https://github.com/dievus/lnkbomb
   #### Clone this repo
   ```bash
   git clone https://github.com/dievus/lnkbomb
-  cd pypykatz
   ```
 </details>
 
