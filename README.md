@@ -48,7 +48,7 @@ https://github.com/dievus/lnkbomb
 
   #### Install prerequirements
   ```bash
-  pip install pysmb==1.2.2
+  pip install -r requirements.txt
   ```
   #### Clone this repo
   ```bash
