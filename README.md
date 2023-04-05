@@ -1,5 +1,3 @@
-https://www.truesec.com/hub/blog/from-stranger-to-da-using-petitpotam-to-ntlm-relay-to-active-directory
-
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
