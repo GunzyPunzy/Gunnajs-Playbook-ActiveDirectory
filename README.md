@@ -54,6 +54,12 @@ https://github.com/dievus/lnkbomb
   ```
 </details>
 
+### PetitPotam
+https://github.com/topotam/PetitPotam
+
+### DFSCoerce
+https://github.com/Wh04m1001/DFSCoerce
+
 ### CrackMapExec
 https://github.com/Porchetta-Industries/CrackMapExec
 
