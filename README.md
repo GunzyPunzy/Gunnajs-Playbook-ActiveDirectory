@@ -325,7 +325,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD
 </details> 
   
 <details>
-  <summary> CrackMapExec local authenitcation </summary> 
+  <summary> CrackMapExec local authentication </summary> 
   
   ### Dump SAM on local computer
   ```bash
