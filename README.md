@@ -289,12 +289,12 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   WINRM = On
   SNMP = Off
   ```
-</details>
 
 ### Kicksart responder then
   ```bash
   sudo responder -I eth0 -dwv
   ```
+</details>
 
 <details>
   <summary> PetitPotam </summary> 
