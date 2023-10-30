@@ -62,6 +62,14 @@ https://www.netexec.wiki/
   ```
 </details>
 
+### Evil-WinRM
+https://github.com/Hackplayers/evil-winrm
+ #### Installation
+  ```bash
+  gem install evil-winrm
+  ```
+</details>
+
 ### FindUncommonShares
 https://github.com/p0dalirius/FindUncommonShares
 
