@@ -358,6 +358,28 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 </details> 
 
+# Share enumeration
+
+<details>
+  <summary> Mount and unmount shares </summary> 
+
+### Mount share
+```bash
+sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
+```
+
+### Unmount share
+```bash
+sudo umount <./folder>
+```
+
+### Search for keywords in files
+```bash
+grep -i <keyword> *
+```
+
+</details> 
+
 # Credential dumping
 
 <details>
@@ -447,27 +469,6 @@ klist
 #### Execute remote commands with any of the following by using the TGT
 ```bash
 python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
-```
-
-## Share enumeration
-
-<details>
-  <summary> Mount and unmount shares </summary> 
-
-### Mount share
-```bash
-sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
-```
-
-### Unmount share
-```bash
-sudo umount <./folder>
-```
-</details> 
-
-### Search for keywords in files
-```bash
-grep -i <keyword> *
 ```
 
 # Printers
