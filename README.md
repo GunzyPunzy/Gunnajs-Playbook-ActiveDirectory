@@ -384,7 +384,7 @@ NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares RE
   <summary> List uncommon shares </summary> 
 
 ```bash
-python smbmap.py -H <target_IP> -u <username> -p <password>
+./FindUncommonShares.py -u <username> -p <password> -d <AD_domain> --dc-ip <Domain_Controller_IP> --check-user-access
 ```
 
 </details> 
