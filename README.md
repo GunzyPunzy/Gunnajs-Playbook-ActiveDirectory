@@ -361,7 +361,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 # Credential dumping
 
 <details>
-  <summary> NetExec local authentication </summary> 
+  <summary> NetExec domain authentication </summary> 
 
   ### Dump NT:hash with masky with domain user
   #### Get ADCS server name
