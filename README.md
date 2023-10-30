@@ -473,13 +473,15 @@ grep -i <keyword> *
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
 </details> 
-  
-## pypykatz
-### Examine lsass dump
+
+<details>
+  <summary> Examine lsass dump with pypykatz </summary> 
+
 ```bash
 pypykatz lsa minidump lsass.DMP
 ```
-
+</details> 
+  
 # golden and silver tickets
 #### Get user SID value by using the Windows Terminal
 ```cmd
