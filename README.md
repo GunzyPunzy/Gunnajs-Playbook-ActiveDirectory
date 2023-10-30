@@ -361,6 +361,15 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 # Share enumeration
 
 <details>
+  <summary> List readable or writable shares </summary> 
+
+```bash
+NetExec smb  <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
+```
+
+</details> 
+
+<details>
   <summary> Mount and unmount shares </summary> 
 
 ### Mount share
