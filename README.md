@@ -482,12 +482,15 @@ pypykatz lsa minidump lsass.DMP
 ```
 </details> 
 
-# Remoce Code Execution
+# Remote Code Execution
 
 <details>
   <summary> NetExec </summary> 
   
   ### Executes command via the follwoing protocols: 
+  * 'wmiexec' executes commands via WMI
+  * 'atexec' executes commands by scheduling a task with windows task scheduler
+  * 'smbexec' executes commands by creating and running a service
   
   #### command
   ```bash
