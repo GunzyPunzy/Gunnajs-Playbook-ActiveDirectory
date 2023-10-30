@@ -64,7 +64,9 @@ https://www.netexec.wiki/
 
 ### Evil-WinRM
 https://github.com/Hackplayers/evil-winrm
- #### Installation
+<details>
+  <summary> Installation </summary>
+  
   ```bash
   gem install evil-winrm
   ```
