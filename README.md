@@ -62,14 +62,14 @@ https://www.netexec.wiki/
   ```
 </details>
 
-### SMBMap
-https://github.com/ShawnDEvans/smbmap
+### FindUncommonShares
+https://github.com/p0dalirius/FindUncommonShares
 
 <details>
   <summary> Installation </summary> 
   
   ```bash
-  sudo pip3 install smbmap
+  git clone https://github.com/p0dalirius/FindUncommonShares
   ```
 </details>
 
@@ -375,7 +375,16 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> List readable or writable shares </summary> 
 
 ```bash
-NetExec smb  <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
+NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
+```
+
+</details>
+
+<details>
+  <summary> List uncommon shares </summary> 
+
+```bash
+python smbmap.py -H <target_IP> -u <username> -p <password>
 ```
 
 </details> 
