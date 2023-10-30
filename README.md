@@ -237,11 +237,11 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 ## Password spray
 <details>
   <summary> NetExec Password spray </summary> 
-### Spray a password on a user list
-```bash
-</details>
-netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
-```
+  ### Spray a password on a user list
+  ```bash
+  netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
+  ```
+  </details>
 # MITM
 <details>
   <summary> Responder </summary> 
