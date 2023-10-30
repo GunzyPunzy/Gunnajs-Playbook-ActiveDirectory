@@ -328,7 +328,6 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   
 # Credential stuff
 
-## Password spray
 <details>
   <summary> NetExec Password spray </summary> 
   
