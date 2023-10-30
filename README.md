@@ -449,7 +449,11 @@ klist
 python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 ```
 
-## SMB VEV
+## Share enumeration
+
+<details>
+  <summary> Mount and unmount shares </summary> 
+
 ### Mount share
 ```bash
 sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
@@ -459,6 +463,7 @@ sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,
 ```bash
 sudo umount <./folder>
 ```
+</details> 
 
 ### Search for keywords in files
 ```bash
