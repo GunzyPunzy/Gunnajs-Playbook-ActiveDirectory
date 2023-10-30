@@ -344,7 +344,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec domain authentication </summary> 
   
   ```bash
-  sudo crackmapexec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash_NT]> 
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash_NT]> 
   ```
 
 </details> 
@@ -353,7 +353,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec local authentication </summary> 
   
   ```bash
-  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  sudo NetExec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
   ```
 
 </details> 
