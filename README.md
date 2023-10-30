@@ -7,7 +7,7 @@ How to pentest like a Gunnaj
 
 # Toolbox
 <details>
-  <summary> Installation </summary> 
+  <summary> Utils </summary> 
 
   ### NMAP
   https://nmap.org/
@@ -164,21 +164,22 @@ How to pentest like a Gunnaj
 
 # Wordlists
 <details>
+  <summary> Lists </summary> 
   
-### Generate wordlist
-https://zzzteph.github.io/weakpass/
-
-### Top 10 million
-https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
-
-### Crackstation
-https://crackstation.net/files/crackstation.txt.gz (14.6 GB)
-
-### Large p-list
-https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
-
-### Rockyou2021
-https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
+  ### Generate wordlist
+  https://zzzteph.github.io/weakpass/
+  
+  ### Top 10 million
+  https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt (8.1 MB)
+  
+  ### Crackstation
+  https://crackstation.net/files/crackstation.txt.gz (14.6 GB)
+  
+  ### Large p-list
+  https://download.g0tmi1k.com/wordlists/large/36.4GB-18_in_1.lst.7z (48.4 GB)
+  
+  ### Rockyou2021
+  https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 </details>
 
 # Network enumeration
