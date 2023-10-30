@@ -485,13 +485,13 @@ pypykatz lsa minidump lsass.DMP
 # Remoce Code Execution
 
 <details>
-  <summary> wmiexec </summary> 
+  <summary> NetExec </summary> 
   
   ### Executes command via the follwoing protocols: 
   
   #### command
   ```bash
-  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -x <command>
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -x <command>
   ```
   #### PowerShell
   ```bash
