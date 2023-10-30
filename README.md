@@ -7,157 +7,158 @@ How to pentest like a Gunnaj
 
 # Toolbox
 <details>
-
-### NMAP
-https://nmap.org/
-
-### linWinPwn - Active Directory Vulnerability Scanner
-https://github.com/lefayjey/linWinPwn
-<details>
   <summary> Installation </summary> 
+
+  ### NMAP
+  https://nmap.org/
   
-  #### Install the dependency NetExec
-  ```bash
-  apt install pipx git
-  pipx ensurepath
-  pipx install git+https://github.com/Pennyw0rth/NetExec
-  ```  
+  ### linWinPwn - Active Directory Vulnerability Scanner
+  https://github.com/lefayjey/linWinPwn
+  <details>
+    <summary> Installation </summary> 
+    
+    #### Install the dependency NetExec
+    ```bash
+    apt install pipx git
+    pipx ensurepath
+    pipx install git+https://github.com/Pennyw0rth/NetExec
+    ```  
+    
+    #### Git clone the repository and make the script executable
+    ```bash
+    git clone https://github.com/lefayjey/linWinPwn
+    cd linWinPwn; chmod +x linWinPwn.sh
+    ```
+    #### Install requirements using the `install.sh` script (using standard account)
+    ```bash
+    chmod +x install.sh
+    ./install.sh
+    ```  
+  </details>
   
-  #### Git clone the repository and make the script executable
-  ```bash
-  git clone https://github.com/lefayjey/linWinPwn
-  cd linWinPwn; chmod +x linWinPwn.sh
-  ```
-  #### Install requirements using the `install.sh` script (using standard account)
-  ```bash
-  chmod +x install.sh
-  ./install.sh
-  ```  
-</details>
-
-### BloodHound
-https://github.com/BloodHoundAD/BloodHound
-<details>
-  <summary> Installation </summary> 
+  ### BloodHound
+  https://github.com/BloodHoundAD/BloodHound
+  <details>
+    <summary> Installation </summary> 
+    
+    ```bash
+    apt-get install bloodhound
+    ```
+    ```bash
+    neo4j console
+    ```
+    #### Navigate to http://localhost:7474/ 
+  </details>
   
-  ```bash
-  apt-get install bloodhound
-  ```
-  ```bash
-  neo4j console
-  ```
-  #### Navigate to http://localhost:7474/ 
-</details>
-
-### Responder
-https://github.com/lgandx/Responder
-
-### NetExec
-https://www.netexec.wiki/
-<details>
-  <summary> Installation </summary> 
-
-  #### Installation
-  ```bash
-  apt install pipx git
-  pipx ensurepath
-  pipx install git+https://github.com/Pennyw0rth/NetExec
-  ```
-  #### Integrate Bloodhound
-  ```bash
-  nano ~/.nxc/nxc.conf
-  ```
-  ```bash
-  [BloodHound]
-  bh_enabled = True
-  bh_uri = 127.0.0.1
-  bh_port = 7687
-  bh_user = <username>
-  bh_pass = <password>
-  ```
-
-</details>
-
-### Evil-WinRM
-https://github.com/Hackplayers/evil-winrm
-<details>
-  <summary> Installation </summary>
+  ### Responder
+  https://github.com/lgandx/Responder
   
-  ```bash
-  gem install evil-winrm
-  ```
-</details>
-
-### FindUncommonShares
-https://github.com/p0dalirius/FindUncommonShares
-
-<details>
-  <summary> Installation </summary> 
+  ### NetExec
+  https://www.netexec.wiki/
+  <details>
+    <summary> Installation </summary> 
   
-  ```bash
-  git clone https://github.com/p0dalirius/FindUncommonShares
-  ```
-</details>
-
-### lnkbomb
-https://github.com/dievus/lnkbomb
-<details>
-  <summary> Installation </summary> 
-
-  #### Install prerequirements
-  ```bash
-  pip install -r requirements.txt
-  ```
-  #### Clone this repo
-  ```bash
-  git clone https://github.com/dievus/lnkbomb
-  ```
-</details>
-
-### PetitPotam
-https://github.com/topotam/PetitPotam
-
-### DFSCoerce
-https://github.com/Wh04m1001/DFSCoerce
-
-### Impacket
-https://github.com/fortra/impacket
-
-### pypykatz
-https://github.com/skelsec/pypykatz
-<details>
-  <summary> Installation </summary> 
-
-  #### Install prerequirements
-  ```bash
-  pip3 install minidump minikerberos aiowinreg msldap winacl
-  ```
-  #### Clone this repo
-  ```bash
-  git clone https://github.com/skelsec/pypykatz.git
-  cd pypykatz
-  ```
-  #### Install it
-  ```bash
-  python3 setup.py install
-  ```
-</details>
-
-### breach-parse
-https://github.com/hmaverickadams/breach-parse
-
-### PRET
-https://github.com/RUB-NDS/PRET
-<details>
-  <summary> Installation </summary> 
+    #### Installation
+    ```bash
+    apt install pipx git
+    pipx ensurepath
+    pipx install git+https://github.com/Pennyw0rth/NetExec
+    ```
+    #### Integrate Bloodhound
+    ```bash
+    nano ~/.nxc/nxc.conf
+    ```
+    ```bash
+    [BloodHound]
+    bh_enabled = True
+    bh_uri = 127.0.0.1
+    bh_port = 7687
+    bh_user = <username>
+    bh_pass = <password>
+    ```
   
-  ```bash
-  git clone https://github.com/RUB-NDS/PRET && cd PRET
-  ```
-  ```bash
-  python -m pip install colorama pysnmP
-  ```
-</details>
+  </details>
+  
+  ### Evil-WinRM
+  https://github.com/Hackplayers/evil-winrm
+  <details>
+    <summary> Installation </summary>
+    
+    ```bash
+    gem install evil-winrm
+    ```
+  </details>
+  
+  ### FindUncommonShares
+  https://github.com/p0dalirius/FindUncommonShares
+  
+  <details>
+    <summary> Installation </summary> 
+    
+    ```bash
+    git clone https://github.com/p0dalirius/FindUncommonShares
+    ```
+  </details>
+  
+  ### lnkbomb
+  https://github.com/dievus/lnkbomb
+  <details>
+    <summary> Installation </summary> 
+  
+    #### Install prerequirements
+    ```bash
+    pip install -r requirements.txt
+    ```
+    #### Clone this repo
+    ```bash
+    git clone https://github.com/dievus/lnkbomb
+    ```
+  </details>
+  
+  ### PetitPotam
+  https://github.com/topotam/PetitPotam
+  
+  ### DFSCoerce
+  https://github.com/Wh04m1001/DFSCoerce
+  
+  ### Impacket
+  https://github.com/fortra/impacket
+  
+  ### pypykatz
+  https://github.com/skelsec/pypykatz
+  <details>
+    <summary> Installation </summary> 
+  
+    #### Install prerequirements
+    ```bash
+    pip3 install minidump minikerberos aiowinreg msldap winacl
+    ```
+    #### Clone this repo
+    ```bash
+    git clone https://github.com/skelsec/pypykatz.git
+    cd pypykatz
+    ```
+    #### Install it
+    ```bash
+    python3 setup.py install
+    ```
+  </details>
+  
+  ### breach-parse
+  https://github.com/hmaverickadams/breach-parse
+  
+  ### PRET
+  https://github.com/RUB-NDS/PRET
+  <details>
+    <summary> Installation </summary> 
+    
+    ```bash
+    git clone https://github.com/RUB-NDS/PRET && cd PRET
+    ```
+    ```bash
+    python -m pip install colorama pysnmP
+    ```
+  </details>
 
 </details>
 
