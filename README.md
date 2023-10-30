@@ -20,10 +20,12 @@ https://github.com/lefayjey/linWinPwn
   pipx ensurepath
   pipx install git+https://github.com/Pennyw0rth/NetExec
   ```
+  #### Git clone the repository and make the script executable
   ```bash
   git clone https://github.com/lefayjey/linWinPwn
   cd linWinPwn; chmod +x linWinPwn.sh
   ```
+  #### Install requirements using the `install.sh` script (using standard account)
   ```bash
   chmod +x install.sh
   ./install.sh
