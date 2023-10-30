@@ -13,7 +13,12 @@ https://nmap.org/
 https://github.com/lefayjey/linWinPwn
 <details>
   <summary> Installation </summary> 
-
+  #### Install the dependency NetExec
+  ```bash
+  apt install pipx git
+  pipx ensurepath
+  pipx install git+https://github.com/Pennyw0rth/NetExec
+  ```
   ```bash
   git clone https://github.com/lefayjey/linWinPwn
   cd linWinPwn; chmod +x linWinPwn.sh
@@ -62,8 +67,19 @@ https://github.com/topotam/PetitPotam
 ### DFSCoerce
 https://github.com/Wh04m1001/DFSCoerce
 
-### CrackMapExec
-https://github.com/Porchetta-Industries/CrackMapExec
+### NetExec
+https://www.netexec.wiki/
+https://github.com/Pennyw0rth/NetExec
+<details>
+  <summary> Installation </summary> 
+
+  #### Installation
+  ```bash
+  apt install pipx git
+  pipx ensurepath
+  pipx install git+https://github.com/Pennyw0rth/NetExec
+  ```
+</details>
 
 ### Impacket
 https://github.com/fortra/impacket
