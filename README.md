@@ -233,17 +233,6 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
   ```
 </details>
-  
-## Password spray
-<details>
-  <summary> NetExec Password spray </summary> 
-  
-  ### Spray a password on a user list
-  ```bash
-  netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
-  ```
-  
-  </details>
 
 # MITM
 <details>
@@ -337,7 +326,19 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   ```
 </details> 
   
-# Credential dumping
+# Credential stuff
+
+## Password spray
+<details>
+  <summary> NetExec Password spray </summary> 
+  
+  ### Spray a password on a user list
+  ```bash
+  netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
+  ```
+  
+  </details>
+
 <details>
   <summary> linWinPwn </summary> 
   
