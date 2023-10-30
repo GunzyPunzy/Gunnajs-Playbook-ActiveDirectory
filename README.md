@@ -6,6 +6,8 @@ How to pentest like a Gunnaj
 ![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader.jpg)
 
 # Toolbox
+<details>
+
 ### NMAP
 https://nmap.org/
 
@@ -141,6 +143,8 @@ https://github.com/RUB-NDS/PRET
   ```bash
   python -m pip install colorama pysnmP
   ```
+</details>
+
 </details>
 
 ## Wordlists
