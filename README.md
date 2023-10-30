@@ -49,6 +49,30 @@ https://github.com/BloodHoundAD/BloodHound
 ### Responder
 https://github.com/lgandx/Responder
 
+### NetExec
+https://www.netexec.wiki/
+<details>
+  <summary> Installation </summary> 
+
+  #### Installation
+  ```bash
+  apt install pipx git
+  pipx ensurepath
+  pipx install git+https://github.com/Pennyw0rth/NetExec
+  ```
+</details>
+
+### SMBMap
+https://github.com/ShawnDEvans/smbmap
+
+<details>
+  <summary> Installation </summary> 
+  
+  ```bash
+  sudo pip3 install smbmap
+  ```
+</details>
+
 ### lnkbomb
 https://github.com/dievus/lnkbomb
 <details>
@@ -69,19 +93,6 @@ https://github.com/topotam/PetitPotam
 
 ### DFSCoerce
 https://github.com/Wh04m1001/DFSCoerce
-
-### NetExec
-https://www.netexec.wiki/
-<details>
-  <summary> Installation </summary> 
-
-  #### Installation
-  ```bash
-  apt install pipx git
-  pipx ensurepath
-  pipx install git+https://github.com/Pennyw0rth/NetExec
-  ```
-</details>
 
 ### Impacket
 https://github.com/fortra/impacket
