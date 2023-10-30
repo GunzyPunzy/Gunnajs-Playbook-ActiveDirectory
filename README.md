@@ -21,20 +21,7 @@ https://github.com/lefayjey/linWinPwn
   apt install pipx git
   pipx ensurepath
   pipx install git+https://github.com/Pennyw0rth/NetExec
-  ```
-
-  #### Integrate Bloodhound
-  ```bash
-  nano ~/.nxc/nxc.conf
-  ```
-  ```bash
-  [BloodHound]
-  bh_enabled = True
-  bh_uri = 127.0.0.1
-  bh_port = 7687
-  bh_user = <username>
-  bh_pass = <password>
-  ```
+  ```  
   
   #### Git clone the repository and make the script executable
   ```bash
@@ -76,6 +63,19 @@ https://www.netexec.wiki/
   pipx ensurepath
   pipx install git+https://github.com/Pennyw0rth/NetExec
   ```
+  #### Integrate Bloodhound
+  ```bash
+  nano ~/.nxc/nxc.conf
+  ```
+  ```bash
+  [BloodHound]
+  bh_enabled = True
+  bh_uri = 127.0.0.1
+  bh_port = 7687
+  bh_user = <username>
+  bh_pass = <password>
+  ```
+
 </details>
 
 ### Evil-WinRM
