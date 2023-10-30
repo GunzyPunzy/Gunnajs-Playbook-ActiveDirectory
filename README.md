@@ -529,6 +529,7 @@ pypykatz lsa minidump lsass.DMP
 
 <details>
   <summary> Command to add a new Domain Admin </summary> 
+  
   ```bash
   'net group "Domain Admins" <username> /add /domain'
   ```
