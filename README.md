@@ -14,15 +14,17 @@ How to pentest like a Gunnaj
   
   ### linWinPwn - Active Directory Vulnerability Scanner
   https://github.com/lefayjey/linWinPwn
+  
   <details>
     <summary> Installation </summary> 
     
     #### Install the dependency NetExec
+    
     ```bash
     apt install pipx git
     pipx ensurepath
     pipx install git+https://github.com/Pennyw0rth/NetExec
-    ```  
+    ```
     
     #### Git clone the repository and make the script executable
     ```bash
@@ -38,6 +40,7 @@ How to pentest like a Gunnaj
   
   ### BloodHound
   https://github.com/BloodHoundAD/BloodHound
+  
   <details>
     <summary> Installation </summary> 
     
@@ -55,6 +58,7 @@ How to pentest like a Gunnaj
   
   ### NetExec
   https://www.netexec.wiki/
+  
   <details>
     <summary> Installation </summary> 
   
@@ -81,6 +85,7 @@ How to pentest like a Gunnaj
   
   ### Evil-WinRM
   https://github.com/Hackplayers/evil-winrm
+  
   <details>
     <summary> Installation </summary>
     
