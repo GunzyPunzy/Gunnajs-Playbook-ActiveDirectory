@@ -45,13 +45,13 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-    ```bash
-    apt-get install bloodhound
-    ```
-    ```bash
-    neo4j console
-    ```
-    #### Navigate to http://localhost:7474/ 
+  ```bash
+  apt-get install bloodhound
+  ```
+  ```bash
+  neo4j console
+  ```
+  #### Navigate to http://localhost:7474/ 
   
   </details>
   
@@ -64,24 +64,24 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
   
-    #### Installation
-    ```bash
-    apt install pipx git
-    pipx ensurepath
-    pipx install git+https://github.com/Pennyw0rth/NetExec
-    ```
-    #### Integrate Bloodhound
-    ```bash
-    nano ~/.nxc/nxc.conf
-    ```
-    ```bash
-    [BloodHound]
-    bh_enabled = True
-    bh_uri = 127.0.0.1
-    bh_port = 7687
-    bh_user = <username>
-    bh_pass = <password>
-    ```
+  #### Installation
+  ```bash
+  apt install pipx git
+  pipx ensurepath
+  pipx install git+https://github.com/Pennyw0rth/NetExec
+  ```
+  #### Integrate Bloodhound
+  ```bash
+  nano ~/.nxc/nxc.conf
+  ```
+  ```bash
+  [BloodHound]
+  bh_enabled = True
+  bh_uri = 127.0.0.1
+  bh_port = 7687
+  bh_user = <username>
+  bh_pass = <password>
+  ```
   
   </details>
   
@@ -91,9 +91,9 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary>
     
-    ```bash
-    gem install evil-winrm
-    ```
+  ```bash
+  gem install evil-winrm
+  ```
   </details>
   
   ### FindUncommonShares
@@ -102,9 +102,9 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-    ```bash
-    git clone https://github.com/p0dalirius/FindUncommonShares
-    ```
+  ```bash
+  git clone https://github.com/p0dalirius/FindUncommonShares
+  ```
   </details>
   
   ### lnkbomb
@@ -112,14 +112,14 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
   
-    #### Install prerequirements
-    ```bash
-    pip install -r requirements.txt
-    ```
-    #### Clone this repo
-    ```bash
-    git clone https://github.com/dievus/lnkbomb
-    ```
+  #### Install prerequirements
+  ```bash
+  pip install -r requirements.txt
+  ```
+  #### Clone this repo
+  ```bash
+  git clone https://github.com/dievus/lnkbomb
+  ```
   </details>
   
   ### PetitPotam
@@ -136,19 +136,19 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
   
-    #### Install prerequirements
-    ```bash
-    pip3 install minidump minikerberos aiowinreg msldap winacl
-    ```
-    #### Clone this repo
-    ```bash
-    git clone https://github.com/skelsec/pypykatz.git
-    cd pypykatz
-    ```
-    #### Install it
-    ```bash
-    python3 setup.py install
-    ```
+  #### Install prerequirements
+  ```bash
+  pip3 install minidump minikerberos aiowinreg msldap winacl
+  ```
+  #### Clone this repo
+  ```bash
+  git clone https://github.com/skelsec/pypykatz.git
+  cd pypykatz
+  ```
+  #### Install it
+  ```bash
+  python3 setup.py install
+  ```
   </details>
   
   ### breach-parse
@@ -159,12 +159,12 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-    ```bash
-    git clone https://github.com/RUB-NDS/PRET && cd PRET
-    ```
-    ```bash
-    python -m pip install colorama pysnmP
-    ```
+  ```bash
+  git clone https://github.com/RUB-NDS/PRET && cd PRET
+  ```
+  ```bash
+  python -m pip install colorama pysnmP
+  ```
   </details>
 
 </details>
