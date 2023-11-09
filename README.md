@@ -1,5 +1,6 @@
 https://github.com/NotMedic/NetNTLMtoSilverTicket
 
+
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
@@ -16,26 +17,26 @@ How to pentest like a Gunnaj
   https://github.com/lefayjey/linWinPwn
   
   <details>
-    <summary> Installation </summary> 
+    <summary> Installation </summary>
     
-    #### Install the dependency NetExec
+  #### Install the dependency NetExec
     
-    ```bash
-    apt install pipx git
-    pipx ensurepath
-    pipx install git+https://github.com/Pennyw0rth/NetExec
-    ```
+  ```bash
+  apt install pipx git
+  pipx ensurepath
+  pipx install git+https://github.com/Pennyw0rth/NetExec
+  ```
     
-    #### Git clone the repository and make the script executable
-    ```bash
-    git clone https://github.com/lefayjey/linWinPwn
-    cd linWinPwn; chmod +x linWinPwn.sh
-    ```
-    #### Install requirements using the `install.sh` script (using standard account)
-    ```bash
-    chmod +x install.sh
-    ./install.sh
-    ```  
+  #### Git clone the repository and make the script executable
+  ```bash
+  git clone https://github.com/lefayjey/linWinPwn
+  cd linWinPwn; chmod +x linWinPwn.sh
+  ```
+  #### Install requirements using the `install.sh` script (using standard account)
+  ```bash
+  chmod +x install.sh
+  ./install.sh
+  ```
   </details>
   
   ### BloodHound
@@ -51,6 +52,7 @@ How to pentest like a Gunnaj
     neo4j console
     ```
     #### Navigate to http://localhost:7474/ 
+  
   </details>
   
   ### Responder
