@@ -112,13 +112,13 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
   
-  #### Install prerequirements
-  ```bash
-  pip install -r requirements.txt
-  ```
   #### Clone this repo
   ```bash
   git clone https://github.com/dievus/lnkbomb
+  ```
+  #### Install prerequirements
+  ```bash
+  pip install -r requirements.txt
   ```
   </details>
   
@@ -150,6 +150,9 @@ How to pentest like a Gunnaj
   python3 setup.py install
   ```
   </details>
+
+  ### certipty
+  https://github.com/ly4k/Certipy
   
   ### breach-parse
   https://github.com/hmaverickadams/breach-parse
