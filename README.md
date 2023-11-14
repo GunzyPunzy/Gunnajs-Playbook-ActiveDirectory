@@ -601,6 +601,15 @@ pypykatz lsa minidump lsass.DMP
   'net group "Domain Admins" <username> /add /domain'
   ```
 </details> 
+
+# AV Evasion
+
+<details>
+  <summary> NetExec </summary> 
+  
+  </details> 
+
+</details> 
   
 # golden and silver tickets
 #### Get user SID value by using the Windows Terminal
