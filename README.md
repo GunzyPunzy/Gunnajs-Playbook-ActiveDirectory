@@ -618,6 +618,9 @@ pypykatz lsa minidump lsass.DMP
 </details> 
   
 # golden and silver tickets
+<details>
+  <summary> Tcikets </summary> 
+  
 #### Get user SID value by using the Windows Terminal
 ```cmd
 wmic useraccount where name="USER" get sid
@@ -640,6 +643,7 @@ export KRB5CCNAME=<TGS_ccache_file>
 ```shell
 klist
 ```
+</details>
 
 #### Execute remote commands with any of the following by using the TGT
 ```shell
