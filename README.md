@@ -604,7 +604,7 @@ pypykatz lsa minidump lsass.DMP
 
   #### Add the new user to the Domain Admins group
   ```ps
-  'net group "Domain Admins" <username> /add /domain'
+  net group "Domain Admins" <username> /add /domain
   ```
 </details> 
 
