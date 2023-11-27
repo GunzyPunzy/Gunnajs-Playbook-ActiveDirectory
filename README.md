@@ -618,6 +618,7 @@ pypykatz lsa minidump lsass.DMP
 </details> 
   
 # golden and silver tickets
+
 <details>
   <summary> Tcikets </summary> 
   
