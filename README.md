@@ -598,7 +598,7 @@ pypykatz lsa minidump lsass.DMP
   <summary> Command to add a new Domain Admin </summary> 
   
   #### Create the new user
-  ```Hack
+  ```Shell
   net user <username> <password> /add /domain
   ```
 
