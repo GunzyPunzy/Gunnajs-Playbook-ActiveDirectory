@@ -464,7 +464,7 @@ grep -i <keyword> *
 # Credential dumping
 
 <details>
-  <summary> NetExec domain authentication </summary> 
+  <summary> Domain authentication </summary> 
 
   ### Dump NT:hash with masky with domain user
   #### Get ADCS server name
@@ -488,7 +488,7 @@ grep -i <keyword> *
 </details> 
 
 <details>
-  <summary> local authentication </summary> 
+  <summary> Local authentication </summary> 
   
   ### Dump SAM on local computer
   ```shell
