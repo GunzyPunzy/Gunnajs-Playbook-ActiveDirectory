@@ -505,7 +505,7 @@ grep -i <keyword> *
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
   ```
 
-### Stored User Names and Passwords on Windows Credential Manager
+  ### Stored User Names and Passwords on Windows Credential Manager
   ```shell
   rundll32.exe keymgr.dll KRShowKeyMgr
   ```
