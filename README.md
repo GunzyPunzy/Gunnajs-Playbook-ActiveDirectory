@@ -700,15 +700,16 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   <summary> Cracking modes </summary> 
 
   ### brute force
-    ```shell
+  ```shell
   hashcat64.exe -m <hash_type> -a 0 <hashes.txt> <passlist.txt> -o cracked.txt
   ```
 </details>
 
 <details>
   <summary> Hash types </summary> 
-  
+
   ### LM
+
   ```shell
   hashcat64.exe -m 3000 -a 3 <LM-hashes.txt> -o cracked.txt
   ```
