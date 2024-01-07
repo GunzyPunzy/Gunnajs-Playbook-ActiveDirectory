@@ -697,10 +697,12 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
 ## Hash cracking
 <details>
-  <summary> Hashcat </summary> 
+  <summary> Cracking modes </summary> 
 
   <details>
-  <summary> Hashcat </summary> 
+    
+  <summary> Hash types </summary> 
+  
   ### LM
   ```shell
   hashcat64.exe -m 3000 -a 3 LM-hashes.txt -o cracked.txt
