@@ -192,6 +192,26 @@ How to pentest like a Gunnaj
   https://github.com/ohmybahgosh/RockYou2021.txt (91.6 GB)
 </details>
 
+# Leaked password
+<details>
+  <summary> Sites </summary>   
+
+  ### breachdirectory (free)
+  https://breachdirectory.org/
+
+  ### Records Search (free)
+  https://search.0t.rocks/
+
+  ### DeHashed
+  https://www.dehashed.com/
+
+  ### Snusbase
+  https://snusbase.com/
+
+  ### breach-parse
+  https://github.com/hmaverickadams/breach-parse
+
+
 # Network enumeration
 <details>
   <summary> NMAP </summary> 
