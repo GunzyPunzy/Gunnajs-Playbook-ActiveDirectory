@@ -210,7 +210,7 @@ How to pentest like a Gunnaj
 
   ### breach-parse
   https://github.com/hmaverickadams/breach-parse
-
+</details>
 
 # Network enumeration
 <details>
