@@ -697,7 +697,7 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
 # Hash cracking
 <details>
-  <summary> Cracking modes </summary> 
+  <summary> Attack modes </summary> 
 
   ### brute force
   ```shell
