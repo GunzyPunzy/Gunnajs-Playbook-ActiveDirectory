@@ -700,29 +700,33 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   <summary> Attack modes </summary> 
 
   ### Dictionary attack (-a 0)
+  #### Tries all words in a list
   ```shell
   hashcat64.exe -m <hash_type> -a 0 <hashes.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Combinator attack (-a 1)
+  #### Combines words from multiple wordlists
   ```shell
-  hashcat64.exe -m <hash_type> -a 1 <hashes.txt> <passlist.txt> -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 1 <hashes.txt> <passlist1.txt> <passlist2.txt> -o cracked.txt
   ```
 
-  ### Mask attack (-a 3)
-  #### Brute force (from 0 to 8 characters of any type)
+  ### Brute force (-a 3)
+  #### Tries all characters from given charsets
   ```shell
   hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a --increment -o cracked.txt
   ```
 
-  #### Hybrid (dictionary + brute force last characters) 
+  ### Hybrid (-a 6)
+  #### Combines wordlists+masks
   ```shell
-  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> <passlist.txt> ?a?a?a?a?a?a?a?a --increment -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 6 <hashes.txt> <passlist.txt> ?a?a?a?a?a?a?a?a --increment -o cracked.txt
   ```
 
-  #### Hybrid (dictionary + brute force first characters) 
+  ### Hybrid (-a 7)
+  #### Combines masks+wordlists
   ```shell
-  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a --increment <passlist.txt>  -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 7 <hashes.txt> ?a?a?a?a?a?a?a?a --increment <passlist.txt>  -o cracked.txt
   ```
 
  #### Built-in charsets
