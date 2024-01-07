@@ -699,10 +699,37 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 <details>
   <summary> Attack modes </summary> 
 
-  ### brute force
+  ### Dictionary attack (-a 0)
   ```shell
   hashcat64.exe -m <hash_type> -a 0 <hashes.txt> <passlist.txt> -o cracked.txt
   ```
+
+  ### Combinator attack (-a 1)
+  ```shell
+  hashcat64.exe -m <hash_type> -a 1 <hashes.txt> <passlist.txt> -o cracked.txt
+  ```
+
+  ### Mask attack (-a 3)
+  #### Brute force (from 0 to 8 characters of any type)
+  ```shell
+  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a -o cracked.txt
+  ```
+
+  #### Hybrid
+  ```shell
+  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> <passlist.txt> -o cracked.txt
+  ```
+
+ #### Built-in charsets
+ * ?l = abcdefghijklmnopqrstuvwxyz
+ * ?u = ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ * ?d = 0123456789
+ * ?h = 0123456789abcdef
+ * ?H = 0123456789ABCDEF
+ * ?s = «space»!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+ * ?a = ?l?u?d?s
+ * ?b = 0x00 - 0xff
+
 </details>
 
 <details>
