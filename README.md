@@ -712,12 +712,17 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ### Mask attack (-a 3)
   #### Brute force (from 0 to 8 characters of any type)
   ```shell
-  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a --increment -o cracked.txt
   ```
 
-  #### Hybrid
+  #### Hybrid (dictionary + brute force last characters) 
   ```shell
-  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> <passlist.txt> -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> <passlist.txt> ?a?a?a?a?a?a?a?a --increment -o cracked.txt
+  ```
+
+  #### Hybrid (dictionary + brute force first characters) 
+  ```shell
+  hashcat64.exe -m <hash_type> -a 3 <hashes.txt> ?a?a?a?a?a?a?a?a --increment <passlist.txt>  -o cracked.txt
   ```
 
  #### Built-in charsets
@@ -729,7 +734,10 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
  * ?s = «space»!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
  * ?a = ?l?u?d?s
  * ?b = 0x00 - 0xff
-
+ 
+ #### Password length increment
+* --increment-min <number>
+* --increment-max <number>
 </details>
 
 <details>
