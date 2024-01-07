@@ -699,7 +699,10 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 <details>
   <summary> Cracking modes </summary> 
 
-  ### TEST
+  ### brute force
+    ```shell
+  hashcat64.exe -m <hash_type> -a 0 <hashes.txt> <passlist.txt> -o cracked.txt
+  ```
 
 </details>
 
@@ -708,56 +711,56 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   
   ### LM
   ```shell
-  hashcat64.exe -m 3000 -a 3 LM-hashes.txt -o cracked.txt
+  hashcat64.exe -m 3000 -a 3 <LM-hashes.txt> -o cracked.txt
   ```
 
   ### NTLM
   ```shell
-  hashcat64.exe -m 1000 -a 3 NTLM-hashes.txt -o cracked.txt
+  hashcat64.exe -m 1000 -a 3 <NTLM-hashes.txt> -o cracked.txt
   ```
 
   ### NTLMv1
   ```shell
-  hashcat64.exe -m 5500 -a 3 NTLMv1-hashes.txt -o cracked.txt
+  hashcat64.exe -m 5500 -a 3 <NTLMv1-hashes.txt> -o cracked.txt
   ```
 
   ### NTLMv2
   ```shell
-  hashcat64.exe -m 5600 -a 0 NTLMv2-hashes.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 5600 -a 0 <NTLMv2-hashes.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos ASREP
   ```shell
-  hashcat64.exe -m 18200 -a 0 asrep-hashes.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 18200 -a 0 <asrep-hashes.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS
   ```shell
-  hashcat64.exe -m 13100 -a 0 krb5tgs-hashes.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 13100 -a 0 <krb5tgs-hashes.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS AES128
   ```shell
-  hashcat64.exe -m 19600 -a 0 krb5tgsaes128-hashes.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 19600 -a 0 <krb5tgsaes128-hashes.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 TGS AES256
   ```shell
-  hashcat64.exe -m 19700  -a 0 krb5tgsaes256.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 19700  -a 0 <krb5tgsaes256.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 etype 17, Pre-Auth
   ```shell
-  hashcat64.exe -m 19800  -a 0 krb5tetype17.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 19800  -a 0 <krb5tetype17.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### Kerberos 5 etype 18, Pre-Auth
   ```shell
-  hashcat64.exe -m 19900  -a 0 krb5tetype18.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 19900  -a 0 <krb5tetype18.txt> <passlist.txt> -o cracked.txt
   ```
 
   ### MsCache 2 (slow af)
   ```shell
-  hashcat64.exe -m 2100 -a 0 mscache2-hashes.txt <passlist.txt> -o cracked.txt
+  hashcat64.exe -m 2100 -a 0 <mscache2-hashes.txt> <passlist.txt> -o cracked.txt
   ```
 </details>
