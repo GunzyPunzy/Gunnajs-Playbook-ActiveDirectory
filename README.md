@@ -703,7 +703,6 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
     ```shell
   hashcat64.exe -m <hash_type> -a 0 <hashes.txt> <passlist.txt> -o cracked.txt
   ```
-
 </details>
 
 <details>
@@ -763,4 +762,4 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ```shell
   hashcat64.exe -m 2100 -a 0 <mscache2-hashes.txt> <passlist.txt> -o cracked.txt
   ```
-</details>
+  </details>
