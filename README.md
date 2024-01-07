@@ -695,12 +695,15 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ```
 </details>
 
-## Hash cracking
-
+# Hash cracking
+<details>
   <summary> Cracking modes </summary> 
 
-  <details>
-    
+  ### TEST
+
+</details>
+
+<details>
   <summary> Hash types </summary> 
   
   ### LM
