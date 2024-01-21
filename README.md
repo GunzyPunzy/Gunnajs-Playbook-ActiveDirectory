@@ -4,7 +4,7 @@
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
-![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader.jpg)
+![alt text](https://github.com/GunzyPunzy/Gunnajs-Playbook/blob/main/anfader-adc.jpg)
 
 # Toolbox
 <details>
