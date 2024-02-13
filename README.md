@@ -107,21 +107,6 @@ How to pentest like a Gunnaj
   ```
   </details>
   
-  ### lnkbomb
-  https://github.com/dievus/lnkbomb
-  <details>
-    <summary> Installation </summary> 
-  
-  #### Clone this repo
-  ```shell
-  git clone https://github.com/dievus/lnkbomb
-  ```
-  #### Install prerequirements
-  ```shell
-  pip install -r requirements.txt
-  ```
-  </details>
-  
   ### PetitPotam
   https://github.com/topotam/PetitPotam
   
