@@ -39,9 +39,10 @@ How to pentest like a Gunnaj
   sudo systemctl enable docker --now
 
   xhost +
+  ```
+  ### Logout and log back into Kali. Open a terminal and execute the following commands:
 
-  Logout and log back into Kali. Open a terminal and execute the following commands:
-
+  ```shell
   docker run hello-world # make sure this works beforeproceeding.
 
   cd legion/docker
