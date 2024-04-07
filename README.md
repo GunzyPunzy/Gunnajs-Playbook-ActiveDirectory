@@ -15,7 +15,14 @@ How to pentest like a Gunnaj
 
   ### legion
   https://github.com/GoVanguard/legion
+
+  <details>
+    <summary> Installation </summary>  
   
+    https://www.reddit.com/r/Kalilinux/comments/11r6r2g/20231_installation_im_new_to_kali_linux_why_does/
+   
+  </details>
+   
   ### linWinPwn - Active Directory Vulnerability Scanner
   https://github.com/lefayjey/linWinPwn
   
