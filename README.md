@@ -52,7 +52,10 @@ How to pentest like a Gunnaj
   
   ### linWinPwn - Active Directory Vulnerability Scanner
   https://github.com/lefayjey/linWinPwn
-    
+  
+  <details>
+    <summary> Installation </summary>  
+  
   #### Install the dependency NetExec
     
   ```shell
