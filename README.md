@@ -14,7 +14,7 @@ How to pentest like a Gunnaj
   https://nmap.org/
 
   ### legion
-  (https://github.com/GoVanguard/legion
+  https://github.com/GoVanguard/legion
 
   <details>
     <summary> Installation </summary>
@@ -40,7 +40,7 @@ How to pentest like a Gunnaj
 
   xhost +
   ```
-  ### Logout and log back into Kali. Open a terminal and execute the following commands:
+  #### Logout and log back into Kali. Open a terminal and execute the following commands:
 
   ```shell
   docker run hello-world # make sure this works beforeproceeding.
