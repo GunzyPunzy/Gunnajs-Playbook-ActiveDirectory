@@ -15,41 +15,6 @@ How to pentest like a Gunnaj
 
   ### legion
   https://github.com/GoVanguard/legion
-
-  <details>
-    <summary> Installation </summary>
-
-  ```shell
-  sudo apt-get install -y docker.io python3-pip -y
-
-  sudo groupadd docker #May not be needed, but won’t hurt
-
-  sudo usermod -aG docker ${USER}
-
-  pip install --user docker-compose
-
-  cd ~
-
-  git clone https://github.com/GoVanguard/legion.git
-
-  cd legion/docker
-
-  chmod +x runIt.sh
-
-  sudo systemctl enable docker --now
-
-  xhost +
-  ```
-  #### Logout and log back into Kali. Open a terminal and execute the following commands:
-
-  ```shell
-  docker run hello-world # make sure this works beforeproceeding.
-
-  cd legion/docker
-  
-  ./runIt.sh # if you get an error, run xhost + and try again.
-  ```
-  </details>
   
   ### linWinPwn - Active Directory Vulnerability Scanner
   https://github.com/lefayjey/linWinPwn
