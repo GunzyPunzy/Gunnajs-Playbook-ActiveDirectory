@@ -16,12 +16,6 @@ How to pentest like a Gunnaj
   ### legion
   (https://github.com/GoVanguard/legion
 
-   <details>
-    <summary> Installation </summary>
-  
-  ### linWinPwn - Active Directory Vulnerability Scanner
-  https://github.com/lefayjey/linWinPwn
-  
   <details>
     <summary> Installation </summary>
 
@@ -56,6 +50,9 @@ How to pentest like a Gunnaj
   ```
   </details>
   
+  ### linWinPwn - Active Directory Vulnerability Scanner
+  https://github.com/lefayjey/linWinPwn
+    
   #### Install the dependency NetExec
     
   ```shell
