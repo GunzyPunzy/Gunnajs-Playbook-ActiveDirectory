@@ -19,7 +19,7 @@ How to pentest like a Gunnaj
   <details>
     <summary> Installation </summary>  
   
-    https://www.reddit.com/r/Kalilinux/comments/11r6r2g/20231_installation_im_new_to_kali_linux_why_does/
+    https://www.reddit.com/r/Kalilinux/comments/1ann3xo/legion_running_perfectly_then_it_disappears/
    
   </details>
    
