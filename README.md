@@ -1,5 +1,7 @@
 [https://github.com/NotMedic/NetNTLMtoSilverTicket](https://github.com/NotMedic/NetNTLMtoSilverTicket)
 
+https://github.com/jfjallid/go-secdump
+
 
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
