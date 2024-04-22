@@ -96,6 +96,16 @@ How to pentest like a Gunnaj
   ```
   
   </details>
+
+  ### go-secdump
+  https://github.com/jfjallid/go-secdump
+  <details>
+    <summary> Installation </summary>
+
+  ```shell
+  git clone https://github.com/jfjallid/go-secdump
+  ```
+  </details>
   
   ### Evil-WinRM
   https://github.com/Hackplayers/evil-winrm
