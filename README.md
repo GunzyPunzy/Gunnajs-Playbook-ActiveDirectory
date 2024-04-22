@@ -359,6 +359,11 @@ How to pentest like a Gunnaj
   sudo python3 ntlmrelayx.py -of <outfile.txt> -tf <nosmbsigning.txt> -smb2support
   ```
 
+  ### go-secdump NTLM Relaying
+  ```shell
+  ./go-secdump --host <target> -n --relay
+  ```
+
   ### Disbale SMB and HTTP in Responder.conf
   ```shell
   [Responder Core]
