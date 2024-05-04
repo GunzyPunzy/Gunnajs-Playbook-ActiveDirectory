@@ -1,5 +1,7 @@
 [https://github.com/NotMedic/NetNTLMtoSilverTicket](https://github.com/NotMedic/NetNTLMtoSilverTicket)
 
+https://www.n00py.io/2022/10/practical-attacks-against-ntlmv1/
+
 
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
