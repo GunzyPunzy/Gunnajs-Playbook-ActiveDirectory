@@ -415,6 +415,11 @@ How to pentest like a Gunnaj
   ```
 </details> 
 
+<details>
+  <summary> NTLMV1 relaying </summary>   
+
+</details>
+
 # Password Spraying
 
 <details>
