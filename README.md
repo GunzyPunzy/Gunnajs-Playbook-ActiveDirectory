@@ -101,7 +101,10 @@ How to pentest like a Gunnaj
     <summary> Installation </summary>
 
   ```shell
+  sudo apt install golang-go
+  sudo apt install gccgo-go 
   git clone https://github.com/jfjallid/go-secdump
+  cd go-secdump/
   go run main.go
   go build
   ```
