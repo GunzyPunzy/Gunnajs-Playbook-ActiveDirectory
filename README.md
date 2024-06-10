@@ -78,9 +78,7 @@ How to pentest like a Gunnaj
   
   #### Installation
   ```shell
-  apt install pipx git
-  pipx ensurepath
-  pipx install git+https://github.com/Pennyw0rth/NetExec
+  apt install netexec
   ```
   #### Integrate Bloodhound
   ```shell
@@ -104,6 +102,8 @@ How to pentest like a Gunnaj
 
   ```shell
   git clone https://github.com/jfjallid/go-secdump
+  go run main.go
+  go build
   ```
   </details>
   
