@@ -352,7 +352,7 @@ How to pentest like a Gunnaj
     
 </details>
 <details>
-  <summary> netexec NTLM-relay </summary>   
+  <summary> NetExec NTLM-relay </summary>   
 
   ### Evaluate no smb-signing and create an IP txt file for NTLMRelayx
   ```shell
