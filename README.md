@@ -265,8 +265,8 @@ How to pentest like a Gunnaj
   
   ### Unauthenticated
   - Module ad_enum
-      - RID bruteforce using crackmapexec
-      - Anonymous enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, ldeep
+      - RID bruteforce using netexec
+      - Anonymous enumeration using netexec, enum4linux-ng, ldapdomaindump, ldeep
       - Pre2k authentication check on collected list of computers
   - Module kerberos
       - kerbrute user spray
@@ -286,7 +286,7 @@ How to pentest like a Gunnaj
   - DNS extraction using adidnsdump
   - Module ad_enum
       - BloodHound data collection
-      - Enumeration using crackmapexec, enum4linux-ng, ldapdomaindump, windapsearch, SilentHound, ldeep
+      - Enumeration using netexec, enum4linux-ng, ldapdomaindump, windapsearch, SilentHound, ldeep
           - Users
           - MachineAccountQuota
           - Password Policy
@@ -296,7 +296,7 @@ How to pentest like a Gunnaj
           - GPP Passwords
           - Check if ldap-signing is enforced, check for LDAP Relay
           - Delegation information
-      - crackmapexec find accounts with user=pass 
+      - netexec find accounts with user=pass 
       - Pre2k authentication check on domain computers
       - Extract ADCS information using certipy and certi.py
 
@@ -352,11 +352,11 @@ How to pentest like a Gunnaj
     
 </details>
 <details>
-  <summary> Crackmapexec NTLM-relay </summary>   
+  <summary> netexec NTLM-relay </summary>   
 
-  ### Evaluate no smb-signing and create an IP txt file for TLMRelayx
+  ### Evaluate no smb-signing and create an IP txt file for NTLMRelayx
   ```shell
-  crackmapexec smb <IPs> --gen-relay-list <nosmbsigning.txt>
+  NetExec smb <IPs> --gen-relay-list <nosmbsigning.txt>
   ```
 
   ### NTLMRelayx
@@ -610,7 +610,7 @@ grep -i <keyword> *
 - Module pwd_dump
     - LAPS and gMSA dump
     - secretsdump on all domain servers
-    - NTDS dump using impacket, crackmapexec and certsync
+    - NTDS dump using impacket, netexec and certsync
     - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
     - Extract backup keys using DonPAPI, HEKATOMB
 ```shell
