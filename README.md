@@ -475,10 +475,10 @@ NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares RE
 </details>
 
 <details>
-  <summary> List uncommon shares </summary> 
+  <summary> List uncommon shares and export as xlsx </summary> 
 
 ```shell
-python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --check-user-access
+python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --readable --export-xlsx shares
 ```
 
 </details> 
