@@ -129,6 +129,8 @@ How to pentest like a Gunnaj
     
   ```shell
   git clone https://github.com/p0dalirius/FindUncommonShares
+  cd FindUncommonShares/
+  pip install -r requirements.txt
   ```
   </details>
   
