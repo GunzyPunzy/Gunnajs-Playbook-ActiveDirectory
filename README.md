@@ -264,6 +264,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> NetExec host enumeration </summary> 
   
+  #### NetExec map network hosts 
   ```shell
   NetExec smb <subnet>
   ```
@@ -275,6 +276,7 @@ How to pentest like a Gunnaj
 <details>
   <summary> NetExec active users </summary> 
 
+#### Get what users are enabled
 ```shell
 NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
 ```
@@ -284,12 +286,14 @@ NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
 <details>
   <summary> NetExec password policy </summary> 
 
+#### Get the password policy of the domain
 ```shell
 NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --pass-pol
 ```
 
 </details>
 
+#### Check if Null Session is enabled
 <details>
   <summary> NetExec enumerate null sessions </summary> 
 
@@ -306,6 +310,7 @@ NetExec smb <Domain_Controller_IP> -u '' -p '' --groups
 <details>
   <summary> NetExec enumerate guest logon </summary> 
 
+#### Check if domain guest account or the local guest account is enabled
 ```shell
 NetExec smb <Domain_Controller_IP> -u 'a' -p ''
 NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
