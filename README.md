@@ -294,6 +294,7 @@ NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --pass-pol
 </details>
 
 #### Check if Null Session is enabled
+
 <details>
   <summary> NetExec enumerate null sessions </summary> 
 
