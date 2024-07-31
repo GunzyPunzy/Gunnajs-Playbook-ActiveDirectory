@@ -262,6 +262,16 @@ How to pentest like a Gunnaj
 </details>
 
 # Acitve directory enumeration
+
+<details>
+  <summary> NetExec active users </summary> 
+
+```shell
+ NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
+```
+
+</details>
+
 <details>
   <summary> linWinPwn </summary> 
   
