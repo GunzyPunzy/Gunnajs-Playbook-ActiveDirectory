@@ -267,7 +267,39 @@ How to pentest like a Gunnaj
   <summary> NetExec active users </summary> 
 
 ```shell
- NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
+NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
+```
+
+</details>
+
+<details>
+  <summary> NetExec password policy </summary> 
+
+```shell
+NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --pass-pol
+```
+
+</details>
+
+<details>
+  <summary> NetExec enumerate null sessions </summary> 
+
+```shell
+NetExec smb <Domain_Controller_IP> -u '' -p ''
+NetExec smb <Domain_Controller_IP> -u '' -p '' --shares
+NetExec smb <Domain_Controller_IP> -u '' -p '' --pass-pol
+NetExec smb <Domain_Controller_IP> -u '' -p '' --users
+NetExec smb <Domain_Controller_IP> -u '' -p '' --groups
+```
+
+</details>
+
+<details>
+  <summary> NetExec enumerate guest logon </summary> 
+
+```shell
+NetExec smb <Domain_Controller_IP> -u 'a' -p ''
+NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 ```
 
 </details>
