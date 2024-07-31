@@ -261,6 +261,15 @@ How to pentest like a Gunnaj
   ```
 </details>
 
+<details>
+  <summary> NetExec host enumeration </summary> 
+  
+  ```shell
+  NetExec smb <subnet>
+  ```
+  
+</details>
+
 # Acitve directory enumeration
 
 <details>
