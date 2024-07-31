@@ -507,6 +507,7 @@ grep -i <keyword> *
 
 <details>
   <summary> Netexec Unconstrained Delegation </summary> 
+  
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
   ```
