@@ -278,7 +278,7 @@ How to pentest like a Gunnaj
 
 #### Get what users are enabled
 ```shell
-NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
+NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
 ```
 
 </details>
@@ -289,6 +289,16 @@ NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --active-users
 #### Get the password policy of the domain
 ```shell
 NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> --pass-pol
+```
+
+</details>
+
+<details>
+  <summary> NetExec BloodHound dump all info </summary> 
+
+#### Dump 
+```shell
+NetExec ldap <Domain_Controller_IP> -d <Domain> -u <AD_user> -p <AD_password> --bloodhound --collection All
 ```
 
 </details>
