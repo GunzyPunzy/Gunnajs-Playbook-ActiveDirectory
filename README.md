@@ -58,10 +58,10 @@ How to pentest like a Gunnaj
     <summary> Installation </summary> 
     
   ```shell
-  apt-get install bloodhound
+  sudo apt-get install bloodhound
   ```
   ```shell
-  neo4j console
+  sudo neo4j console
   ```
   #### Navigate to http://localhost:7474/ 
   
