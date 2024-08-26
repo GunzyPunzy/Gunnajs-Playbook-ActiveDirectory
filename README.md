@@ -2,6 +2,7 @@
 
 https://www.n00py.io/2022/10/practical-attacks-against-ntlmv1/
 
+https://teams.microsoft.com/l/message/19:meeting_ZDQ5ZTIxMGQtMmE5Yy00ZWY4LWE1ZTctMTVkMzYxYjk5NzBh@thread.v2/1718610967444?context=%7B%22contextType%22%3A%22chat%22%7D
 
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
