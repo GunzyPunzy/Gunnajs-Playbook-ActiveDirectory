@@ -4,6 +4,8 @@ https://www.n00py.io/2022/10/practical-attacks-against-ntlmv1/
 
 https://medium.com/@offsecdeer/a-practical-guide-to-rbcd-exploitation-a3f1a47267d5
 
+https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/adversary-in-the-middle/rdp-mitm
+
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
