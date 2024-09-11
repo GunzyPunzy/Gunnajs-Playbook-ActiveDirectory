@@ -513,7 +513,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 </details>
 
 <details>
-  <summary> NTLMV1 relay </summary>   
+  <summary> NTLMv1-relay </summary>   
 
 </details>
 
