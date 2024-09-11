@@ -397,7 +397,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   sudo responder -I eth0
   ```
 
-  Switche for Responder
+  Switches for Responder
   * -d = DHCP 
   * -D = DHCP-DNS
   * -w = WPAD
