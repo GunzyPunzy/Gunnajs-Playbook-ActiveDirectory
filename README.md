@@ -397,35 +397,13 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   sudo responder -I eth0
   ```
 
-  ### DHCP
-  ```shell
-  sudo responder -I eth0 -d
-  ```
-
-  ### DHCP-DNS
-  ```shell
-  sudo responder -I eth0 -D
-  ```
-
-  ### wpad
-  ```shell
-  sudo responder -I eth0 -w
-  ```
-
-  ### Froce wpad auth
-  ```shell
-  sudo responder -I eth0 -F
-  ```
-
-  ### Downdgrading
-  ```shell
-  sudo responder -I eth0 --lm --disable-ess
-  ```
-
-  ### Full blast
-  ```shell
-  sudo responder -I eth0 -DwF
-  ```
+  Switche for Responder
+  * -d = DHCP 
+  * -D = DHCP-DNS
+  * -w = WPAD
+  * -F = Force WPAD atuh
+  * --lm = Force ntlmv1
+  * --disable-ess = No ESS (Extended Session Security
   
  </details>
  <details>
