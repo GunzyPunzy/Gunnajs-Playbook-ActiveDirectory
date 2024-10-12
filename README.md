@@ -17,17 +17,7 @@ How to pentest like a Gunnaj
 
   ### NMAP
   https://nmap.org/
-
-  ### legion
-  https://github.com/GoVanguard/legion
-
-  <details>
-    <summary> Installation </summary>  
   
-    https://www.reddit.com/r/Kalilinux/comments/1ann3xo/legion_running_perfectly_then_it_disappears/
-   
-  </details>
-   
   ### linWinPwn - Active Directory Vulnerability Scanner
   https://github.com/lefayjey/linWinPwn
   
