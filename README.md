@@ -906,7 +906,7 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ### Hybrid (-a 7)
   #### Combines masks+wordlists
   ```shell
-  hashcat64.exe -m <hash_type> -a 7 <hashes.txt> ?a?a?a?a?a?a?a?a --increment <passlist.txt>  -o cracked.txt
+  hashcat64.exe -m <hash_type> -a 7 <hashes.txt> ?a?a?a?a?a?a?a?a <passlist.txt> --increment -o cracked.txt
   ```
 
  #### Built-in charsets
