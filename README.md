@@ -6,6 +6,8 @@ https://medium.com/@offsecdeer/a-practical-guide-to-rbcd-exploitation-a3f1a47267
 
 https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/adversary-in-the-middle/rdp-mitm
 
+https://www.thehacker.recipes/ad/movement/dacl/addmember
+
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
