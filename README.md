@@ -626,7 +626,20 @@ grep -i <keyword> *
 # Delegation abuse
 
 <details>
-  <summary> Netexec Misconfigured  Delegation </summary> 
+  <summary> BloodHound query for Delegation rights </summary> 
+  
+  ```shell
+  MATCH q=(u)-[:GenericWrite|GenericAll|WriteDacl|
+WriteOwner|Owns|WriteAccountRestrictions|AllowedToAct|AllowedToDelegate]->(:Computer) WHERE NOT
+u.objectid ENDS WITH "-512" AND NOT
+u.objectid ENDS WITH "-519" AND NOT
+u.objectid ENDS WITH "-544" AND NOT
+u.objectid ENDS WITH "-548" RETURN q
+  ```
+</details> 
+
+<details>
+  <summary> Netexec Misconfigured Delegation </summary> 
   
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --find-delegation
