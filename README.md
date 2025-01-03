@@ -510,7 +510,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 </details>
 
 <details>
-  <summary> PetitPotam </summary> 
+  <summary> NetExecd coerce_plus </summary> 
   
   ### NetExec Coerce Authentication
   ```shell
