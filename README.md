@@ -662,7 +662,7 @@ u.objectid ENDS WITH "-548" RETURN q
   ```
 
   ### Unconstrained Delegation 
-    ```shell
+  ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
   ```
     
