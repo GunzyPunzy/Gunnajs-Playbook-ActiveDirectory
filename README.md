@@ -604,9 +604,6 @@ python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -a
 </details> 
 
 <details>
-  <summary> Mount and unmount shares </summary> 
-
-<details>
   <summary> Impacket smbclient </summary> 
   
 ### Passord authentication
@@ -620,6 +617,9 @@ impacket-smbclient -hashes <hash[LM:NT]> <username>:@<target_IP>
 ```
 
 </details> 
+
+<details>
+  <summary> Mount and unmount shares </summary> 
 
 ### Mount share
 ```shell
