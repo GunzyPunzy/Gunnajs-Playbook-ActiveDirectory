@@ -656,16 +656,13 @@ u.objectid ENDS WITH "-548" RETURN q
 <details>
   <summary> Netexec Misconfigured Delegation </summary> 
   
+  ### Misconfigured Delegation
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --find-delegation
   ```
-</details> 
-    
 
-<details>
-  <summary> Netexec Unconstrained Delegation </summary> 
-  
-  ```shell
+  ### Unconstrained Delegation 
+    ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
   ```
     
@@ -677,6 +674,8 @@ u.objectid ENDS WITH "-548" RETURN q
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
   ```
+
+</details> 
 
 <details>
   <summary> Unconstrained Delegation </summary> 
