@@ -128,12 +128,6 @@ How to pentest like a Gunnaj
   ```
   </details>
   
-  ### PetitPotam
-  https://github.com/topotam/PetitPotam
-  
-  ### DFSCoerce
-  https://github.com/Wh04m1001/DFSCoerce
-  
   ### Impacket
   https://github.com/fortra/impacket
   
