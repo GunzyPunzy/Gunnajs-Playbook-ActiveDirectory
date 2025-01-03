@@ -670,6 +670,31 @@ u.objectid ENDS WITH "-548" RETURN q
   ```
     
 </details> 
+
+<details>
+  <summary> Resource-based Constrained Delegation </summary> 
+  
+  ```shell
+  NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
+  ```
+
+<details>
+  <summary> Unconstrained Delegation </summary> 
+  
+  ```shell
+  NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
+  ```
+    
+</details> 
+
+<details>
+  <summary> Constrained Delegation </summary> 
+  
+  ```shell
+  NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
+  ```
+    
+</details> 
     
 </details> 
 
