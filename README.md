@@ -606,6 +606,21 @@ python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -a
 <details>
   <summary> Mount and unmount shares </summary> 
 
+<details>
+  <summary> Impacket smbclient </summary> 
+  
+### Passord authentication
+```shell
+impacket-smbclient <AD_domain>/<username>:<password>@<target_IP>
+```
+
+### Pass-the-Hash
+```shell
+impacket-smbclient -hashes <hash[LM:NT]> <username>:@<target_IP>
+```
+
+</details> 
+
 ### Mount share
 ```shell
 sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
