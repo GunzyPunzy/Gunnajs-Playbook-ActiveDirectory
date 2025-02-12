@@ -153,6 +153,19 @@ How to pentest like a Gunnaj
 
   ### certipty
   https://github.com/ly4k/Certipy
+
+  ### Pre2k
+  https://github.com/garrettfoster13/pre2k
+  <details>
+    <summary> Installation </summary> 
+    
+  ```shell
+  git clone https://github.com/garrettfoster13/pre2k.git && cd pre2k/
+  ```
+  ```shell
+  pip3 install .
+  ```
+  </details>
   
   ### breach-parse
   https://github.com/hmaverickadams/breach-parse
