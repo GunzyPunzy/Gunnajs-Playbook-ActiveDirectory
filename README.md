@@ -579,7 +579,7 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   
   ### Spray a password on a user list
   ```shell
-  netexec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
+  NetExec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
   ```
 
 </details>
