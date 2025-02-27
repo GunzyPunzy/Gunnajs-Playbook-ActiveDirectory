@@ -376,14 +376,14 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 </details>
 
 <details>
-  <summary> NetExec Enumerate Logged on Users </summary> 
+  <summary> NetExec enumerate logged on users </summary> 
 
-## Domain Accout
+####  Domain account
 ```shell
 NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --loggedon-users
 ```
 
-## Local Accounnt
+####  Local account
 ```shell
 NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth --loggedon-users
 ```
