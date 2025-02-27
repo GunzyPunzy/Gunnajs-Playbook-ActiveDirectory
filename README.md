@@ -305,6 +305,22 @@ NetExec ldap <Domain_Controller_IP> -d <Domain> -u <AD_user> -p <AD_password> --
 </details>
 
 <details>
+  <summary> BloodHound mark all relevant groups as highvalue </summary> 
+
+#### Query
+```shell
+MATCH (x:Group)
+WHERE x.highvalue=true
+MATCH p=shortestPath((n:Group)-[r*1..]->(x)) 
+WHERE x <> n
+AND NONE (r in relationships(p) WHERE type(r) = "CanRDP")
+SET n.highvalue = true
+RETURN http://n.name, n.highvalue
+```
+
+</details>
+
+<details>
   <summary> NetExec enumerate null sessions </summary> 
 
 #### Check if Null Session is enabled
