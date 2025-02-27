@@ -276,9 +276,35 @@ How to pentest like a Gunnaj
     
 <details>
   <summary> NetExec domain authentication </summary> 
-  
+
+  #### Password
   ```shell
-  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> 
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password>
+  ```
+
+  #### Pass-the-Hash
+  ```shell
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -H <hash[LM:NT]> 
+  ```
+
+  #### Kerberos
+  ```shell
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -k -p <AD_password>
+  ```
+
+  #### Using kcache
+
+  ```shell
+  export KRB5CCNAME=<Kerberos_ticket>
+  ```
+
+  ```shell
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> --use-kcache
+  ```
+
+  #### Pass-the-Certificate
+  ```shell
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> ---pfx-cert <user.pfx>
   ```
 
 </details> 
