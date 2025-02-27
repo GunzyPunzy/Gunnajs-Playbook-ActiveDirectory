@@ -560,6 +560,16 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 </details>
 
 <details>
+  <summary> Kerberos-relay </summary>   
+
+  ### In the works
+  ```shell
+  ---
+  ```
+
+</details>
+
+<details>
   <summary> NetExecd coerce_plus </summary> 
   
   ### NetExec Coerce Authentication
