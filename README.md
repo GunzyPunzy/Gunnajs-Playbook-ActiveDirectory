@@ -597,18 +597,6 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   * printerbug
   * dfscoerce
 </details> 
-  
-# Password Spraying
-
-<details>
-  <summary> NetExec Password spray </summary> 
-  
-  ### Spray a password on a user list
-  ```shell
-  NetExec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
-  ```
-
-</details>
 
 # Authentication
     
@@ -631,10 +619,11 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 </details> 
 
 <details>
-  <summary> NetExec rdp authentication </summary> 
+  <summary> NetExec Password spray </summary> 
   
+  ### Spray a password on a user list
   ```shell
-  NetExec rdp <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
+  NetExec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
   ```
 
 </details> 
