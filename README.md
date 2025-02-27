@@ -737,6 +737,16 @@ u.objectid ENDS WITH "-548" RETURN q
     
 </details> 
 
+# AD Certificates
+
+<details>
+  <summary> ESC1 </summary> 
+  
+  ```shell
+  ----
+  ```
+</details> 
+
 # Credential dumping
 
 <details>
