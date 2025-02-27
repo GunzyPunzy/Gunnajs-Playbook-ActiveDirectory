@@ -293,7 +293,7 @@ How to pentest like a Gunnaj
 </details> 
 
 <details>
-  <summary> NetExec Password spray </summary> 
+  <summary> NetExec password spray </summary> 
   
   ### Spray a password on a user list
   ```shell
