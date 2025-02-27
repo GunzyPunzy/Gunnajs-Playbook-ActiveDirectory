@@ -474,6 +474,61 @@ NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth --loggedon-us
   ```
 </details>
 
+# Share enumeration
+
+<details>
+  <summary> List readable or writable shares </summary> 
+
+```shell
+NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
+```
+
+</details>
+
+<details>
+  <summary> List uncommon shares and export as xlsx </summary> 
+
+```shell
+python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --readable --export-xlsx shares
+```
+
+</details> 
+
+<details>
+  <summary> Impacket smbclient </summary> 
+  
+### Passord authentication
+```shell
+impacket-smbclient <AD_domain>/<username>:<password>@<target_IP>
+```
+
+### Pass-the-Hash
+```shell
+impacket-smbclient -hashes <hash[LM:NT]> <username>:@<target_IP>
+```
+
+</details> 
+
+<details>
+  <summary> Mount and unmount shares </summary> 
+
+### Mount share
+```shell
+sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
+```
+
+### Unmount share
+```shell
+sudo umount <./folder>
+```
+
+### Search for keywords in files
+```shell
+grep -i <keyword> *
+```
+
+</details> 
+
 # Computer accounts 
 
 <details>
@@ -667,61 +722,6 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   * PetitPotam
   * printerbug
   * dfscoerce
-</details> 
-
-# Share enumeration
-
-<details>
-  <summary> List readable or writable shares </summary> 
-
-```shell
-NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
-```
-
-</details>
-
-<details>
-  <summary> List uncommon shares and export as xlsx </summary> 
-
-```shell
-python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --readable --export-xlsx shares
-```
-
-</details> 
-
-<details>
-  <summary> Impacket smbclient </summary> 
-  
-### Passord authentication
-```shell
-impacket-smbclient <AD_domain>/<username>:<password>@<target_IP>
-```
-
-### Pass-the-Hash
-```shell
-impacket-smbclient -hashes <hash[LM:NT]> <username>:@<target_IP>
-```
-
-</details> 
-
-<details>
-  <summary> Mount and unmount shares </summary> 
-
-### Mount share
-```shell
-sudo mount.cifs <//ip/folder> <./folder> -o user=<username>,password=<password>,dom=<AD_domain>
-```
-
-### Unmount share
-```shell
-sudo umount <./folder>
-```
-
-### Search for keywords in files
-```shell
-grep -i <keyword> *
-```
-
 </details> 
 
 # Delegation abuse
