@@ -331,6 +331,16 @@ How to pentest like a Gunnaj
 # Acitve directory enumeration
 
 <details>
+  <summary> LDAPDomainDump </summary> 
+
+#### Collect domain info
+```shell
+ldapdomaindump -u <Domain>\<AD_user> -p <AD_password> <Domain_Controller_IP>
+```
+
+</details>
+
+<details>
   <summary> NetExec active users </summary> 
 
 #### Get what users are enabled
