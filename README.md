@@ -1011,26 +1011,26 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 
 | Service Type                           | Service Silver Tickets |
 |----------------------------------------|------------------------|
-| WMI                                    | HOST                   |
-|                                        | RPCSS                  |
+| <u>WMI</u>                             | <u>HOST</u>            |
+|                                        | <u>RPCSS</u>           |
 |----------------------------------------|------------------------|
-| PowerShell Remoting                    | HOST                   |
-|                                        | HTTP                   |
+| <u>PowerShell Remoting</u>             | <u>HOST</u>            |
+|                                        | <u>HTTP</u>            |
 |----------------------------------------|------------------------|
-|                                        |Depending on OS version may also need:|
-|                                        | WSMAN                  |
-|                                        | RPCSS                  |
+|                                        |<u>Depending on OS version may also need:</u>|
+|                                        | <u>WSMAN</u>           |
+|                                        | <u>RPCSS</u>           |
 |----------------------------------------|------------------------|
-| WinRM                                  | HOST                   |
-|                                        | HTTP                   |
+| <u>WinRM</u>                           | <u>HOST</u>            |
+|                                        | <u>HTTP</u>            |
 |----------------------------------------|------------------------|
-| Scheduled Tasks                        | HOST                   |
+| <u>Scheduled Tasks</u>                 | <u>HOST</u>            |
 |----------------------------------------|------------------------|
-| Windows File Share (CIFS)              | CIFS                   |
+| <u>Windows File Share (CIFS)</u>       | <u>CIFS</u>            |
 |----------------------------------------|------------------------|
-| Windows Remote Server Administration Tools | RPCSS              |
-|                                        | LDAP                   |
-|                                        | CIFS                   |
+| <u>Windows Remote Server Administration Tools</u> | <u>RPCSS</u> |
+|                                        | <u>LDAP</u>            |
+|                                        | <u>CIFS</u>            |
 
 </details>
 
