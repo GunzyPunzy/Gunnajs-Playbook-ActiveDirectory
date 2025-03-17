@@ -1011,24 +1011,21 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 
 | Service Type                           | Service Silver Tickets |
 |----------------------------------------|------------------------|
-| **WMI**                                | **HOST**               |
-|                                        | **RPCSS**              |
-|----------------------------------------|------------------------|
-| **PowerShell Remoting**                | **HOST**               |
-|                                        | **HTTP**               |
-|----------------------------------------|------------------------|
-|                                        |**Depending on OS version may also need:**|
-|                                        | **WSMAN**              |
-|                                        | **RPCSS**              |
-|----------------------------------------|------------------------|
-| **WinRM**                              | **HOST**               |
-|                                        | **HTTP**               |
-|----------------------------------------|------------------------|
-| **Scheduled Tasks**                    | **HOST**               |
-|----------------------------------------|------------------------|
-| **Windows File Share (CIFS)**          | **CIFS**               |
-|----------------------------------------|------------------------|
-| **Windows Remote Server Administration Tools** | **RPCSS**       |
+| WMI                                    | HOST                   |
+|                                        | RPCSS                  |
+| PowerShell Remoting                    | HOST                   |
+|                                        | HTTP                   |
+| Depending on OS version may also need: |                        |
+|                                        | WSMAN                  |
+|                                        | RPCSS                  |
+| WinRM                                  | HOST                   |
+|                                        | HTTP                   |
+| Scheduled Tasks                        | HOST                   |
+| Windows File Share (CIFS)              | CIFS                   |
+| LDAP operations including Mimikatz DCSync | LDAP                |
+| Windows Remote Server Administration Tools | RPCSS              |
+|                                        | LDAP                   |
+|                                        | CIFS                   |
 
 </details>
 
