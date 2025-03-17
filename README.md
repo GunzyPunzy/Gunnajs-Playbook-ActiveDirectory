@@ -1011,21 +1011,21 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 
 | Service Type                           | Service Silver Tickets |
 |----------------------------------------|------------------------|
-| WMI                                    | HOST                   |
-|                                        | RPCSS                  |
-| PowerShell Remoting                    | HOST                   |
-|                                        | HTTP                   |
-| Depending on OS version may also need: |                        |
-|                                        | WSMAN                  |
-|                                        | RPCSS                  |
-| WinRM                                  | HOST                   |
-|                                        | HTTP                   |
-| Scheduled Tasks                        | HOST                   |
-| Windows File Share (CIFS)              | CIFS                   |
-| LDAP operations including Mimikatz DCSync | LDAP                |
-| Windows Remote Server Administration Tools | RPCSS              |
-|                                        | LDAP                   |
-|                                        | CIFS                   |
+| <u>WMI</u>                             | <u>HOST</u>            |
+|                                        | <u>RPCSS</u>           |
+| <u>PowerShell Remoting</u>             | <u>HOST</u>            |
+|                                        | <u>HTTP</u>            |
+| <u>Depending on OS version may also need:</u> |                |
+|                                        | <u>WSMAN</u>           |
+|                                        | <u>RPCSS</u>           |
+| <u>WinRM</u>                           | <u>HOST</u>            |
+|                                        | <u>HTTP</u>            |
+| <u>Scheduled Tasks</u>                 | <u>HOST</u>            |
+| <u>Windows File Share (CIFS)</u>       | <u>CIFS</u>            |
+| <u>LDAP operations including Mimikatz DCSync</u> | <u>LDAP</u>  |
+| <u>Windows Remote Server Administration Tools</u> | <u>RPCSS</u> |
+|                                        | <u>LDAP</u>            |
+|                                        | <u>CIFS</u>            |
 
 </details>
 
