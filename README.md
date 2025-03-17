@@ -1029,7 +1029,7 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 | <u>Windows File Share (CIFS)</u>       | <u>CIFS</u>            |
 |----------------------------------------|------------------------|
 | <u>Windows Remote Server Administration Tools</u> | <u>RPCSS</u> |
-|                                        | <u>LDAP</u>            |
+|                                        | <u>LDAP</u>            | 
 |                                        | <u>CIFS</u>            |
 
 </details>
