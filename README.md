@@ -8,6 +8,8 @@ https://viperone.gitbook.io/pentest-everything/everything/everything-active-dire
 
 https://www.thehacker.recipes/ad/movement/dacl/addmember
 
+https://www.blackhillsinfosec.com/mitm6-strikes-again-the-dark-side-of-ipv6/
+
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
