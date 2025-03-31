@@ -924,22 +924,6 @@ u.objectid ENDS WITH "-548" RETURN q
 </details> 
 
 <details>
-  <summary> linWinPwn </summary> 
-  
-### With administrator Account (using password, NTLM hash or Kerberos ticket)
-- All of the "Standard User" checks
-- Module pwd_dump
-    - LAPS and gMSA dump
-    - secretsdump on all domain servers
-    - NTDS dump using impacket, netexec and certsync
-    - Dump lsass on all domain servers using: procdump, lsassy, nanodump, handlekatz, masky 
-    - Extract backup keys using DonPAPI, HEKATOMB
-```shell
-sudo ./linWinPwn.sh -t <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> -K <kerbticket[./krb5cc_ticket]> -o <output_dir>
-```
-</details> 
-
-<details>
   <summary> Examine lsass dump with pypykatz </summary> 
 
 ```shell
