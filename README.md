@@ -10,6 +10,8 @@ https://www.thehacker.recipes/ad/movement/dacl/addmember
 
 https://www.blackhillsinfosec.com/mitm6-strikes-again-the-dark-side-of-ipv6/
 
+https://github.com/Hackndo/pyGPOAbuse
+
 # Gunnajs-Playbook
 How to pentest like a Gunnaj
 
