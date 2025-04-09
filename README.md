@@ -108,6 +108,16 @@ How to pentest like a Gunnaj
   ```
   </details>
 
+  ### blindsight
+  https://github.com/0xdea/blindsight
+  <details>
+    <summary> Installation </summary>
+
+  ```shell
+  =)
+  ```
+  </details>
+
   ### mitm6
   https://github.com/dirkjanm/mitm6
   <details>
