@@ -761,7 +761,7 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 </details>
 
 <details>
-  <summary> NetExecd coerce_plus </summary> 
+  <summary> NetExec coerce_plus </summary> 
   
   ### NetExec Coerce Authentication
   ```shell
