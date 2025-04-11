@@ -359,7 +359,7 @@ How to pentest like a Gunnaj
 
 #### Collect domain info
 ```shell
-ldapdomaindump -u <Domain>\<AD_user> -p <AD_password> <Domain_Controller_IP>
+ldapdomaindump -u <Domain>\\<AD_user> -p <AD_password> <Domain_Controller_IP>
 ```
 
 </details>
