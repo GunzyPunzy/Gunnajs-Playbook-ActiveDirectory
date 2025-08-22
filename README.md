@@ -443,12 +443,12 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --reg-sessions
 ```
 
-####  Domain account
+####  Domain account with local admin rights 
 ```shell
 NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --loggedon-users
 ```
 
-####  Local account
+####  Local account with local admin rights 
 ```shell
 NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon-users
 ```
