@@ -189,20 +189,7 @@ How to pentest like a Gunnaj
 
   ### certipty
   https://github.com/ly4k/Certipy
-
-  ### Pre2k
-  https://github.com/garrettfoster13/pre2k
-  <details>
-    <summary> Installation </summary> 
-    
-  ```shell
-  git clone https://github.com/garrettfoster13/pre2k.git && cd pre2k/
-  ```
-  ```shell
-  pip3 install .
-  ```
-  </details>
-  
+ 
   ### breach-parse
   https://github.com/hmaverickadams/breach-parse
   
@@ -608,11 +595,6 @@ impacket-addcomputer -dc-ip <Domain_Controller_IP> -computer-name <Computer_Name
 #### NetExec pre2k - obtain tickets
 ```shell
 NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M pre2k
-```
-
-#### Pre2k
-```shell
-pre2k auth -d <AD_domain> -dc-ip <Domain_Controller_IP> 
 ```
 
 </details>
