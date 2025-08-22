@@ -440,6 +440,11 @@ NetExec smb <Domain_Controller_IP> -u 'a' -p '' --shares
 
 ####  Domain account
 ```shell
+NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --reg-sessions
+```
+
+####  Domain account
+```shell
 NetExec smb <target_IP> -u <AD_user> -p <AD_password> -H <hash[LM:NT]> --loggedon-users
 ```
 
@@ -1204,6 +1209,10 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ### NTLM
   ```shell
   hashcat64.exe -m 1000 -a 3 <NTLM-hashes.txt> -o cracked.txt
+  ```
+  dcsync
+  ```shell
+  hashcat64.exe -m 1000 -a 3 --username <NTLM-hashes.txt> -o cracked.txt
   ```
 
   ### NTLMv1
