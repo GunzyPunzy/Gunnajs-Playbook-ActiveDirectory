@@ -94,6 +94,18 @@ How to pentest like a Gunnaj
   
   </details>
 
+  ### BloodyAD
+  https://github.com/CravateRouge/bloodyAD
+  
+  <details>
+    <summary> Installation </summary> 
+    
+  ```shell
+  sudo apt-get install bloodyad
+  ```
+  
+  </details>
+
   ### go-secdump
   https://github.com/jfjallid/go-secdump
   <details>
