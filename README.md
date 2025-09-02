@@ -818,7 +818,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> Certipy find vulnerable certificates </summary> 
   
   ```shell
-  certipy find -u <AD_user> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout
+  certipy find -u <AD_user> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout -enabled -text -json
   ```
 </details> 
 
