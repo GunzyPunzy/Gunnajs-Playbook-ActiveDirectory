@@ -57,10 +57,18 @@ How to pentest like a Gunnaj
     <summary> Installation </summary> 
     
   ```shell
-  sudo apt-get install bloodhound
+  sudo apt install -y docker.io docker-compose
+  wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz
+  tar -xvzf bloodhound-cli-linux-amd64.tar.gz
+  sudo ./bloodhound-cli install
   ```
 
-  #### Navigate to http://localhost:7474/ 
+  #### Get the initial password
+  ```shell
+  docker logs bloodhoundce_bloodhound_1 2>&1 | grep "Initial Password Set To:"
+  ```
+
+  #### Navigate to http://localhost:8080/ui/login
   
   </details>
   
