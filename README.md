@@ -63,11 +63,6 @@ How to pentest like a Gunnaj
   sudo ./bloodhound-cli install
   ```
 
-  #### Get the initial password
-  ```shell
-  docker logs bloodhoundce_bloodhound_1 2>&1 | grep "Initial Password Set To:"
-  ```
-
   #### Navigate to http://localhost:8080/ui/login
   
   </details>
