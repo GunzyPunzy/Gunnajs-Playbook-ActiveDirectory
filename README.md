@@ -519,7 +519,7 @@ NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon
   <summary> List readable or writable shares </summary> 
 
 ```shell
-NetExec smb <target_IP> -u AD_user -p <password>  --shares --filter-shares READ WRITE
+NetExec smb <target_IP> -u AD_user -p <password>  --shares READ,WRITE
 ```
 
 </details>
