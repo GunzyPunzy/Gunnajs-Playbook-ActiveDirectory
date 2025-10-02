@@ -55,7 +55,18 @@ How to pentest like a Gunnaj
   
   <details>
     <summary> Installation </summary> 
-    
+
+  ```shell
+  sudo apt install bloodhound
+  sudo bloodhoud-setup
+  ```
+
+  ## Update /etc/bhapi/bhapi.json with neo4j password
+  ```shell
+  sudo bloodhound
+  ```
+
+  ## Docker
   ```shell
   sudo apt install -y docker.io docker-compose
   wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz
