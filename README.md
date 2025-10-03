@@ -58,9 +58,8 @@ How to pentest like a Gunnaj
 
   ```shell
   sudo apt install bloodhound
-  sudo bloodhoud-setup
   ```
-
+  #### Open Bloodhound in GUI
   #### Update /etc/bhapi/bhapi.json with neo4j password
   ```shell
   sudo bloodhound
