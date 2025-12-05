@@ -338,7 +338,7 @@ How to pentest like a Gunnaj
 
   #### Pass-the-Certificate
   ```shell
-  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> ---pfx-cert <user.pfx>
+  sudo NetExec smb <Domain_Controller_IP> -u <AD_user> --pfx-cert <user.pfx>
   ```
 
 </details> 
