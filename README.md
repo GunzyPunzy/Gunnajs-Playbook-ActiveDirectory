@@ -362,10 +362,10 @@ How to pentest like a Gunnaj
 
 </details> 
 
-# Proxychains
+# Pivoting
 
 <details>
-  <summary> LDAPDomainDump </summary> 
+  <summary> proxychains </summary> 
 
   ### Reverse SOCKS tunnel
   ```shell
