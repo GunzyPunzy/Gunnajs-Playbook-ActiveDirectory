@@ -1275,11 +1275,10 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 <details>
   <summary> Show cracked hashes </summary> 
 
-</details>
-
 ```shell
 hashcat.exe -m <hash_type> --show --username <hashes.txt> -o cracked.txt
 ```
+</details>
 
 <details>
   <summary> Hash types </summary> 
