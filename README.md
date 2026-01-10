@@ -490,6 +490,26 @@ NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon
 </details>
 
 <details>
+  <summary> BloodyAD </summary> 
+
+####  Get membership
+```shell
+bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get membership
+```
+
+####  Get writable
+```shell
+bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get writable
+```
+
+####  Get object info
+```shell
+bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object <object>
+```
+
+</details>
+
+<details>
   <summary> linWinPwn </summary> 
   
   ### Unauthenticated
