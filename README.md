@@ -507,7 +507,7 @@ bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get w
 
 <details>
   <summary> BloodyAD Get object info </summary> 
-#
+
 ```shell
 bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object <object>
 ```
