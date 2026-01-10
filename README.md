@@ -490,23 +490,27 @@ NetExec smb <target_IP> -u <local_user> -H <hash[LM:NT]> --local-auth --loggedon
 </details>
 
 <details>
-  <summary> BloodyAD </summary> 
+  <summary> BloodyAD Get membership </summary> 
 
-####  Get membership
 ```shell
 bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get membership
 ```
+</details>
 
-####  Get writable
+<details>
+  <summary> BloodyAD Get writable </summary> 
+
 ```shell
 bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get writable
 ```
+</details>
 
-####  Get object info
+<details>
+  <summary> BloodyAD Get object info </summary> 
+#
 ```shell
 bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object <object>
 ```
-
 </details>
 
 <details>
