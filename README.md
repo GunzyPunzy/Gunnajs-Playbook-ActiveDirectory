@@ -309,7 +309,7 @@ How to pentest like a Gunnaj
 # Authentication
     
 <details>
-  <summary> NetExec authentication </summary> 
+  <summary> NetExec </summary> 
 
   #### Password
   ```shell
