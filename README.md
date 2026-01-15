@@ -354,7 +354,6 @@ How to pentest like a Gunnaj
   #### xfreerdp
   ```shell 
   xfreerdp /u:<AD_user> /d:Target_Domain>  /v:<target_IP>
-  NetExec smb  -u <AD_user> -H <hash[LM:NT]>
   ```
 
   #### NetExec
