@@ -410,7 +410,7 @@ How to pentest like a Gunnaj
   ### Edit /etc/proxychains4.conf
   ```shell
   [ProxyList]
-  socks5 127.0.0.1 <PORT>
+  socks5 127.0.0.1 1080
   ```
 
   ### Connecting from the client
