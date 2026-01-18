@@ -396,6 +396,16 @@ How to pentest like a Gunnaj
 
 </details> 
 
+<details>
+  <summary> Chisel </summary> 
+
+  ###
+  ```shell
+
+  ```
+
+</details> 
+
 
 # Acitve directory enumeration
 
