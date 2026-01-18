@@ -274,9 +274,9 @@ How to pentest like a Gunnaj
   sudo nmap -PN -sC -sV -p- -oN <output.txt> <IP/mask>
   ```
 
-  #### smb vuln scan
+  #### Vuln scan
   ```shell
-  sudo nmap -PN --script smb-vuln* -p139,445 -oN <output.txt> <IP/mask>
+  sudo nmap -Pn -p- -sV -sC --script vuln -oN <output.txt> <IP/mask>
   ```
 
   ### Find DC IP
