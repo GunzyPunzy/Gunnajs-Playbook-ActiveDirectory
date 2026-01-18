@@ -1154,7 +1154,7 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
   <summary> Impacket PsExec </summary> 
   
   ```shell
- impacket-psexec -u <username> -p <password> -hashes <hash[LM:NT]> <target_IP> <command>
+ impacket-psexec <AD_domain>/<username>:<password>@<target_IP>
   ```
 </details> 
 
