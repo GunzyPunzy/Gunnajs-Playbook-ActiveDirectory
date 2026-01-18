@@ -1225,11 +1225,6 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 <details>
   <summary> Tickets </summary> 
   
-#### BloodyAD get user SID
-```shell
-bloodyAD -u <AD_user> -d <domain> -p <password> --host <Domain_Controller_IP> get object <AD_user>
-```
-
 ##### BloodyAD get domain SID
 ```shell
 bloodyAD --dc-ip <Domain_Controller_IP> -u <AD_user> -p <AD_password or LM:NT]> get object get object "DC=<domain>,DC=<local>" --attr objectSid
