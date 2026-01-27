@@ -344,6 +344,11 @@ How to pentest like a Gunnaj
   sudo NetExec smb <Domain_Controller_IP> -u <AD_user> --use-kcache
   ```
 
+  #### With AES key
+   ```shell
+  nxc smb 192.168.1.10 -u admin --aesKey <AES_KEY> -k
+  ```
+
   #### Pass-the-Certificate
   ```shell
   sudo NetExec smb <Domain_Controller_IP> -u <AD_user> --pfx-cert <user.pfx>
