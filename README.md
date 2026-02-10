@@ -1337,7 +1337,7 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   <summary> Show cracked hashes </summary> 
 
 ```shell
-hashcat.exe -m <hash_type> --show --username <hashes.txt> -o cracked.txt
+hashcat.exe -m <hash_type> --show --username <hashes.txt>
 ```
 </details>
 
