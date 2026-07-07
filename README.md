@@ -1295,6 +1295,16 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ```
 </details>
 
+# Physical accees
+<details>
+  <summary> Attack modes </summary> 
+### Insert bootable media, shift F1 for cmd
+  ```cmd
+  pret.py target {ps,pjl,pcl}
+  ```
+  
+</details>
+
 # Hash cracking
 <details>
   <summary> Attack modes </summary> 
