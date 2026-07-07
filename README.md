@@ -1297,7 +1297,7 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 
 # Physical accees
 <details>
-  <summary> Attack modes </summary> 
+  <summary> Get cmd as SYSTEM </summary> 
   
   ### Insert bootable media, shift F1 for cmd (If no bitlocker)
   #### List disks for which to use
