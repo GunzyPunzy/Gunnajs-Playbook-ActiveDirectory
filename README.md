@@ -211,22 +211,24 @@ How to pentest like a Gunnaj
   https://github.com/RUB-NDS/PRET
   <details>
     <summary> Installation </summary> 
-  #### In Explorer
-  ```shell
-  \\live.sysinternals.com\tools\adexplorer.exe
-  ```
+    ```shell
+    git clone https://github.com/RUB-NDS/PRET
+    ```  
+    ```shell
+   chmod +x install.sh
+    ```  
+    ```shell
+    sudo ./install.sh
+    ```  
   </details>
 
-  ### PRET
-  live.sysinternals
+  ### live.sysinternals
+  
   <details>
     <summary> How to use </summary> 
     
   ```shell
-  git clone https://github.com/RUB-NDS/PRET && cd PRET
-  ```
-  ```shell
-  python -m pip install colorama pysnmP
+  \\live.sysinternals.com\tools\adexplorer.exeP
   ```
   </details>
 
