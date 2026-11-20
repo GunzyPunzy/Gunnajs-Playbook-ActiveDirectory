@@ -227,13 +227,9 @@ How to pentest like a Gunnaj
   </details>
 
   ### live.sysinternals
-  
-  <details>
-    <summary> How to use </summary> 
-
   https://live.sysinternals.com/tools/
   
-  </details>
+
 
 </details>
 
