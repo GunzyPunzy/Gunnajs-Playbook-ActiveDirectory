@@ -211,15 +211,18 @@ How to pentest like a Gunnaj
   https://github.com/RUB-NDS/PRET
   <details>
     <summary> Installation </summary> 
-    ```shell
-    git clone https://github.com/RUB-NDS/PRET
-    ```  
-    ```shell
-   chmod +x install.sh
-    ```  
-    ```shell
-    sudo ./install.sh
-    ```  
+  ```shell
+  git clone https://github.com/RUB-NDS/PRET
+  ```  
+ 
+  ```shell
+  chmod +x install.sh
+  ```  
+ 
+  ```shell
+  sudo ./install.sh
+  ```
+
   </details>
 
   ### live.sysinternals
