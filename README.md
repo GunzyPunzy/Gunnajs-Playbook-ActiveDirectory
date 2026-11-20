@@ -211,6 +211,16 @@ How to pentest like a Gunnaj
   https://github.com/RUB-NDS/PRET
   <details>
     <summary> Installation </summary> 
+  #### In Explorer
+  ```shell
+  \\live.sysinternals.com\tools\adexplorer.exe
+  ```
+  </details>
+
+  ### PRET
+  live.sysinternals
+  <details>
+    <summary> How to use </summary> 
     
   ```shell
   git clone https://github.com/RUB-NDS/PRET && cd PRET
