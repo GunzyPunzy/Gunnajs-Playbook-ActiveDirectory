@@ -458,6 +458,17 @@ NetExec ldap <Domain_Controller_IP> -d <Domain> -u <AD_user> -p <AD_password> --
 </details>
 
 <details>
+  <summary> adexplorer </summary> 
+
+#### Open in explorer and run
+```cmd
+\\live.sysinternals.com\tools\ADExplorer.exe
+```
+
+</details>
+
+
+<details>
   <summary> BloodHound mark all relevant groups as highvalue </summary> 
 
 #### Query
