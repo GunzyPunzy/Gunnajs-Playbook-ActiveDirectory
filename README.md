@@ -230,10 +230,9 @@ How to pentest like a Gunnaj
   
   <details>
     <summary> How to use </summary> 
-    
-  ```shell
-  \\live.sysinternals.com\tools\adexplorer.exeP
-  ```
+
+  https://live.sysinternals.com/tools/
+  
   </details>
 
 </details>
